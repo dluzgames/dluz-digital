@@ -1,0 +1,321 @@
+import os
+
+def create_proposal():
+    html_content = """<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proposta Comercial Oficial | DLuz Digital</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    @media print {
+      body {
+        background: white !important;
+        color: #0F172A !important;
+      }
+      .page-break {
+        page-break-after: always;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .print-shadow-none {
+        box-shadow: none !important;
+        border: 1px solid #CBD5E1 !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-slate-950 text-slate-100 font-sans antialiased py-10 px-4 sm:px-6">
+
+  <!-- Print Controller Bar -->
+  <div class="max-w-4xl mx-auto mb-8 bg-slate-900/90 backdrop-blur-md p-4 rounded-2xl border border-white/10 flex flex-wrap items-center justify-between gap-4 no-print shadow-2xl">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold">
+        <i class="fa-solid fa-file-pdf"></i>
+      </div>
+      <div>
+        <div class="text-sm font-bold text-white">Modelo Oficial de Proposta Comercial</div>
+        <div class="text-xs text-slate-400">Pronto para exportar em PDF ou enviar o link para o cliente</div>
+      </div>
+    </div>
+    <div class="flex items-center gap-3">
+      <button onclick="window.print()" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-400 to-teal-400 text-slate-950 font-bold text-xs shadow-lg hover:scale-105 transition flex items-center gap-2">
+        <i class="fa-solid fa-print"></i>
+        <span>Imprimir / Salvar em PDF</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- MAIN PROPOSAL CONTAINER (A4 Sheet Simulation) -->
+  <div class="max-w-4xl mx-auto bg-[#0C1019] border border-white/10 rounded-3xl p-8 sm:p-14 shadow-2xl space-y-12">
+    
+    <!-- HEADER & COVER -->
+    <div class="border-b border-white/10 pb-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
+      <div class="flex items-center gap-3.5">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-cyan-400 to-amber-400 p-0.5 flex items-center justify-center shadow-lg">
+          <div class="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center">
+            <span class="text-xl font-extrabold text-white tracking-tighter">D<span class="text-cyan-400">L</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="text-2xl font-extrabold tracking-tight text-white">
+            DLUZ <span class="text-amber-400">DIGITAL</span>
+          </div>
+          <div class="text-xs uppercase tracking-widest text-slate-400 font-semibold">Tecnologia & Marketing Inteligente</div>
+        </div>
+      </div>
+
+      <div class="text-left sm:text-right">
+        <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 mb-1">
+          PROPOSTA COMERCIAL EXCLUSIVA
+        </span>
+        <div class="text-xs text-slate-400 font-mono">Ref: DLUZ-PROP-2026/01</div>
+        <div class="text-xs text-slate-400">Data de Emissão: 17 de Setembro de 2026</div>
+      </div>
+    </div>
+
+    <!-- CLIENT IDENTIFICATION -->
+    <div class="bg-white/5 rounded-2xl p-6 border border-white/5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div>
+        <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold mb-1">Cliente / Empresa:</div>
+        <div class="text-lg font-bold text-white">{{NOME_DA_EMPRESA_CLIENTE}}</div>
+        <div class="text-xs text-slate-300">A/C: {{NOME_DO_DECISOR_OU_PROPRIETARIO}}</div>
+        <div class="text-xs text-slate-400 mt-1">Cidade: {{CIDADE_OU_PALMAS}} - TO</div>
+      </div>
+      <div class="sm:text-right">
+        <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold mb-1">Responsável Técnico DLuz Digital:</div>
+        <div class="text-sm font-bold text-white flex items-center sm:justify-end gap-1.5">
+          <span>DLuz — Fundador & Estrategista</span>
+          <i class="fa-solid fa-circle-check text-cyan-400 text-xs"></i>
+        </div>
+        <div class="text-xs text-slate-300">WhatsApp Oficial: (63) 99999-9999</div>
+        <div class="text-xs text-amber-400 font-medium mt-1">Validade da Proposta: 7 dias corridos</div>
+      </div>
+    </div>
+
+    <!-- 1. OBJETIVO & DIAGNÓSTICO -->
+    <section class="space-y-4">
+      <div class="flex items-center gap-2.5 text-cyan-400 font-bold text-sm tracking-wider uppercase">
+        <i class="fa-solid fa-crosshairs"></i> 1. Diagnóstico do Negócio & Oportunidade
+      </div>
+      <h2 class="text-2xl font-extrabold text-white tracking-tight">
+        Multiplicar a Entrada de Novos Clientes e Modernizar o Atendimento Comercial
+      </h2>
+      <p class="text-slate-300 text-sm leading-relaxed">
+        Após análise preliminar da presença digital da <strong>{{NOME_DA_EMPRESA_CLIENTE}}</strong>, identificamos 3 grandes oportunidades de crescimento imediato na sua região e em Palmas:
+      </p>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+        <div class="p-4 rounded-xl bg-slate-900 border border-white/5">
+          <div class="text-amber-400 text-base mb-1.5"><i class="fa-solid fa-triangle-exclamation"></i></div>
+          <div class="text-xs font-bold text-white mb-1">Google Maps Inexplorado</div>
+          <div class="text-[11px] text-slate-400">Clientes locais pesquisam seu serviço todos os dias e acabam caindo no concorrente por falta de otimização no Maps.</div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900 border border-white/5">
+          <div class="text-cyan-400 text-base mb-1.5"><i class="fa-solid fa-clock-rotate-left"></i></div>
+          <div class="text-xs font-bold text-white mb-1">Gargalo no WhatsApp</div>
+          <div class="text-[11px] text-slate-400">Demora para responder clientes em horários de pico, fins de semana e noites, gerando perda de vendas imediatas.</div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900 border border-white/5">
+          <div class="text-teal-400 text-base mb-1.5"><i class="fa-solid fa-chart-line"></i></div>
+          <div class="text-xs font-bold text-white mb-1">Falta de Previsibilidade</div>
+          <div class="text-[11px] text-slate-400">Dependência exclusiva de indicação boca a boca, sem uma máquina ativa atraindo novos clientes todos os dias.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ESCOPO DA SOLUÇÃO (OS 3 PILARES) -->
+    <section class="space-y-4">
+      <div class="flex items-center gap-2.5 text-cyan-400 font-bold text-sm tracking-wider uppercase">
+        <i class="fa-solid fa-cubes-stacked"></i> 2. O Plano de Ação Estratégico DLuz Digital
+      </div>
+      <h2 class="text-2xl font-extrabold text-white tracking-tight">
+        A Construção da Máquina de Vendas Digital
+      </h2>
+      
+      <div class="space-y-3 pt-2">
+        
+        <div class="p-4 rounded-2xl bg-white/5 border border-white/5 flex items-start gap-4">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-lg shrink-0">
+            📍
+          </div>
+          <div>
+            <div class="text-sm font-bold text-white">Pilar 1: Dominação no Google Meu Negócio & SEO Local</div>
+            <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+              Otimização completa das categorias, palavras-chave de intenção de compra, catálogo e implantação do sistema automático de coleta de avaliações 5 estrelas via WhatsApp. Sua empresa no Top 3 do Google Maps.
+            </p>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-white/5 border border-white/5 flex items-start gap-4">
+          <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold text-lg shrink-0">
+            🤖
+          </div>
+          <div>
+            <div class="text-sm font-bold text-white">Pilar 2: Atendente com Inteligência Artificial 24/7 no WhatsApp</div>
+            <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+              Robô inteligente treinado especificamente com os dados, tabela de preços e dúvidas frequentes da sua empresa. Atende no segundo zero, transcreve e escuta áudios, agenda consultas/serviços e envia orçamentos.
+            </p>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-white/5 border border-white/5 flex items-start gap-4">
+          <div class="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-400 flex items-center justify-center font-bold text-lg shrink-0">
+            🎯
+          </div>
+          <div>
+            <div class="text-sm font-bold text-white">Pilar 3: Landing Page Google Stitch & Tráfego Pago de Alta Conversão</div>
+            <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+              Página ultra veloz no padrão Google Stitch (carregamento instantâneo) conectada a campanhas assertivas no Meta Ads (Instagram) e Google Ads, direcionando pessoas qualificadas direto para o WhatsApp.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. CRONOGRAMA DE IMPLANTAÇÃO -->
+    <section class="space-y-4">
+      <div class="flex items-center gap-2.5 text-cyan-400 font-bold text-sm tracking-wider uppercase">
+        <i class="fa-solid fa-calendar-check"></i> 3. Cronograma de Execução Semanal
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-4 gap-3 pt-2">
+        <div class="p-3.5 rounded-xl bg-slate-900 border border-white/5 text-center sm:text-left">
+          <div class="text-xs font-bold text-cyan-400 mb-1">Semana 1</div>
+          <div class="text-xs font-bold text-white mb-1">Diagnóstico & Setup</div>
+          <div class="text-[11px] text-slate-400">Otimização completa do Google Maps e levantamento da base de dados do negócio.</div>
+        </div>
+        <div class="p-3.5 rounded-xl bg-slate-900 border border-white/5 text-center sm:text-left">
+          <div class="text-xs font-bold text-cyan-400 mb-1">Semana 2</div>
+          <div class="text-xs font-bold text-white mb-1">Construção & IA</div>
+          <div class="text-[11px] text-slate-400">Desenvolvimento da Landing Page Stitch e treinamento do Bot IA no WhatsApp.</div>
+        </div>
+        <div class="p-3.5 rounded-xl bg-slate-900 border border-white/5 text-center sm:text-left">
+          <div class="text-xs font-bold text-cyan-400 mb-1">Semana 3</div>
+          <div class="text-xs font-bold text-white mb-1">Lançamento & Tráfego</div>
+          <div class="text-[11px] text-slate-400">Ativação dos anúncios no Google/Meta e primeiros testes de resposta em tempo real.</div>
+        </div>
+        <div class="p-3.5 rounded-xl bg-slate-900 border border-white/5 text-center sm:text-left">
+          <div class="text-xs font-bold text-cyan-400 mb-1">Semana 4</div>
+          <div class="text-xs font-bold text-white mb-1">Escala & Otimização</div>
+          <div class="text-[11px] text-slate-400">Apresentação do primeiro relatório de métricas e otimização dos custos por lead.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. OPÇÕES DE INVESTIMENTO (TABELA COMPARATIVA) -->
+    <section class="space-y-4">
+      <div class="flex items-center gap-2.5 text-cyan-400 font-bold text-sm tracking-wider uppercase">
+        <i class="fa-solid fa-wallet"></i> 4. Opções de Investimento & Planos
+      </div>
+      <h2 class="text-2xl font-extrabold text-white tracking-tight">
+        Escolha o Pacote Ideal para Sua Empresa
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+        
+        <!-- Opção 1 -->
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Opção 01</div>
+            <div class="text-lg font-bold text-white mb-2">Start Local</div>
+            <div class="text-2xl font-extrabold text-white mb-4">R$ 697 <span class="text-xs font-normal text-slate-400">/único</span></div>
+            <ul class="text-xs text-slate-300 space-y-2 mb-6">
+              <li>• Otimização Google Maps</li>
+              <li>• Sistema Reviews 5 Estrelas</li>
+              <li>• Padronização WhatsApp</li>
+              <li>• Suporte por 30 dias</li>
+            </ul>
+          </div>
+          <div class="text-[10px] text-slate-400 text-center py-2 bg-slate-900 rounded-lg">Ideal para validar presença local</div>
+        </div>
+
+        <!-- Opção 2: RECOMENDADA -->
+        <div class="p-6 rounded-2xl bg-cyan-950/40 border-2 border-cyan-400 relative flex flex-col justify-between shadow-xl">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-cyan-400 text-slate-950 font-extrabold text-[10px] uppercase">
+            ⭐ Mais Recomendado
+          </div>
+          <div>
+            <div class="text-xs font-bold text-cyan-400 uppercase tracking-wider mb-1">Opção 02</div>
+            <div class="text-lg font-bold text-white mb-2">Escala & IA (Recorrente)</div>
+            <div class="text-2xl font-extrabold text-cyan-400 mb-4">R$ 1.497 <span class="text-xs font-normal text-slate-400">/mês</span></div>
+            <ul class="text-xs text-slate-200 space-y-2 mb-6">
+              <li>• <strong>Landing Page Stitch Inclusa</strong></li>
+              <li>• <strong>Bot IA no WhatsApp 24/7</strong></li>
+              <li>• Gestão de Tráfego Pago Meta/Google</li>
+              <li>• Google Maps Monitorado</li>
+              <li>• Relatórios Quinzenais</li>
+            </ul>
+          </div>
+          <div class="text-[10px] text-cyan-300 text-center py-2 bg-cyan-900/50 rounded-lg font-bold">Máximo retorno sobre investimento</div>
+        </div>
+
+        <!-- Opção 3 -->
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-1">Opção 03</div>
+            <div class="text-lg font-bold text-white mb-2">Dominação 360°</div>
+            <div class="text-2xl font-extrabold text-amber-400 mb-4">R$ 2.997 <span class="text-xs font-normal text-slate-400">/mês</span></div>
+            <ul class="text-xs text-slate-300 space-y-2 mb-6">
+              <li>• Tudo da Opção Escala</li>
+              <li>• <strong>4 Vídeos Cinéticos por Mês</strong></li>
+              <li>• Gestão Completa Google + Meta</li>
+              <li>• Automação de Retenção de Clientes</li>
+              <li>• Atendimento VIP Prioritário</li>
+            </ul>
+          </div>
+          <div class="text-[10px] text-slate-400 text-center py-2 bg-slate-900 rounded-lg">Para líderes de mercado</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. ACEITE & APROVAÇÃO -->
+    <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div>
+        <div class="text-sm font-bold text-white">Como Aprovar Esta Proposta?</div>
+        <div class="text-xs text-slate-400 mt-0.5">Basta clicar no botão ao lado para confirmar o plano escolhido no WhatsApp oficial.</div>
+      </div>
+
+      <a href="https://wa.me/5563999999999?text=Ol%C3%A1%20DLuz!%20Recebi%20a%20proposta%20comercial%20e%20gostaria%20de%20aprovar%20o%20projeto." target="_blank" class="px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-400 to-teal-400 text-slate-950 font-extrabold text-sm shadow-lg hover:scale-105 transition flex items-center gap-2.5 shrink-0">
+        <i class="fa-brands fa-whatsapp text-lg"></i>
+        <span>Aprovar Proposta e Iniciar Projeto</span>
+      </a>
+    </div>
+
+    <!-- SIGNATURE FIELDS (FOR PRINT/PDF) -->
+    <div class="border-t border-white/10 pt-10 grid grid-cols-2 gap-8 text-center text-xs text-slate-400">
+      <div>
+        <div class="border-b border-white/20 pb-2 mb-2 font-semibold text-white">DLuz — Diretor DLuz Digital</div>
+        <div>DLuz Digital LTDA • Tocantins - Brasil</div>
+      </div>
+      <div>
+        <div class="border-b border-white/20 pb-2 mb-2 font-semibold text-white">{{NOME_DO_DECISOR_OU_PROPRIETARIO}}</div>
+        <div>{{NOME_DA_EMPRESA_CLIENTE}}</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
+"""
+    dest_html = r"C:\Users\dluzgg\.gemini\antigravity\scratch\dluz-digital-web\proposta-comercial-modelo.html"
+    with open(dest_html, "w", encoding="utf-8") as f:
+        f.write(html_content)
+    print(f"Modelo HTML da Proposta gerado em: {dest_html}")
+
+if __name__ == "__main__":
+    create_proposal()
