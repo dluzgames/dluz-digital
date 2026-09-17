@@ -15,7 +15,7 @@
 | **Aos Cuidados de** | `{{NOME_DO_DECISOR_OU_PROPRIETARIO}}` |
 | **Localização** | `{{CIDADE_OU_PALMAS}}` — TO |
 | **Responsável Técnico** | **DLuz** — Fundador & Diretor de Tecnologia da DLuz Digital |
-| **Contato Oficial** | WhatsApp: (63) 99999-9999 |
+| **Contato Oficial** | WhatsApp: (63) 98124-9724 | Instagram: @dluz.digital.pso |
 
 ---
 

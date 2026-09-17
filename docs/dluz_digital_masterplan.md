@@ -1,4 +1,4 @@
-# 🚀 DLuz Digital — Masterplan Estratégico & Catálogo de Serviços 360°
+# 🚀 DLuz Digital (Duilio Luz) — Masterplan Estratégico & Catálogo de Serviços 360°
 
 > **"Transformando Empresas com Marketing de Alta Performance, Tecnologia e Inteligência Artificial."**
 
@@ -8,8 +8,8 @@
 
 A maioria das agências tradicionais é lenta, cobra caro, demora semanas para entregar um criativo e não entende nada de tecnologia, programação ou inteligência artificial.
 
-A **DLuz Digital** nasce com um diferencial competitivo imbatível:
-- **Agilidade Extrema impulsionada por IA:** O que uma agência comum leva 1 mês para fazer, a DLuz Digital entrega em dias com qualidade de estúdio e automações proprietárias.
+A **DLuz Digital (Duilio Luz)** nasce com um diferencial competitivo imbatível:
+- **Agilidade Extrema impulsionada por IA:** O que uma agência comum leva 1 mês para fazer, a DLuz Digital (Duilio Luz) entrega em dias com qualidade de estúdio e automações proprietárias.
 - **DNA Técnico Real:** Não fazemos apenas "posts bonitinhos". Criamos ecossistemas completos: sites ultrarrápidos (padrão Google Stitch), bots inteligentes de atendimento 24/7 no WhatsApp, campanhas orientadas a dados e vídeos com retenção cinematográfica.
 - **Foco em Lucro Real (ROI):** O cliente não quer métricas de vaidade (curtidas). Ele quer telefone tocando, WhatsApp apitando com clientes e faturamento no caixa.
 
@@ -19,7 +19,7 @@ A **DLuz Digital** nasce com um diferencial competitivo imbatível:
 
 ```mermaid
 flowchart TD
-    subgraph DLUZ_DIGITAL["🌟 Ecossistema DLuz Digital"]
+    subgraph DLUZ_DIGITAL["🌟 Ecossistema DLuz Digital (Duilio Luz)"]
         direction TB
         A["🌐 Sites & Aplicações Web"]
         B["🎬 Vídeos & Audiovisual de Alta Retenção"]
@@ -98,7 +98,7 @@ flowchart TD
 
 ## 💰 3. Estrutura de Precificação e Esteira de Produtos (Product Ladder)
 
-Para a DLuz Digital crescer com solidez financeira, dividimos as ofertas em 3 níveis:
+Para a DLuz Digital (Duilio Luz) crescer com solidez financeira, dividimos as ofertas em 3 níveis:
 
 | Nível de Oferta | Objetivo | Exemplos de Serviços | Modelo de Cobrança |
 | :--- | :--- | :--- | :--- |
@@ -108,16 +108,16 @@ Para a DLuz Digital crescer com solidez financeira, dividimos as ofertas em 3 n�
 
 ---
 
-## 🎯 4. Dicas Estratégicas para a Marca DLuz Digital
+## 🎯 4. Dicas Estratégicas para a Marca DLuz Digital (Duilio Luz)
 
 ### 1. O Posicionamento: "A Agência Sem Enrolação"
 - O mercado B2B está traumatizado com agências que cobram caro, prometem rios de dinheiro e entregam apenas posts com frases motivacionais que não vendem.
-- O posicionamento da **DLuz Digital** deve ser: **Pragmático, Tecnológico e Orientado a Resultados**.
+- O posicionamento da **DLuz Digital (Duilio Luz)** deve ser: **Pragmático, Tecnológico e Orientado a Resultados**.
 - Frases de impacto para a marca:
   > *"Nós não vendemos curtidas. Nós geramos clientes prontos para comprar no seu WhatsApp."*
   > *"Sua empresa com a tecnologia e a inteligência artificial dos gigantes do mercado."*
 
-### 2. A Força do Canal do YouTube `DLuz Digital`
+### 2. A Força do Canal do YouTube `DLuz Digital (Duilio Luz)`
 - Use o canal oficial para mostrar os **bastidores da tecnologia e estudos de caso reais**!
 - Grave vídeos práticos no canal:
   - *"Como criamos um bot no WhatsApp que atende 500 clientes por dia sem funcionário"*
@@ -126,9 +126,9 @@ Para a DLuz Digital crescer com solidez financeira, dividimos as ofertas em 3 n�
 - O YouTube é a maior fonte de autoridade e prospecção passiva: empresários assistem e comentam *"quanto você cobra para fazer isso na minha empresa?"*.
 
 ### 3. Proposta Comercial Irresistível (O "PDF Magnético")
-- Toda proposta da DLuz Digital deve ser entregue em um PDF interativo impecável, com:
+- Toda proposta da DLuz Digital (Duilio Luz) deve ser entregue em um PDF interativo impecável, com:
   1. O problema atual do cliente (dor nítida).
-  2. A solução técnica da DLuz Digital em etapas claras.
+  2. A solução técnica da DLuz Digital (Duilio Luz) em etapas claras.
   3. O ROI estimado (retorno sobre o investimento).
   4. Três opções de pacotes (Básico, Recomendado/Mais Popular e Completo).
   5. Botão direto para aprovação e assinatura digital no WhatsApp.
