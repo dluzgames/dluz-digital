@@ -1,13 +1,20 @@
 import os
 
 def create_landing_page():
-    html_content = """<!DOCTYPE html>
+    html_content = '''<!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DLuz Digital | Marketing de Alta Performance, Tecnologia & IA para Empresas</title>
-  <meta name="description" content="A agência de tecnologia e marketing inteligente do Tocantins. Sites ultrarrápidos, Google Meu Negócio, Tráfego Pago, Vídeos de Alta Retenção e Bots com IA 24/7 no WhatsApp." />
+  <title>DLuz Digital | Redes Sociais, Automações & Tecnologia para Empresas</title>
+  <meta name="description" content="Destaque sua empresa com Redes Sociais Magnéticas, Top 1 no Google Maps e Atendimento Automático 24/7 no WhatsApp. Resultados reais para negócios no Tocantins e em todo o Brasil." />
+  
+  <!-- Favicon & App Icon -->
+  <link rel="icon" type="image/jpeg" href="assets/img/dluz_digital_logo_squircle.jpg" />
+  <link rel="apple-touch-icon" href="assets/img/dluz_digital_logo_squircle.jpg" />
+  <meta property="og:image" content="assets/img/dluz_digital_logo_infinity.jpg" />
+  <meta property="og:title" content="DLuz Digital | Redes Sociais, Automações Inteligentes & Tecnologia" />
+  <meta property="og:description" content="Multiplique as vendas da sua empresa com Redes Sociais Magnéticas, Top 1 no Google Maps e Atendimento Automático 24/7 no WhatsApp." />
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -135,17 +142,15 @@ def create_landing_page():
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
       <!-- Brand Logo -->
-      <a href="#" class="flex items-center gap-3 group">
-        <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-brand-cyan to-brand-gold p-0.5 flex items-center justify-center shadow-glow-cyan transition group-hover:scale-105">
-          <div class="w-full h-full bg-brand-bgDark rounded-[10px] flex items-center justify-center">
-            <span class="text-xl font-extrabold text-white tracking-tighter">D<span class="text-brand-cyan">L</span></span>
-          </div>
+      <a href="#" class="flex items-center gap-3.5 group">
+        <div class="relative w-11 h-11 sm:w-12 sm:h-12 rounded-2xl overflow-hidden p-[1.5px] bg-gradient-to-tr from-brand-cyan via-teal-400 to-brand-gold shadow-glow-cyan transition duration-300 group-hover:scale-105">
+          <img src="assets/img/dluz_digital_logo_squircle.jpg" alt="DLuz Digital Logo Oficial" class="w-full h-full object-cover rounded-[14px]" />
         </div>
         <div class="flex flex-col">
-          <span class="text-xl font-bold tracking-tight text-white group-hover:text-brand-cyan transition">
-            DLUZ <span class="text-brand-gold">DIGITAL</span>
+          <span class="text-xl font-extrabold tracking-tight text-white group-hover:text-brand-cyan transition flex items-center gap-1.5">
+            DLUZ <span class="bg-gradient-to-r from-brand-cyan to-teal-300 bg-clip-text text-transparent">DIGITAL</span>
           </span>
-          <span class="text-[10px] uppercase tracking-widest text-slate-400 font-semibold">Tech & Marketing IA</span>
+          <span class="text-[10px] uppercase tracking-widest text-slate-400 font-semibold">Redes Sociais • Automação • IA</span>
         </div>
       </a>
 
@@ -162,7 +167,8 @@ def create_landing_page():
 
       <!-- CTA Button -->
       <div class="flex items-center gap-4">
-        <a href="https://wa.me/5563999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20DLuz%20Digital%20e%20gostaria%20de%20uma%20an%C3%A1lise%20gratuita%20para%20minha%20empresa." target="_blank" class="relative group overflow-hidden rounded-xl px-5 py-2.5 bg-gradient-to-r from-brand-cyan to-cyan-400 text-brand-bgDark font-bold text-sm shadow-glow-cyan hover:shadow-cyan-400/50 transition-all duration-300 flex items-center gap-2">
+        <a href="https://www.instagram.com/dluz.digital.pso" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-pink-400 text-lg transition hidden sm:inline-flex items-center gap-1.5" title="Instagram Oficial @dluz.digital.pso"><i class="fa-brands fa-instagram text-xl text-pink-500"></i></a>
+        <a href="https://wa.me/5563981249724?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20DLuz%20Digital%20e%20gostaria%20de%20uma%20an%C3%A1lise%20gratuita%20para%20minha%20empresa." target="_blank" class="relative group overflow-hidden rounded-xl px-5 py-2.5 bg-gradient-to-r from-brand-cyan to-cyan-400 text-brand-bgDark font-bold text-sm shadow-glow-cyan hover:shadow-cyan-400/50 transition-all duration-300 flex items-center gap-2">
           <i class="fa-brands fa-whatsapp text-base"></i>
           <span>Falar com Especialista</span>
         </a>
@@ -186,27 +192,27 @@ def create_landing_page():
           <!-- Badge -->
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-brand-cyan mb-6 backdrop-blur-md">
             <i class="fa-solid fa-bolt text-brand-gold"></i>
-            <span>A Agência Tech & IA da Nova Era</span>
+            <span>Redes Sociais Magnéticas & Automações que Vendem</span>
           </div>
 
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6">
             Multiplique as Vendas da sua Empresa com <br />
-            <span class="stitch-gradient-text">Tecnologia, IA e Marketing de Elite.</span>
+            <span class="stitch-gradient-text">Redes Sociais, Automação e Tecnologia.</span>
           </h1>
 
           <p class="text-base sm:text-lg text-slate-300 font-body mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-            Elimine a lentidão das agências tradicionais. Colocamos sua empresa no <strong>Topo do Google Maps</strong>, criamos <strong>Sites Ultrarrápidos</strong>, <strong>Vídeos de Retenção Extrema</strong> e <strong>Robôs com IA que vendem 24/7 no seu WhatsApp</strong>.
+            A galera da cidade está no Instagram e no WhatsApp o dia todo. Nós transformamos seguidores em compradores: criamos um <strong>Instagram Magnético</strong> com vídeos de alta retenção, colocamos sua empresa no <strong>Topo do Google Maps</strong> e ativamos <strong>Robôs com Atendimento Automático 24/7</strong> que respondem na hora, tiram dúvidas e fecham negócios.
           </p>
 
           <!-- Action Buttons -->
           <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
-            <a href="https://wa.me/5563999999999?text=Ol%C3%A1!%20Quero%20uma%20consultoria%20gratuita%20para%20minha%20empresa%20com%20a%20DLuz%20Digital." target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-brand-cyan via-cyan-400 to-teal-400 text-brand-bgDark font-extrabold text-base shadow-glow-cyan hover:scale-[1.02] transition flex items-center justify-center gap-3">
+            <a href="https://wa.me/5563981249724?text=Ol%C3%A1!%20Quero%20uma%20consultoria%20gratuita%20para%20minha%20empresa%20com%20a%20DLuz%20Digital." target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-brand-cyan via-cyan-400 to-teal-400 text-brand-bgDark font-extrabold text-base shadow-glow-cyan hover:scale-[1.02] transition flex items-center justify-center gap-3">
               <i class="fa-brands fa-whatsapp text-lg"></i>
               <span>Quero uma Consultoria Gratuita</span>
             </a>
             <a href="#simulador" class="w-full sm:w-auto px-7 py-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold text-base transition flex items-center justify-center gap-2.5">
               <i class="fa-solid fa-robot text-brand-cyan"></i>
-              <span>Testar Robô com IA</span>
+              <span>Testar Robô de Atendimento</span>
             </a>
           </div>
 
@@ -217,12 +223,12 @@ def create_landing_page():
               <div class="text-xs text-slate-400 font-medium">Google Maps Local</div>
             </div>
             <div>
-              <div class="text-2xl lg:text-3xl font-extrabold text-brand-cyan">24/7</div>
-              <div class="text-xs text-slate-400 font-medium">Atendimento com IA</div>
+              <div class="text-2xl lg:text-3xl font-extrabold text-brand-cyan">3 seg</div>
+              <div class="text-xs text-slate-400 font-medium">Resposta no WhatsApp</div>
             </div>
             <div>
-              <div class="text-2xl lg:text-3xl font-extrabold text-brand-gold">0%</div>
-              <div class="text-xs text-slate-400 font-medium">Enrolação e Desculpas</div>
+              <div class="text-2xl lg:text-3xl font-extrabold text-brand-gold">100%</div>
+              <div class="text-xs text-slate-400 font-medium">Foco em Vendas Reais</div>
             </div>
           </div>
 
@@ -248,32 +254,26 @@ def create_landing_page():
                 </span>
               </div>
 
-              <!-- Composition: DLuz & Frya -->
-              <div class="relative h-80 rounded-2xl overflow-hidden bg-gradient-to-b from-slate-900 to-slate-950 flex items-end justify-center">
-                
-                <!-- Founder Photo (DLuz) -->
-                <img src="assets/img/dluz_founder.jpg" alt="DLuz Fundador DLuz Digital" class="absolute left-2 bottom-0 w-44 h-72 object-cover object-top rounded-xl border border-white/10 shadow-lg" />
-
-                <!-- Mascote Frya -->
-                <img src="assets/img/frya_mascote.png" alt="Frya Mascote e Assistente IA Oficial" class="absolute right-0 bottom-0 w-48 h-64 object-contain filter drop-shadow-[0_10px_20px_rgba(255,184,0,0.3)] animate-float" />
+              <!-- Composition: DLuz & Frya Executivos -->
+              <div class="relative h-80 sm:h-96 rounded-2xl overflow-hidden group shadow-2xl border border-white/10">
+                <img src="assets/img/dluz_frya_executive.jpg" alt="DLuz & Frya - Estrategista Humano e IA DLuz Digital" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition duration-700 ease-out" />
                 
                 <!-- Overlay Gradient -->
-                <div class="absolute inset-0 bg-gradient-to-t from-brand-bgDark via-transparent to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-bgDark/95 via-transparent to-transparent"></div>
 
                 <!-- Bottom Label -->
                 <div class="absolute bottom-3 inset-x-3 bg-brand-cardDark/90 backdrop-blur-md p-3 rounded-xl border border-white/10 flex items-center justify-between">
                   <div>
                     <div class="text-xs font-bold text-white flex items-center gap-1.5">
-                      <span>DLuz & Frya</span>
+                      <span>Duilio Luz & Frya</span>
                       <i class="fa-solid fa-circle-check text-brand-cyan text-[11px]"></i>
                     </div>
-                    <div class="text-[10px] text-slate-400">Estrategista Humano + IA 24/7</div>
+                    <div class="text-[10px] text-slate-300 font-medium">Duilio Luz (Fundador) + IA Frya 24/7</div>
                   </div>
                   <span class="text-xs font-bold text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded border border-brand-gold/20">
                     Sua Empresa no Topo
                   </span>
                 </div>
-
               </div>
 
               <!-- Floating Live Stats -->
@@ -347,7 +347,43 @@ def create_landing_page():
           </ul>
         </div>
 
-        <!-- 2. Sites & Landing Pages de Elite -->
+        <!-- 2. Gestão de Redes Sociais & Reels Magnéticos -->
+        <div class="stitch-card rounded-2xl p-7 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-pink-500/10 border border-pink-500/20 text-pink-400 flex items-center justify-center text-2xl mb-6 shadow-glow-red">
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Redes Sociais & Reels Magnéticos</h3>
+            <p class="text-sm text-slate-300 font-body mb-6 leading-relaxed">
+              A galera da cidade consome Instagram o dia todo. Criamos uma <strong>identidade visual magnética</strong>, posts profissionais, carrosséis estratégicos e Reels de alta retenção que geram autoridade e transformam seguidores em clientes pagantes.
+            </p>
+          </div>
+          <ul class="text-xs text-slate-400 space-y-2 border-t border-white/5 pt-4">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Design de posts e carrosséis de alto padrão</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Edição de Reels com gancho dinâmico e retenção</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Estratégia de engajamento para lotar o direct</li>
+          </ul>
+        </div>
+
+        <!-- 3. Automação de WhatsApp & Atendente 24/7 -->
+        <div class="stitch-card rounded-2xl p-7 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-teal-500/10 border border-teal-500/20 text-teal-400 flex items-center justify-center text-2xl mb-6 shadow-glow-cyan">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Automação de WhatsApp & Direct 24/7</h3>
+            <p class="text-sm text-slate-300 font-body mb-6 leading-relaxed">
+              Um atendente automático que responde em <strong>menos de 3 segundos</strong>. Envia catálogo/cardápio, tira dúvidas frequentes, escuta áudios e agenda horários sem você perder vendas por demora no atendimento.
+            </p>
+          </div>
+          <ul class="text-xs text-slate-400 space-y-2 border-t border-white/5 pt-4">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Resposta instantânea no WhatsApp e Direct</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Envio automático de catálogos e links de Pix</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> IA discreta que soa 100% amigável e natural</li>
+          </ul>
+        </div>
+
+        <!-- 4. Sites & Landing Pages de Elite -->
         <div class="stitch-card rounded-2xl p-7 flex flex-col justify-between">
           <div>
             <div class="w-14 h-14 rounded-2xl bg-brand-cyan/10 border border-brand-cyan/20 text-brand-cyan flex items-center justify-center text-2xl mb-6 shadow-glow-cyan">
@@ -362,42 +398,6 @@ def create_landing_page():
             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Zero lentidão do WordPress tradicional</li>
             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Design 100% responsivo para celulares</li>
             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Rastreamento de conversões (Pixel / Tag Manager)</li>
-          </ul>
-        </div>
-
-        <!-- 3. Bots de IA no WhatsApp -->
-        <div class="stitch-card rounded-2xl p-7 flex flex-col justify-between">
-          <div>
-            <div class="w-14 h-14 rounded-2xl bg-teal-500/10 border border-teal-500/20 text-teal-400 flex items-center justify-center text-2xl mb-6 shadow-glow-cyan">
-              <i class="fa-brands fa-whatsapp"></i>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-2">Bots com IA & Atendimento 24/7</h3>
-            <p class="text-sm text-slate-300 font-body mb-6 leading-relaxed">
-              Um atendente com inteligência artificial que responde clientes às 2 da manhã, tira dúvidas, <strong>escuta e entende áudios</strong>, agenda reuniões ou consultas e envia links de pagamento.
-            </p>
-          </div>
-          <ul class="text-xs text-slate-400 space-y-2 border-t border-white/5 pt-4">
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Transcrição e resposta a áudios do WhatsApp</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Agendamento sincronizado com Google Agenda</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Disparo automático de lembretes anti-falta</li>
-          </ul>
-        </div>
-
-        <!-- 4. Vídeos de Alta Retenção & Reels -->
-        <div class="stitch-card rounded-2xl p-7 flex flex-col justify-between">
-          <div>
-            <div class="w-14 h-14 rounded-2xl bg-brand-red/10 border border-brand-red/20 text-brand-red flex items-center justify-center text-2xl mb-6 shadow-glow-red">
-              <i class="fa-solid fa-clapperboard"></i>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-2">Vídeos Comerciais & Motion Cinético</h3>
-            <p class="text-sm text-slate-300 font-body mb-6 leading-relaxed">
-              Vídeos sem enrolação com gancho imediato, ritmo dinâmico, efeitos sonoros imersivos (SFX) e motion graphics que prendem a atenção no Instagram, TikTok e YouTube.
-            </p>
-          </div>
-          <ul class="text-xs text-slate-400 space-y-2 border-t border-white/5 pt-4">
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Padrão oficial de retenção HyperFrames</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Locução encorpada com IA (OmniVoice)</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Roteiro persuasivo com foco em vendas</li>
           </ul>
         </div>
 
@@ -494,7 +494,7 @@ def create_landing_page():
             <div class="bg-[#202C33] px-4 py-3 rounded-2xl flex items-center justify-between mb-3 text-white">
               <div class="flex items-center gap-3">
                 <div class="relative">
-                  <img src="assets/img/frya_mascote.png" alt="Frya" class="w-10 h-10 rounded-full object-cover bg-slate-800 border border-brand-gold" />
+                  <img src="assets/img/frya_executive_formal.jpg" alt="Frya Executiva" class="w-10 h-10 rounded-full object-cover bg-slate-800 border-2 border-brand-gold shadow-md" />
                   <span class="w-3 h-3 rounded-full bg-green-500 border-2 border-[#202C33] absolute bottom-0 right-0"></span>
                 </div>
                 <div>
@@ -561,11 +561,11 @@ def create_landing_page():
           <!-- Founder Photo -->
           <div class="lg:col-span-4 flex justify-center">
             <div class="relative w-64 h-80 sm:w-72 sm:h-96 rounded-2xl overflow-hidden border-2 border-brand-cyan/30 shadow-glow-cyan">
-              <img src="assets/img/dluz_profile.jpg" alt="DLuz Fundador da DLuz Digital" class="w-full h-full object-cover object-top" />
+              <img src="assets/img/dluz_founder_formal.jpg" alt="DLuz Fundador da DLuz Digital" class="w-full h-full object-cover object-top" />
               <div class="absolute inset-0 bg-gradient-to-t from-brand-bgDark via-transparent to-transparent"></div>
               <div class="absolute bottom-4 inset-x-4 text-center">
                 <div class="text-lg font-bold text-white flex items-center justify-center gap-1.5">
-                  <span>DLuz</span>
+                  <span>Duilio Luz</span>
                   <i class="fa-solid fa-circle-check text-brand-cyan"></i>
                 </div>
                 <div class="text-xs text-brand-gold font-semibold">Fundador & Diretor de Tecnologia</div>
@@ -585,7 +585,7 @@ def create_landing_page():
             </h2>
 
             <p class="text-slate-300 font-body text-base leading-relaxed mb-6">
-              Como desenvolvedor, produtor audiovisual e especialista em inteligência artificial, cansei de ver pequenos e médios empresários do Tocantins pagando caro por agências que só sabem postar fotos bonitinhas sem nenhum resultado no caixa.
+              Como desenvolvedor, produtor audiovisual e especialista em inteligência artificial, me chamo <strong>Duilio Luz</strong> (conhecido como <strong>DLuz</strong>) e criei a DLuz Digital ao ver empresários de Paraíso do Tocantins, Palmas e região pagando caro por agências que só sabem postar fotos bonitinhas sem nenhum resultado no caixa.
             </p>
 
             <p class="text-slate-300 font-body text-base leading-relaxed mb-6">
@@ -654,7 +654,7 @@ def create_landing_page():
               <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-brand-cyan"></i> Proposta Comercial em PDF</li>
             </ul>
           </div>
-          <a href="https://wa.me/5563999999999?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Plano%20Start%20Local%20da%20DLuz%20Digital." target="_blank" class="w-full py-3.5 rounded-xl bg-white/5 hover:bg-white/10 text-white font-bold text-sm text-center border border-white/10 transition">
+          <a href="https://wa.me/5563981249724?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Plano%20Start%20Local%20da%20DLuz%20Digital." target="_blank" class="w-full py-3.5 rounded-xl bg-white/5 hover:bg-white/10 text-white font-bold text-sm text-center border border-white/10 transition">
             Escolher Plano Start
           </a>
         </div>
@@ -682,7 +682,7 @@ def create_landing_page():
               <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-brand-cyan"></i> Relatórios Quinzenais de Vendas</li>
             </ul>
           </div>
-          <a href="https://wa.me/5563999999999?text=Ol%C3%A1!%20Quero%20contratar%20o%20Plano%20Escala%20%26%20IA%20da%20DLuz%20Digital." target="_blank" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-brand-cyan to-teal-400 text-brand-bgDark font-extrabold text-sm text-center shadow-glow-cyan hover:scale-[1.02] transition">
+          <a href="https://wa.me/5563981249724?text=Ol%C3%A1!%20Quero%20contratar%20o%20Plano%20Escala%20%26%20IA%20da%20DLuz%20Digital." target="_blank" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-brand-cyan to-teal-400 text-brand-bgDark font-extrabold text-sm text-center shadow-glow-cyan hover:scale-[1.02] transition">
             Contratar Plano Escala
           </a>
         </div>
@@ -707,7 +707,7 @@ def create_landing_page():
               <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-brand-gold"></i> Atendimento Prioritário VIP</li>
             </ul>
           </div>
-          <a href="https://wa.me/5563999999999?text=Ol%C3%A1!%20Quero%20uma%20proposta%20personalizada%20do%20Plano%20Domina%C3%A7%C3%A3o%20360%C2%B0." target="_blank" class="w-full py-3.5 rounded-xl bg-white/5 hover:bg-white/10 text-white font-bold text-sm text-center border border-white/10 transition">
+          <a href="https://wa.me/5563981249724?text=Ol%C3%A1!%20Quero%20uma%20proposta%20personalizada%20do%20Plano%20Domina%C3%A7%C3%A3o%20360%C2%B0." target="_blank" class="w-full py-3.5 rounded-xl bg-white/5 hover:bg-white/10 text-white font-bold text-sm text-center border border-white/10 transition">
             Falar com a Diretoria
           </a>
         </div>
@@ -734,7 +734,7 @@ def create_landing_page():
         Não atendemos duas empresas do mesmo segmento na mesma cidade. Garanta a exclusividade da DLuz Digital para o seu negócio antes do seu concorrente.
       </p>
 
-      <a href="https://wa.me/5563999999999?text=Ol%C3%A1%20DLuz!%20Quero%20agendar%20uma%20conversa%20e%20saber%20se%20o%20meu%20setor%20est%C3%A1%20dispon%C3%ADvel%20na%20minha%20cidade." target="_blank" class="inline-flex items-center gap-3 px-10 py-5 rounded-2xl bg-gradient-to-r from-brand-cyan via-cyan-400 to-teal-400 text-brand-bgDark font-extrabold text-lg shadow-glow-cyan hover:scale-105 transition">
+      <a href="https://wa.me/5563981249724?text=Ol%C3%A1%20DLuz!%20Quero%20agendar%20uma%20conversa%20e%20saber%20se%20o%20meu%20setor%20est%C3%A1%20dispon%C3%ADvel%20na%20minha%20cidade." target="_blank" class="inline-flex items-center gap-3 px-10 py-5 rounded-2xl bg-gradient-to-r from-brand-cyan via-cyan-400 to-teal-400 text-brand-bgDark font-extrabold text-lg shadow-glow-cyan hover:scale-105 transition">
         <i class="fa-brands fa-whatsapp text-2xl"></i>
         <span>Garantir Vaga da Minha Empresa no WhatsApp</span>
       </a>
@@ -747,14 +747,12 @@ def create_landing_page():
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
       
       <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-brand-cyan to-brand-gold p-0.5 flex items-center justify-center">
-          <div class="w-full h-full bg-brand-bgDark rounded-[6px] flex items-center justify-center font-bold text-white text-xs">
-            DL
-          </div>
+        <div class="w-9 h-9 rounded-xl overflow-hidden border border-white/10 shadow-sm flex-shrink-0">
+          <img src="assets/img/dluz_digital_logo_squircle.jpg" alt="DLuz Digital Logo" class="w-full h-full object-cover" />
         </div>
         <div>
-          <span class="font-bold text-white">DLUZ DIGITAL</span> — Tecnologia & Marketing com IA
-          <div class="text-[10px] text-slate-500">Tocantins • Palmas • Brasil</div>
+          <span class="font-bold text-white">DLUZ DIGITAL</span> — Redes Sociais, Automações & Tecnologia
+          <div class="text-[10px] text-slate-500">Paraíso do Tocantins • Palmas • Brasil</div>
         </div>
       </div>
 
@@ -762,7 +760,8 @@ def create_landing_page():
         <a href="#servicos" class="hover:text-brand-cyan transition">Serviços</a>
         <a href="#fundador" class="hover:text-brand-cyan transition">Fundador</a>
         <a href="#planos" class="hover:text-brand-cyan transition">Planos</a>
-        <a href="https://wa.me/5563999999999" target="_blank" class="text-brand-cyan hover:underline">Contato WhatsApp</a>
+        <a href="https://www.instagram.com/dluz.digital.pso" target="_blank" class="hover:text-pink-400 transition flex items-center gap-1.5"><i class="fa-brands fa-instagram text-pink-500"></i> @dluz.digital.pso</a>
+        <a href="https://wa.me/5563981249724" target="_blank" class="text-brand-cyan hover:underline flex items-center gap-1.5"><i class="fa-brands fa-whatsapp text-green-400"></i> (63) 98124-9724</a>
       </div>
 
       <div class="text-slate-500 text-center sm:text-right">
@@ -773,7 +772,7 @@ def create_landing_page():
   </footer>
 
   <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/5563999999999?text=Ol%C3%A1%20DLuz%20Digital!%20Vim%20pelo%20site%20e%20quero%20mais%20informa%C3%A7%C3%B5es." target="_blank" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 text-white flex items-center justify-center text-2xl shadow-lg hover:scale-110 transition duration-300 group">
+  <a href="https://wa.me/5563981249724?text=Ol%C3%A1%20DLuz%20Digital!%20Vim%20pelo%20site%20e%20quero%20mais%20informa%C3%A7%C3%B5es." target="_blank" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 text-white flex items-center justify-center text-2xl shadow-lg hover:scale-110 transition duration-300 group">
     <span class="absolute w-full h-full rounded-full bg-teal-400/40 animate-ping"></span>
     <i class="fa-brands fa-whatsapp relative z-10"></i>
   </a>
@@ -821,7 +820,7 @@ def create_landing_page():
           <div class="max-w-[85%] bg-[#202C33] p-3 rounded-2xl rounded-tl-none shadow-sm leading-relaxed border border-white/5">
             <p>${botReply}</p>
             <div class="mt-2 pt-2 border-t border-white/5 flex items-center justify-between">
-              <a href="https://wa.me/5563999999999?text=${encodeURIComponent(text)}" target="_blank" class="text-[11px] text-brand-cyan font-bold hover:underline flex items-center gap-1">
+              <a href="https://wa.me/5563981249724?text=${encodeURIComponent(text)}" target="_blank" class="text-[11px] text-brand-cyan font-bold hover:underline flex items-center gap-1">
                 <i class="fa-brands fa-whatsapp"></i> Continuar no WhatsApp Real &rarr;
               </a>
               <span class="text-[9px] text-slate-400">Agora • ✓✓</span>
@@ -836,12 +835,11 @@ def create_landing_page():
 
 </body>
 </html>
-"""
-    dest = r"C:\Users\dluzgg\.gemini\antigravity\scratch\dluz-digital-web\index.html"
-    os.makedirs(os.path.dirname(dest), exist_ok=True)
-    with open(dest, "w", encoding="utf-8") as f:
+'''
+    output_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'index.html')
+    with open(output_path, 'w', encoding='utf-8') as f:
         f.write(html_content)
-    print(f"Landing Page gerada com sucesso em: {dest}")
+    print('Landing page gerada!')
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     create_landing_page()
