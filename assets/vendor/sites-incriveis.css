@@ -160,3 +160,10 @@
   flex-wrap: wrap;
   transform: none !important;
 }
+
+@media print {
+  [data-fx] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
