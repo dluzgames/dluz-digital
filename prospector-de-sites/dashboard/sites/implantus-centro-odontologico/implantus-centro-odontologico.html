@@ -325,129 +325,8 @@
             color: var(--text-muted);
         }
 
-        /* SEÇÃO INTERATIVA: SLIDER ANTES E DEPOIS */
-        .transformation-section {
-            padding: 90px 0;
-            background: #FAF7F2;
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-        }
-        .section-intro {
-            text-align: center;
-            max-width: 680px;
-            margin: 0 auto 48px;
-        }
-        .section-intro h2 {
-            font-family: var(--serif);
-            font-size: clamp(32px, 3.8vw, 48px);
-            color: var(--wine);
-            line-height: 1.15;
-            margin-bottom: 14px;
-        }
-        .section-intro p {
-            font-size: 16px;
-            color: var(--text-muted);
-        }
 
-        .comparator-card {
-            background: #fff;
-            border-radius: 28px;
-            padding: 24px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.06);
-            border: 1px solid var(--border);
-            max-width: 960px;
-            margin: 0 auto;
-        }
-        .split-slider-wrapper {
-            position: relative;
-            width: 100%;
-            height: 460px;
-            border-radius: 20px;
-            overflow: hidden;
-            user-select: none;
-            cursor: ew-resize;
-            background: #111;
-        }
-        .split-img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            pointer-events: none;
-        }
-        .split-before {
-            z-index: 1;
-        }
-        .split-after-wrapper {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 50%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 2;
-            border-right: 2px solid #fff;
-        }
-        .split-after {
-            width: 960px;
-            max-width: none;
-            height: 100%;
-            object-fit: cover;
-        }
-        .slider-handle {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 44px;
-            height: 44px;
-            background: #fff;
-            color: var(--wine);
-            border-radius: 50%;
-            box-shadow: 0 4px 18px rgba(0,0,0,0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 10;
-            font-size: 13px;
-            font-weight: 900;
-            pointer-events: none;
-            border: 2px solid var(--wine);
-        }
-        .badge-before, .badge-after {
-            position: absolute;
-            top: 20px;
-            padding: 6px 14px;
-            border-radius: 30px;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            z-index: 5;
-            backdrop-filter: blur(8px);
-        }
-        .badge-before {
-            right: 20px;
-            background: rgba(30, 27, 24, 0.85);
-            color: #fff;
-        }
-        .badge-after {
-            left: 20px;
-            background: rgba(107, 20, 34, 0.9);
-            color: #fff;
-            border: 1px solid rgba(197, 160, 89, 0.4);
-        }
-        .slider-instructions {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 8px;
-            margin-top: 14px;
-            font-size: 13px;
-            color: var(--text-muted);
-        }
+
 
         /* Card de Depoimento Real do Instagram 2026 */
         .real-quote-card {
@@ -735,7 +614,6 @@
 
         @media (max-width: 900px) {
             .hero-grid, .doctor-grid, .footer-grid, .insta-grid { grid-template-columns: 1fr; }
-            .split-slider-wrapper { height: 320px; }
             .nav-menu { display: none; }
             .wizard-options { grid-template-columns: 1fr; }
             .main-hero-img { height: 340px; }
@@ -775,7 +653,6 @@
             </a>
 
             <ul class="nav-menu">
-                <li><a href="#transformacao">Casos Clínicos</a></li>
                 <li><a href="#especialista">Dr. Guilherme Pasquali</a></li>
                 <li><a href="#simulador">Simulador 3D</a></li>
                 <li><a href="#equipe">Corpo Clínico</a></li>
@@ -807,8 +684,8 @@
                     <a href="https://wa.me/5563984812000?text=Olá!%20Gostaria%20de%20conversar%20sobre%20meu%20tratamento%20de%20implantes." target="_blank" class="btn-gold">
                         Agendar no WhatsApp Oficial
                     </a>
-                    <a href="#transformacao" class="btn-ghost">
-                        Ver Casos Reais ▾
+                    <a href="#especialista" class="btn-ghost">
+                        Conhecer o Especialista ▾
                     </a>
                 </div>
 
@@ -843,60 +720,6 @@
             </div>
         </div>
     </header>
-
-    <!-- SEÇÃO INTERATIVA: SLIDER ANTES E DEPOIS (DIAGNÓSTICO DIGITAL VS SORRISO DEFINITIVO) -->
-    <section class="transformation-section" id="transformacao">
-        <div class="container">
-            <div class="section-intro">
-                <div class="kicker" style="justify-content: center;">
-                    <span class="kicker-line"></span>
-                    Tecnologia & Resultado Clínico
-                    <span class="kicker-line"></span>
-                </div>
-                <h2>A Transformação em Detalhes</h2>
-                <p>Arraste o divisor central para visualizar a precisão do Planejamento Digital 3D (Clinicorp) e o Sorriso Final Reabilitado.</p>
-            </div>
-
-            <div class="comparator-card">
-                <div class="split-slider-wrapper" id="sliderWrapper">
-                    <span class="badge-after">Resultado · Sorriso Seguro</span>
-                    <span class="badge-before">Diagnóstico · Raio-X Digital 3D</span>
-
-                    <!-- Imagem Antes: Raio-X Panorâmico Digital Recente no Clinicorp -->
-                    <img src="fotos_instagram/insta_foto_4.jpg" alt="Diagnóstico e Planejamento Digital de Implantes" class="split-img split-before">
-
-                    <!-- Imagem Depois com máscara de corte: Sorriso Reabilitado Recente -->
-                    <div class="split-after-wrapper" id="afterWrapper">
-                        <img src="fotos_instagram/insta_foto_3.jpg" alt="Resultado de Reabilitação Oral com Implantes" class="split-img split-after">
-                    </div>
-
-                    <!-- Divisor Arrastável -->
-                    <div class="slider-handle" id="sliderHandle">
-                        <span>◂ ▸</span>
-                    </div>
-                </div>
-
-                <div class="slider-instructions">
-                    <span>👆 <strong>Clique e arraste</strong> horizontalmente para comparar o planejamento e o resultado</span>
-                </div>
-
-                <!-- Depoimento Real do Post de 26 de Agosto de 2026 -->
-                <div class="real-quote-card">
-                    <div>
-                        <p class="quote-text">
-                            “Eu deixei de comprar um automóvel para investir no meu tratamento dentário na Implantus. Conquistei liberdade, mastigação e qualidade de vida!”
-                        </p>
-                        <p class="quote-author">
-                            — Relato real de paciente reabilitado com Protocolo sobre Implantes (@implantus.co)
-                        </p>
-                    </div>
-                    <a href="https://www.instagram.com/p/DcgP_Asmy-M/?img_index=1" target="_blank" class="btn-ghost" style="white-space: nowrap;">
-                        Ver post original ↗
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- SEÇÃO EDITORIAL DO DOUTOR RESPONSÁVEL -->
     <section class="doctor-section" id="especialista">
@@ -1137,44 +960,7 @@
 
     <!-- SCRIPTS INTERATIVOS -->
     <script>
-        // 1. SLIDER ANTES E DEPOIS INTERATIVO
-        const sliderWrapper = document.getElementById('sliderWrapper');
-        const afterWrapper = document.getElementById('afterWrapper');
-        const sliderHandle = document.getElementById('sliderHandle');
-        let isSliding = false;
-
-        function setSliderPosition(x) {
-            const rect = sliderWrapper.getBoundingClientRect();
-            let pos = (x - rect.left) / rect.width;
-            if (pos < 0.05) pos = 0.05;
-            if (pos > 0.95) pos = 0.95;
-            const percent = pos * 100;
-            afterWrapper.style.width = percent + '%';
-            sliderHandle.style.left = percent + '%';
-        }
-
-        sliderWrapper.addEventListener('mousedown', (e) => {
-            isSliding = true;
-            setSliderPosition(e.clientX);
-        });
-        window.addEventListener('mouseup', () => { isSliding = false; });
-        window.addEventListener('mousemove', (e) => {
-            if (!isSliding) return;
-            setSliderPosition(e.clientX);
-        });
-
-        // Touch support para celulares e tablets
-        sliderWrapper.addEventListener('touchstart', (e) => {
-            isSliding = true;
-            setSliderPosition(e.touches[0].clientX);
-        });
-        window.addEventListener('touchend', () => { isSliding = false; });
-        window.addEventListener('touchmove', (e) => {
-            if (!isSliding) return;
-            setSliderPosition(e.touches[0].clientX);
-        });
-
-        // 2. SIMULADOR EM 3 PASSOS (WIZARD)
+        // 1. SIMULADOR EM 3 PASSOS (WIZARD)
         let selectedGoal = '';
         let selectedTime = '';
 
