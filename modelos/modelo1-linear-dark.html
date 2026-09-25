@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DLuz Digital — Infraestrutura de Crescimento B2B | Modelo 1 (Linear Dark)</title>
+  <title>DLuz Digital — Infraestrutura de Crescimento B2B | Modelo 1 (Linear Obsidian)</title>
   <meta name="description" content="Engenharia de aquisição de clientes para empresas: Redes Sociais com alta retenção, Top 1 no Google Maps e Atendimento Automático 24/7 via WhatsApp." />
   
   <link rel="icon" type="image/png" href="../assets/img/DLuz_Digital_Simbolo_Infinity_SemFundo.png" />
   
+  <!-- Sites Incríveis Engine CSS -->
+  <link rel="stylesheet" href="../assets/vendor/sites-incriveis.css" />
+
   <!-- Fonts: Plus Jakarta Sans (Display) + Inter (Body) + JetBrains Mono (Tech/Metrics) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,16 +26,14 @@
         extend: {
           colors: {
             obsidian: {
-              DEFAULT: '#08090C',
+              DEFAULT: '#07080B',
               surface: '#0E1117',
-              card: '#131720',
+              card: '#121620',
               border: 'rgba(255, 255, 255, 0.08)',
-              borderHover: 'rgba(0, 229, 255, 0.35)',
             },
             cyan: {
               accent: '#00E5FF',
               dim: '#00A3B5',
-              glow: 'rgba(0, 229, 255, 0.15)',
             }
           },
           fontFamily: {
@@ -47,12 +48,10 @@
 
   <style>
     body {
-      background-color: #08090C;
+      background-color: #07080B;
       color: #E2E8F0;
-      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     }
     
-    /* Fine background technical grid */
     .bg-tech-grid {
       background-size: 40px 40px;
       background-image: 
@@ -67,13 +66,22 @@
     }
     .linear-card:hover {
       border-color: rgba(0, 229, 255, 0.4);
-      background: #11151E;
+      background: #11151F;
       transform: translateY(-2px);
-      box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.5), 0 0 20px 0 rgba(0, 229, 255, 0.08);
+      box-shadow: 0 14px 30px -10px rgba(0, 0, 0, 0.6), 0 0 20px 0 rgba(0, 229, 255, 0.08);
     }
 
-    .tabular-nums {
-      font-variant-numeric: tabular-nums;
+    .rail-card {
+      flex: 0 0 380px;
+      margin-right: 28px;
+      background: #0E1117;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 32px;
+      transition: border-color 0.3s ease;
+    }
+    .rail-card:hover {
+      border-color: rgba(0, 229, 255, 0.35);
     }
   </style>
 </head>
@@ -85,7 +93,7 @@
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
       <div class="flex items-center gap-2">
         <span class="px-2 py-0.5 rounded bg-cyan-accent/10 text-cyan-accent font-mono font-semibold text-[11px] border border-cyan-accent/20">MODELO 1</span>
-        <span class="text-slate-400 font-medium">Linear Dark Executive — Monocromático Obsidian com Acento Cirúrgico Ciano</span>
+        <span class="text-slate-400 font-medium">Linear Obsidian Scrolly — Motor Sites Incríveis + Monocromático Obsidian</span>
       </div>
       <div class="flex items-center gap-3">
         <a href="index.html" class="text-cyan-accent hover:underline font-medium text-xs flex items-center gap-1">
@@ -95,31 +103,27 @@
     </div>
   </aside>
 
-  <!-- Main Navigation -->
-  <header class="border-b border-obsidian-border/60 bg-obsidian/80 backdrop-blur-md sticky top-9 z-40">
+  <!-- Navigation -->
+  <header class="border-b border-obsidian-border/60 bg-obsidian/85 backdrop-blur-md sticky top-9 z-40">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <!-- Brand Logo -->
       <a href="#" class="flex items-center gap-3.5">
         <img src="../assets/img/DLuz_Digital_Logo_Horizontal_Transparente.png" alt="DLuz Digital" class="h-10 sm:h-11 w-auto object-contain" />
       </a>
 
-      <!-- Desktop Nav -->
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
-        <a href="#solucoes" class="hover:text-white transition">Soluções</a>
-        <a href="#arquitetura" class="hover:text-white transition">Arquitetura de Vendas</a>
+        <a href="#solucoes" class="hover:text-white transition">Soluções em Trilho</a>
         <a href="#simulador" class="hover:text-white transition">Simulador 24/7</a>
         <a href="#fundador" class="hover:text-white transition">Diretoria</a>
         <a href="#investimento" class="hover:text-white transition">Planos</a>
       </nav>
 
-      <!-- Right Action / Status -->
       <div class="flex items-center gap-4">
         <div class="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.03] border border-obsidian-border text-xs font-mono text-slate-400">
           <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
           <span>SISTEMA ATIVO</span>
         </div>
-        <a href="https://wa.me/5563981249724?text=Ol%C3%A1!%20Vim%20pelo%20Modelo%201%20da%20DLuz%20Digital%20e%20gostaria%20de%20uma%20an%C3%A1lise." target="_blank" class="px-5 py-2.5 rounded-lg bg-cyan-accent text-obsidian font-bold text-sm hover:bg-cyan-300 transition duration-200 flex items-center gap-2 shadow-[0_0_20px_rgba(0,229,255,0.25)]">
+        <a href="https://wa.me/5563981249724?text=Ol%C3%A1!%20Vim%20pelo%20Modelo%201%20da%20DLuz%20Digital." target="_blank" class="px-5 py-2.5 rounded-lg bg-cyan-accent text-obsidian font-bold text-sm hover:bg-cyan-300 transition duration-200 flex items-center gap-2 shadow-[0_0_20px_rgba(0,229,255,0.25)]">
           <i class="fa-brands fa-whatsapp text-base"></i>
           <span>Falar com Especialista</span>
         </a>
@@ -128,112 +132,97 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="relative pt-16 pb-24 lg:pt-24 lg:pb-32 bg-tech-grid overflow-hidden">
-    <!-- Subtle localized ambient glow (single color: cyan, zero rainbow) -->
-    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-cyan-accent/[0.04] rounded-full blur-[140px] pointer-events-none"></div>
-
+  <!-- Cena 1: Abertura Cinética (Palavras se Montam + Digitação) -->
+  <section class="relative pt-20 pb-24 lg:pt-28 lg:pb-32 bg-tech-grid overflow-hidden border-b border-obsidian-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         
-        <!-- Left Column: Executive Value Proposition -->
         <div class="lg:col-span-7">
           
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-white/[0.04] border border-obsidian-border text-xs font-mono text-cyan-accent mb-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-white/[0.04] border border-obsidian-border text-xs font-mono text-cyan-accent mb-6" data-fx="surgir">
             <span class="w-1.5 h-1.5 rounded-full bg-cyan-accent"></span>
             <span>B2B GROWTH & AUTOMATION INFRASTRUCTURE</span>
           </div>
 
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1] mb-6">
-            Sua Empresa Não Precisa de Postzinhos. <br />
-            <span class="text-cyan-accent">Precisa de um Sistema que Vende.</span>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1] mb-6" data-fx="palavras">
+            Sua Empresa Não Precisa de Postzinhos. Precisa de um Sistema que Vende.
           </h1>
 
-          <p class="text-base sm:text-lg text-slate-400 font-body leading-relaxed mb-8 max-w-2xl">
-            Unimos <strong>Redes Sociais de Alta Retenção</strong>, <strong>Posicionamento Top 1 no Google Maps</strong> e <strong>Automação Inteligente no WhatsApp 24/7</strong>. Substituímos o amadorismo de agências tradicionais por infraestrutura tecnológica que converte visitantes em contratos.
+          <p class="text-base sm:text-lg text-slate-400 font-body leading-relaxed mb-8 max-w-2xl" data-fx="digitar" data-fx-atraso="400">
+            Unimos Redes Sociais de Alta Retenção, Posicionamento Top 1 no Google Maps e Atendimento Automático 24/7 no WhatsApp.
           </p>
 
-          <div class="flex flex-col sm:flex-row items-center gap-4 mb-12">
-            <a href="https://wa.me/5563981249724?text=Ol%C3%A1!%20Quero%20uma%20an%C3%A1lise%20estrat%C3%A9gica%20da%20minha%20empresa%20com%20a%20DLuz%20Digital." target="_blank" class="w-full sm:w-auto px-7 py-4 rounded-lg bg-cyan-accent text-obsidian font-bold text-sm hover:bg-cyan-300 transition duration-200 flex items-center justify-center gap-2.5 shadow-[0_0_25px_rgba(0,229,255,0.3)]">
+          <div class="flex flex-col sm:flex-row items-center gap-4 mb-12" data-fx="subir" data-fx-atraso="700">
+            <a href="https://wa.me/5563981249724?text=Ol%C3%A1!%20Quero%20uma%20an%C3%A1lise%20estrat%C3%A9gica%20com%20a%20DLuz%20Digital." target="_blank" class="w-full sm:w-auto px-7 py-4 rounded-lg bg-cyan-accent text-obsidian font-bold text-sm hover:bg-cyan-300 transition duration-200 flex items-center justify-center gap-2.5 shadow-[0_0_25px_rgba(0,229,255,0.3)]">
               <i class="fa-solid fa-calendar-check"></i>
               <span>Solicitar Diagnóstico Estrutural</span>
             </a>
-            <a href="#simulador" class="w-full sm:w-auto px-6 py-4 rounded-lg bg-obsidian-surface hover:bg-white/[0.06] border border-obsidian-border text-slate-200 font-medium text-sm transition flex items-center justify-center gap-2">
-              <i class="fa-solid fa-play text-cyan-accent text-xs"></i>
-              <span>Ver Demonstração ao Vivo</span>
+            <a href="#solucoes" class="w-full sm:w-auto px-6 py-4 rounded-lg bg-obsidian-surface hover:bg-white/[0.06] border border-obsidian-border text-slate-200 font-medium text-sm transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-arrow-down text-cyan-accent text-xs"></i>
+              <span>Explorar a Tríade</span>
             </a>
           </div>
 
-          <!-- Strict Metrics Bar -->
+          <!-- Números que contam sozinhos (data-fx="contar") -->
           <div class="pt-8 border-t border-obsidian-border grid grid-cols-3 gap-6">
-            <div>
-              <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono tabular-nums">&lt; 3.0s</div>
+            <div data-fx="surgir">
+              <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono"><strong data-fx="contar" data-fx-fim="3.0" data-fx-decimais="1" data-fx-prefixo="< " data-fx-sufixo="s">0</strong></div>
               <div class="text-xs text-slate-400 mt-1">Tempo Médio de Resposta</div>
             </div>
-            <div>
-              <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono tabular-nums">TOP 1</div>
+            <div data-fx="surgir" data-fx-atraso="150">
+              <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono"><strong data-fx="contar" data-fx-fim="1" data-fx-prefixo="TOP ">0</strong></div>
               <div class="text-xs text-slate-400 mt-1">Busca Local Google Maps</div>
             </div>
-            <div>
-              <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono tabular-nums">100%</div>
+            <div data-fx="surgir" data-fx-atraso="300">
+              <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono"><strong data-fx="contar" data-fx-fim="100" data-fx-sufixo="%">0</strong></div>
               <div class="text-xs text-slate-400 mt-1">Disponibilidade 24/7/365</div>
             </div>
           </div>
 
         </div>
 
-        <!-- Right Column: System Terminal / Mockup -->
-        <div class="lg:col-span-5">
+        <!-- Terminal de Atividades em Tempo Real -->
+        <div class="lg:col-span-5" data-fx="crescer">
           <div class="linear-card rounded-2xl p-5 border border-obsidian-border relative overflow-hidden shadow-2xl">
             
-            <!-- Terminal Header -->
             <div class="flex items-center justify-between pb-4 border-b border-obsidian-border mb-4">
               <div class="flex items-center gap-2">
                 <span class="w-2.5 h-2.5 rounded-full bg-slate-700"></span>
                 <span class="w-2.5 h-2.5 rounded-full bg-slate-700"></span>
                 <span class="w-2.5 h-2.5 rounded-full bg-slate-700"></span>
-                <span class="text-xs font-mono text-slate-400 ml-2">dluz-engine-v2.5.sh</span>
+                <span class="text-xs font-mono text-slate-400 ml-2">dluz-core.sh</span>
               </div>
-              <span class="text-[10px] font-mono text-cyan-accent px-2 py-0.5 rounded bg-cyan-accent/10 border border-cyan-accent/20">LIVE PRODUCTION</span>
+              <span class="text-[10px] font-mono text-cyan-accent px-2 py-0.5 rounded bg-cyan-accent/10 border border-cyan-accent/20">LIVE ENGINE</span>
             </div>
 
-            <!-- Executive Portrait & Status Badge -->
             <div class="relative h-64 rounded-xl overflow-hidden mb-4 border border-obsidian-border">
               <img src="../assets/img/dluz_founder_formal.jpg" alt="Duilio Luz Fundador" class="w-full h-full object-cover object-top filter grayscale contrast-125" />
               <div class="absolute inset-0 bg-gradient-to-t from-obsidian-surface via-transparent to-transparent"></div>
               <div class="absolute bottom-3 inset-x-3 p-3 rounded-lg bg-obsidian-surface/90 backdrop-blur-md border border-obsidian-border flex items-center justify-between">
                 <div>
                   <div class="text-xs font-bold text-white">Duilio Luz</div>
-                  <div class="text-[11px] text-slate-400">Fundador & Arquiteto de Sistemas</div>
+                  <div class="text-[11px] text-slate-400">Fundador & Arquiteto Tecnológico</div>
                 </div>
-                <span class="text-[10px] font-mono text-emerald-400 bg-emerald-400/10 px-2 py-1 rounded border border-emerald-400/20">DISPONÍVEL</span>
+                <span class="text-[10px] font-mono text-emerald-400 bg-emerald-400/10 px-2 py-1 rounded border border-emerald-400/20">ONLINE</span>
               </div>
             </div>
 
-            <!-- Real-Time Activity Log -->
             <div class="space-y-2 text-[11px] font-mono">
-              <div class="p-2.5 rounded bg-black/40 border border-obsidian-border flex items-center justify-between text-slate-400">
+              <div class="p-2.5 rounded bg-black/50 border border-obsidian-border flex items-center justify-between text-slate-400">
                 <span class="flex items-center gap-2 text-slate-300">
-                  <i class="fa-solid fa-arrow-down-left text-cyan-accent"></i>
+                  <i class="fa-solid fa-bolt text-cyan-accent"></i>
                   <span>WhatsApp Lead inbound (Palmas-TO)</span>
                 </span>
                 <span class="text-slate-400">agora</span>
               </div>
-              <div class="p-2.5 rounded bg-black/40 border border-obsidian-border flex items-center justify-between text-slate-400">
+              <div class="p-2.5 rounded bg-black/50 border border-obsidian-border flex items-center justify-between text-slate-400">
                 <span class="flex items-center gap-2 text-slate-300">
                   <i class="fa-solid fa-check text-emerald-400"></i>
                   <span>Frya IA qualificou orçamento em 1.4s</span>
                 </span>
                 <span class="text-emerald-400">✓✓</span>
               </div>
-              <div class="p-2.5 rounded bg-black/40 border border-obsidian-border flex items-center justify-between text-slate-400">
-                <span class="flex items-center gap-2 text-slate-300">
-                  <i class="fa-solid fa-map-pin text-cyan-accent"></i>
-                  <span>Google Maps: Top 1 mantido (Paraíso-TO)</span>
-                </span>
-                <span class="text-slate-400">5.0 ★</span>
-              </div>
             </div>
 
           </div>
@@ -244,129 +233,115 @@
     </div>
   </section>
 
-  <!-- The 3 Pillars (Bento Grid) -->
-  <section id="solucoes" class="py-24 border-t border-obsidian-border relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="max-w-3xl mb-16">
-        <span class="text-xs font-mono text-cyan-accent tracking-widest uppercase mb-2 block">01 / CAPACIDADES CENTRAIS</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
-          A Tríade que Alimenta o Crescimento da Sua Empresa
-        </h2>
-        <p class="text-slate-400 font-body text-base">
-          Enquanto outros se perdem em métricas vazias de curtidas, construímos três pilares integrados para abastecer seu funil comercial todos os dias.
-        </p>
+  <!-- Cena 2: Trilho Horizontal de Soluções (data-fx="trilho") -->
+  <section id="solucoes" data-fx-fixa data-fx-altura="3" class="border-b border-obsidian-border">
+    <div class="fx-palco" style="justify-content: flex-start;">
+      <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
+        <span class="text-xs font-mono text-cyan-accent uppercase tracking-widest block mb-2">TRILHO DINÂMICO DE SOLUÇÕES</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white">A Tríade de Aquisição Deslizando na Tela</h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-        <!-- Pillar 1: Redes Sociais & Retenção -->
-        <div class="linear-card rounded-2xl p-8 flex flex-col justify-between">
+      <div data-fx="trilho" class="flex" style="padding-left: max(1rem, calc((100vw - 80rem) / 2 + 1rem));">
+        
+        <!-- Cartão 1 -->
+        <article class="rail-card flex flex-col justify-between">
           <div>
             <div class="w-12 h-12 rounded-xl bg-white/[0.04] border border-obsidian-border text-cyan-accent flex items-center justify-center text-xl mb-6">
               <i class="fa-solid fa-photo-film"></i>
             </div>
-            <div class="text-xs font-mono text-slate-400 mb-1">Pilar 01</div>
+            <div class="text-xs font-mono text-cyan-accent mb-1">01 / AUDÍOVISUAL</div>
             <h3 class="text-xl font-bold text-white mb-3">Redes Sociais & Retenção Cinética</h3>
-            <p class="text-sm text-slate-400 font-body leading-relaxed mb-6">
-              Criação de identidade visual impecável, carrosséis de alto valor e Reels editados sob a metodologia de retenção máxima. A imagem da sua empresa passa a transmitir autoridade incontestável.
+            <p class="text-xs text-slate-400 leading-relaxed font-body">
+              Identidade visual sob medida, carrosséis de alto valor e vídeos curtos no formato Reels com gancho imediato no segundo 0. Transformamos espectadores em autoridade percebida.
             </p>
           </div>
-          <div class="pt-4 border-t border-obsidian-border/80 text-xs font-mono text-slate-400 space-y-1.5">
-            <div class="flex items-center gap-2"><span class="text-cyan-accent">●</span> Design editorial alinhado à marca</div>
-            <div class="flex items-center gap-2"><span class="text-cyan-accent">●</span> Vídeos verticais sem enrolação</div>
-            <div class="flex items-center gap-2"><span class="text-cyan-accent">●</span> Atração orgânica qualificada</div>
+          <div class="pt-4 border-t border-obsidian-border text-[11px] font-mono text-slate-400 space-y-1">
+            <div>• Gancho dinâmico sem vinhetas</div>
+            <div>• Design editorial de prestígio</div>
           </div>
-        </div>
+        </article>
 
-        <!-- Pillar 2: Atendente Automático 24/7 -->
-        <div class="linear-card rounded-2xl p-8 flex flex-col justify-between border-cyan-accent/30 relative">
-          <div class="absolute -top-3 right-6 px-2.5 py-0.5 rounded bg-cyan-accent text-obsidian text-[10px] font-mono font-bold">
-            ALTA DEMANDA
-          </div>
+        <!-- Cartão 2 -->
+        <article class="rail-card flex flex-col justify-between border-cyan-accent/30 bg-[#10141D]">
           <div>
             <div class="w-12 h-12 rounded-xl bg-cyan-accent/10 border border-cyan-accent/20 text-cyan-accent flex items-center justify-center text-xl mb-6">
               <i class="fa-brands fa-whatsapp"></i>
             </div>
-            <div class="text-xs font-mono text-cyan-accent mb-1">Pilar 02</div>
-            <h3 class="text-xl font-bold text-white mb-3">Atendimento Automático 24/7 no WhatsApp</h3>
-            <p class="text-sm text-slate-400 font-body leading-relaxed mb-6">
-              Seu cliente nunca mais espera. Uma assistente inteligente que atende em segundos, tira dúvidas técnicas, envia catálogo, escuta áudios e encaminha o cliente pronto para fechar a compra.
+            <div class="text-xs font-mono text-cyan-accent mb-1">02 / AUTOMAÇÃO</div>
+            <h3 class="text-xl font-bold text-white mb-3">Atendente IA 24/7 no WhatsApp</h3>
+            <p class="text-xs text-slate-400 leading-relaxed font-body">
+              Resposta em menos de 3 segundos no WhatsApp e Direct. Compreende áudios de clientes, tira dúvidas sobre produtos e envia orçamentos sem você perder vendas por demora.
             </p>
           </div>
-          <div class="pt-4 border-t border-obsidian-border/80 text-xs font-mono text-slate-400 space-y-1.5">
-            <div class="flex items-center gap-2"><span class="text-cyan-accent">●</span> Resposta média abaixo de 3 segundos</div>
-            <div class="flex items-center gap-2"><span class="text-cyan-accent">●</span> Fala humanizada sem árvore mecânica</div>
-            <div class="flex items-center gap-2"><span class="text-cyan-accent">●</span> Recuperação ativa de contatos frios</div>
+          <div class="pt-4 border-t border-obsidian-border text-[11px] font-mono text-cyan-accent space-y-1">
+            <div>• Disponibilidade 24 horas por dia</div>
+            <div>• Escuta e processa áudio nativo</div>
           </div>
-        </div>
+        </article>
 
-        <!-- Pillar 3: Google Maps Domination -->
-        <div class="linear-card rounded-2xl p-8 flex flex-col justify-between">
+        <!-- Cartão 3 -->
+        <article class="rail-card flex flex-col justify-between">
           <div>
             <div class="w-12 h-12 rounded-xl bg-white/[0.04] border border-obsidian-border text-cyan-accent flex items-center justify-center text-xl mb-6">
               <i class="fa-solid fa-map-location-dot"></i>
             </div>
-            <div class="text-xs font-mono text-slate-400 mb-1">Pilar 03</div>
-            <h3 class="text-xl font-bold text-white mb-3">Top 1 no Google Maps & SEO Local</h3>
-            <p class="text-sm text-slate-400 font-body leading-relaxed mb-6">
-              Mais de 70% dos clientes ligam para os 3 primeiros colocados no Maps. Otimizamos sua ficha, palavras-chave e instalamos automação para multiplicar avaliações 5 estrelas dos seus clientes reais.
+            <div class="text-xs font-mono text-cyan-accent mb-1">03 / GEOLOCALIZAÇÃO</div>
+            <h3 class="text-xl font-bold text-white mb-3">Top 1 no Google Maps Local</h3>
+            <p class="text-xs text-slate-400 leading-relaxed font-body">
+              Posicionamento nas 3 primeiras posições do Maps em Paraíso, Palmas e região, com esteira automática de coleta de avaliações 5 estrelas via WhatsApp.
             </p>
           </div>
-          <div class="pt-4 border-t border-obsidian-border/80 text-xs font-mono text-slate-400 space-y-1.5">
-            <div class="flex items-center gap-2"><span class="text-cyan-accent">●</span> Domínio em buscas geolocalizadas</div>
-            <div class="flex items-center gap-2"><span class="text-cyan-accent">●</span> Sistema de avaliações via WhatsApp</div>
-            <div class="flex items-center gap-2"><span class="text-cyan-accent">●</span> Captação de intenção imediata</div>
+          <div class="pt-4 border-t border-obsidian-border text-[11px] font-mono text-slate-400 space-y-1">
+            <div>• Captação de alta intenção</div>
+            <div>• Disparo de avaliações automáticas</div>
           </div>
-        </div>
+        </article>
+
+        <!-- Cartão 4 -->
+        <article class="rail-card flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-white/[0.04] border border-obsidian-border text-cyan-accent flex items-center justify-center text-xl mb-6">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div class="text-xs font-mono text-cyan-accent mb-1">04 / COMPROMISSO</div>
+            <h3 class="text-xl font-bold text-white mb-3">Exclusividade por Cidade</h3>
+            <p class="text-xs text-slate-400 leading-relaxed font-body">
+              Não atendemos dois concorrentes do mesmo segmento na mesma região. Quem chega primeiro garante a infraestrutura e a dianteira do mercado.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-obsidian-border text-[11px] font-mono text-slate-400 space-y-1">
+            <div>• Vaga exclusiva garantida</div>
+            <div>• Suporte direto da diretoria</div>
+          </div>
+        </article>
 
       </div>
-
     </div>
   </section>
 
-  <!-- Interactive WhatsApp Simulator Section -->
-  <section id="simulador" class="py-24 border-t border-obsidian-border bg-obsidian-surface/40">
+  <!-- Cena 3: Simulador WhatsApp -->
+  <section id="simulador" class="py-24 border-b border-obsidian-border bg-obsidian-surface/40">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        <!-- Left: Context -->
-        <div class="lg:col-span-5">
-          <span class="text-xs font-mono text-cyan-accent tracking-widest uppercase mb-2 block">02 / INTERATIVIDADE REAL</span>
+        <div class="lg:col-span-5" data-fx="esquerda">
+          <span class="text-xs font-mono text-cyan-accent tracking-widest uppercase mb-2 block">INTERATIVIDADE TÁTIL</span>
           <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
-            Experimente o Tempo de Resposta da Nossa IA
+            Experimente a Resposta em Segundos da Nossa IA
           </h2>
           <p class="text-slate-400 font-body text-base mb-6 leading-relaxed">
-            Faça um teste agora mesmo. Clique em uma das perguntas ao lado e veja como o sistema responde com naturalidade, velocidade e foco em converter o cliente.
+            Clique nas opções ao lado e veja a velocidade com que a Frya atende o cliente, qualifica a intenção de compra e encaminha para o fechamento.
           </p>
-
-          <div class="space-y-4 mb-8 text-sm text-slate-300">
-            <div class="flex items-center gap-3">
-              <i class="fa-solid fa-check text-cyan-accent"></i>
-              <span>Não trava o cliente com menus complexos</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <i class="fa-solid fa-check text-cyan-accent"></i>
-              <span>Suporta áudio, texto e imagens</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <i class="fa-solid fa-check text-cyan-accent"></i>
-              <span>Integração com WhatsApp Oficial e CRM</span>
-            </div>
-          </div>
-
           <div class="p-4 rounded-xl bg-obsidian border border-obsidian-border text-xs text-slate-400">
-            <i class="fa-solid fa-circle-info text-cyan-accent mr-1.5"></i>
-            Esta mesma tecnologia pode ser implantada na sua empresa em menos de 48 horas.
+            <i class="fa-solid fa-bolt text-cyan-accent mr-1.5"></i>
+            Tempo real de resposta inferior a 1 segundo.
           </div>
         </div>
 
-        <!-- Right: Modern Dark WhatsApp Mockup -->
-        <div class="lg:col-span-7 flex justify-center">
+        <div class="lg:col-span-7 flex justify-center" data-fx="direita">
           <div class="w-full max-w-md bg-[#0C1014] rounded-3xl p-3 border border-obsidian-border shadow-2xl">
             
-            <!-- Header -->
             <div class="bg-[#161C24] p-3.5 rounded-2xl flex items-center justify-between mb-3 border border-white/[0.05]">
               <div class="flex items-center gap-3">
                 <div class="relative w-10 h-10 rounded-full overflow-hidden border border-cyan-accent/40">
@@ -375,7 +350,7 @@
                 </div>
                 <div>
                   <div class="text-xs font-bold text-white flex items-center gap-1.5">
-                    <span>Frya • Atendimento Inteligente</span>
+                    <span>Frya • DLuz Digital</span>
                     <i class="fa-solid fa-circle-check text-cyan-accent text-[10px]"></i>
                   </div>
                   <div class="text-[10px] font-mono text-cyan-accent" id="simStatus">Online • Resposta &lt; 1s</div>
@@ -384,30 +359,23 @@
               <span class="text-xs text-slate-500 font-mono">DLUZ-OS</span>
             </div>
 
-            <!-- Messages Window -->
             <div id="linearChatMessages" class="h-80 overflow-y-auto px-2 py-3 space-y-3 font-body text-xs text-white">
               <div class="flex justify-start">
                 <div class="max-w-[85%] bg-[#18202A] p-3 rounded-xl rounded-tl-none border border-white/[0.05] leading-relaxed">
                   <p class="text-slate-200">Olá! Eu sou a <strong>Frya</strong>, assistente executiva da <strong>DLuz Digital</strong>.</p>
-                  <p class="mt-1 text-slate-400">Como podemos estruturar a presença e automação da sua empresa hoje? Selecione uma opção abaixo para testar:</p>
-                  <div class="text-[9px] font-mono text-slate-500 text-right mt-1.5">14:02 • ✓✓</div>
+                  <p class="mt-1 text-slate-400">Como podemos acelerar as vendas da sua empresa hoje? Escolha uma opção para testar:</p>
+                  <div class="text-[9px] font-mono text-slate-500 text-right mt-1.5">Agora • ✓✓</div>
                 </div>
               </div>
             </div>
 
-            <!-- Trigger Buttons -->
             <div class="p-2 border-t border-obsidian-border bg-[#0E131A] rounded-xl mt-2 space-y-1.5">
-              <div class="text-[10px] font-mono uppercase text-slate-400 px-1 mb-1">Simular Pergunta:</div>
               <button onclick="linearSimulate('Como a automação do WhatsApp funciona na prática?')" class="w-full text-left px-3 py-2 rounded-lg bg-white/[0.03] hover:bg-cyan-accent/10 border border-obsidian-border hover:border-cyan-accent/30 text-xs text-slate-300 hover:text-cyan-accent transition flex items-center justify-between">
                 <span>⚡ O que a automação no WhatsApp faz?</span>
                 <i class="fa-solid fa-chevron-right text-[10px]"></i>
               </button>
               <button onclick="linearSimulate('Como vocês colocam minha empresa no Top 1 do Google Maps?')" class="w-full text-left px-3 py-2 rounded-lg bg-white/[0.03] hover:bg-cyan-accent/10 border border-obsidian-border hover:border-cyan-accent/30 text-xs text-slate-300 hover:text-cyan-accent transition flex items-center justify-between">
                 <span>📍 Como funciona a otimização no Maps?</span>
-                <i class="fa-solid fa-chevron-right text-[10px]"></i>
-              </button>
-              <button onclick="linearSimulate('Vocês atendem empresas de Paraíso, Palmas e região?')" class="w-full text-left px-3 py-2 rounded-lg bg-white/[0.03] hover:bg-cyan-accent/10 border border-obsidian-border hover:border-cyan-accent/30 text-xs text-slate-300 hover:text-cyan-accent transition flex items-center justify-between">
-                <span>💼 Atendem minha cidade e região?</span>
                 <i class="fa-solid fa-chevron-right text-[10px]"></i>
               </button>
             </div>
@@ -420,11 +388,11 @@
     </div>
   </section>
 
-  <!-- Founder Statement -->
-  <section id="fundador" class="py-24 border-t border-obsidian-border">
+  <!-- Cena 4: Diretoria e Liderança -->
+  <section id="fundador" class="py-24 border-b border-obsidian-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="linear-card rounded-3xl p-8 lg:p-12 border border-obsidian-border">
+      <div class="linear-card rounded-3xl p-8 lg:p-12 border border-obsidian-border" data-fx="crescer">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
           <div class="lg:col-span-4 flex justify-center">
@@ -439,31 +407,27 @@
           </div>
 
           <div class="lg:col-span-8">
-            <span class="text-xs font-mono text-cyan-accent tracking-widest uppercase mb-2 block">03 / LIDERANÇA & COMPROMISSO</span>
+            <span class="text-xs font-mono text-cyan-accent tracking-widest uppercase mb-2 block">LIDERANÇA & COMPROMISSO</span>
             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight mb-6">
-              "Agências cobram fortunas para postar fotos genéricas. Nós construímos sistemas de aquisição que trazem clientes de verdade."
+              "Agências cobram caro por posts que ninguém vê. Nós construímos a infraestrutura que coloca o cliente no seu caixa."
             </h2>
             
             <p class="text-slate-400 font-body text-sm sm:text-base leading-relaxed mb-6">
-              Meu nome é <strong>Duilio Luz</strong>. Desenvolvo sistemas, tecnologia e automações com inteligência artificial para o mundo real. Criei a <strong>DLuz Digital</strong> após presenciar dezenas de empresários em Paraíso do Tocantins, Palmas e em todo o país sendo enganados por agências que entregavam artes bonitas mas deixavam o WhatsApp da empresa em silêncio.
+              Sou <strong>Duilio Luz</strong>. Desenvolvo sistemas, automações e audiovisual há mais de 10 anos. Criei a <strong>DLuz Digital</strong> para libertar empresários da dependência de agências tradicionais que só entregam artes vazias e deixam o WhatsApp silencioso.
             </p>
 
-            <p class="text-slate-400 font-body text-sm sm:text-base leading-relaxed mb-8">
-              Aqui a regra é clara: <strong>código rápido, atendimento instantâneo e resultados mensuráveis no seu caixa</strong>. Se não ajuda sua empresa a vender mais, nós não fazemos.
-            </p>
-
-            <div class="grid grid-cols-3 gap-4 pt-6 border-t border-obsidian-border/80 text-center sm:text-left">
+            <div class="grid grid-cols-3 gap-4 pt-6 border-t border-obsidian-border/80 text-center sm:text-left font-mono">
               <div>
-                <div class="text-xl font-bold font-mono text-white">+10 Anos</div>
+                <div class="text-xl font-bold text-white">+10 Anos</div>
                 <div class="text-xs text-slate-400">Em Engenharia & Mídia</div>
               </div>
               <div>
-                <div class="text-xl font-bold font-mono text-cyan-accent">Sub-3s</div>
-                <div class="text-xs text-slate-400">Tempo de Atendimento</div>
+                <div class="text-xl font-bold text-cyan-accent">&lt; 3s</div>
+                <div class="text-xs text-slate-400">Resposta Automática</div>
               </div>
               <div>
-                <div class="text-xl font-bold font-mono text-white">Exclusividade</div>
-                <div class="text-xs text-slate-400">1 Empresa por Nicho</div>
+                <div class="text-xl font-bold text-white">1 por Praça</div>
+                <div class="text-xs text-slate-400">Exclusividade Local</div>
               </div>
             </div>
 
@@ -475,39 +439,31 @@
     </div>
   </section>
 
-  <!-- Pricing Table (Transparent Investment) -->
-  <section id="investimento" class="py-24 border-t border-obsidian-border">
+  <!-- Cena 5: Investimento -->
+  <section id="investimento" class="py-24 border-b border-obsidian-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="max-w-3xl mb-16">
-        <span class="text-xs font-mono text-cyan-accent tracking-widest uppercase mb-2 block">04 / INVESTIMENTO ESTRUTURADO</span>
+      <div class="max-w-3xl mb-16" data-fx="subir">
+        <span class="text-xs font-mono text-cyan-accent tracking-widest uppercase mb-2 block">INVESTIMENTO ESTRUTURADO</span>
         <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
           Planos Claros, Sem Letras Miúdas
         </h2>
-        <p class="text-slate-400 font-body text-base">
-          Escolha o nível de aceleração que sua empresa precisa hoje. Suporte direto e relatórios semanais inclusos.
-        </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
         
-        <!-- Plano Start -->
-        <div class="linear-card rounded-2xl p-7 flex flex-col justify-between">
+        <div class="linear-card rounded-2xl p-7 flex flex-col justify-between" data-fx="subir">
           <div>
             <div class="text-xs font-mono text-slate-400 uppercase tracking-wider mb-2">Start Local</div>
             <div class="text-xl font-bold text-white mb-3">Domínio no Maps</div>
-            <p class="text-xs text-slate-400 mb-6 leading-relaxed">
-              Ideal para negócios locais que querem começar na frente de todos os concorrentes da cidade.
-            </p>
             <div class="mb-6 pb-6 border-b border-obsidian-border">
               <span class="text-xs text-slate-400">Investimento único</span>
               <div class="text-3xl font-bold text-white font-mono">R$ 697</div>
             </div>
             <ul class="text-xs text-slate-300 space-y-3 mb-8">
-              <li class="flex items-center gap-2"><span class="text-cyan-accent">✓</span> Otimização Google Maps Top 1</li>
-              <li class="flex items-center gap-2"><span class="text-cyan-accent">✓</span> Sistema de Reviews 5 Estrelas</li>
-              <li class="flex items-center gap-2"><span class="text-cyan-accent">✓</span> Padronização WhatsApp Comercial</li>
-              <li class="flex items-center gap-2"><span class="text-cyan-accent">✓</span> Proposta Comercial Interativa</li>
+              <li>✓ Otimização Google Maps Top 1</li>
+              <li>✓ Sistema de Reviews 5 Estrelas</li>
+              <li>✓ Padronização WhatsApp Comercial</li>
             </ul>
           </div>
           <a href="https://wa.me/5563981249724?text=Ol%C3%A1!%20Quero%20contratar%20o%20Plano%20Start%20Local." target="_blank" class="w-full py-3 rounded-lg bg-white/[0.05] hover:bg-white/[0.1] border border-obsidian-border text-white text-xs font-bold text-center transition">
@@ -515,27 +471,22 @@
           </a>
         </div>
 
-        <!-- Plano Escala & IA (Recomendado) -->
-        <div class="linear-card rounded-2xl p-7 flex flex-col justify-between border-cyan-accent/40 relative bg-obsidian-surface">
+        <div class="linear-card rounded-2xl p-7 flex flex-col justify-between border-cyan-accent/40 bg-obsidian-surface relative" data-fx="subir" data-fx-atraso="150">
           <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-cyan-accent text-obsidian text-[10px] font-mono font-bold">
-            MAIS ESCOLHIDO
+            RECOMENDADO
           </div>
           <div>
             <div class="text-xs font-mono text-cyan-accent uppercase tracking-wider mb-2">Escala & IA</div>
             <div class="text-xl font-bold text-white mb-3">Máquina de Vendas 24/7</div>
-            <p class="text-xs text-slate-400 mb-6 leading-relaxed">
-              Estrutura contínua com atendente automático no WhatsApp, anúncios e presença digital de alto padrão.
-            </p>
             <div class="mb-6 pb-6 border-b border-obsidian-border">
               <span class="text-xs text-slate-400">Mensalidade recorrente</span>
               <div class="text-3xl font-bold text-cyan-accent font-mono">R$ 1.497 <span class="text-xs font-normal text-slate-400">/mês</span></div>
             </div>
             <ul class="text-xs text-slate-300 space-y-3 mb-8">
-              <li class="flex items-center gap-2"><span class="text-cyan-accent">✓</span> <strong>Bot Atendente IA no WhatsApp 24/7</strong></li>
-              <li class="flex items-center gap-2"><span class="text-cyan-accent">✓</span> <strong>Landing Page Google Stitch de Alta Velocidade</strong></li>
-              <li class="flex items-center gap-2"><span class="text-cyan-accent">✓</span> Gestão de Tráfego Pago (Meta / Google)</li>
-              <li class="flex items-center gap-2"><span class="text-cyan-accent">✓</span> Monitoramento Ativo Google Maps</li>
-              <li class="flex items-center gap-2"><span class="text-cyan-accent">✓</span> Relatórios Quinzenais de Conversão</li>
+              <li>✓ <strong>Bot Atendente IA no WhatsApp 24/7</strong></li>
+              <li>✓ <strong>Landing Page de Alta Performance Sub-segundo</strong></li>
+              <li>✓ Gestão de Tráfego Pago (Meta / Google)</li>
+              <li>✓ Monitoramento Google Maps</li>
             </ul>
           </div>
           <a href="https://wa.me/5563981249724?text=Ol%C3%A1!%20Quero%20o%20Plano%20Escala%20%26%20IA." target="_blank" class="w-full py-3 rounded-lg bg-cyan-accent text-obsidian text-xs font-bold text-center hover:bg-cyan-300 transition shadow-[0_0_20px_rgba(0,229,255,0.25)]">
@@ -543,24 +494,19 @@
           </a>
         </div>
 
-        <!-- Plano Dominação 360 -->
-        <div class="linear-card rounded-2xl p-7 flex flex-col justify-between">
+        <div class="linear-card rounded-2xl p-7 flex flex-col justify-between" data-fx="subir" data-fx-atraso="300">
           <div>
             <div class="text-xs font-mono text-slate-400 uppercase tracking-wider mb-2">Dominação 360</div>
             <div class="text-xl font-bold text-white mb-3">Ecossistema Completo</div>
-            <p class="text-xs text-slate-400 mb-6 leading-relaxed">
-              Para empresas consolidadas que querem liderança absoluta regional com audiovisual e IA avançada.
-            </p>
             <div class="mb-6 pb-6 border-b border-obsidian-border">
-              <span class="text-xs text-slate-400">Projeto sob medida</span>
+              <span class="text-xs text-slate-400">Mensalidade recorrente</span>
               <div class="text-3xl font-bold text-white font-mono">R$ 2.997 <span class="text-xs font-normal text-slate-400">/mês</span></div>
             </div>
             <ul class="text-xs text-slate-300 space-y-3 mb-8">
-              <li class="flex items-center gap-2"><span class="text-cyan-accent">✓</span> Tudo do Plano Escala & IA</li>
-              <li class="flex items-center gap-2"><span class="text-cyan-accent">✓</span> <strong>4 Vídeos Mensais de Alta Retenção (Reels)</strong></li>
-              <li class="flex items-center gap-2"><span class="text-cyan-accent">✓</span> Tráfego Multicanal (Google + Meta)</li>
-              <li class="flex items-center gap-2"><span class="text-cyan-accent">✓</span> Recuperação de Base Antiga de Clientes</li>
-              <li class="flex items-center gap-2"><span class="text-cyan-accent">✓</span> Canal de Atendimento Direto VIP</li>
+              <li>✓ Tudo do Plano Escala & IA</li>
+              <li>✓ <strong>4 Vídeos Mensais de Alta Retenção (Reels)</strong></li>
+              <li>✓ Tráfego Multicanal Avançado</li>
+              <li>✓ Atendimento VIP Direto</li>
             </ul>
           </div>
           <a href="https://wa.me/5563981249724?text=Ol%C3%A1!%20Quero%20proposta%20do%20Plano%20Domina%C3%A7%C3%A3o%20360." target="_blank" class="w-full py-3 rounded-lg bg-white/[0.05] hover:bg-white/[0.1] border border-obsidian-border text-white text-xs font-bold text-center transition">
@@ -573,16 +519,13 @@
     </div>
   </section>
 
-  <!-- Final CTA -->
-  <section class="py-24 border-t border-obsidian-border bg-obsidian-surface text-center">
-    <div class="max-w-4xl mx-auto px-4">
+  <!-- Fechamento -->
+  <section class="py-24 border-b border-obsidian-border bg-obsidian-surface text-center">
+    <div class="max-w-4xl mx-auto px-4" data-fx="crescer">
       <span class="text-xs font-mono text-cyan-accent tracking-widest uppercase mb-3 block">POLÍTICA DE EXCLUSIVIDADE</span>
       <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-6">
         Garantimos Exclusividade Territorial: Uma Empresa por Nicho por Região.
       </h2>
-      <p class="text-slate-400 font-body text-base max-w-xl mx-auto mb-8">
-        Não atendemos seus concorrentes diretos na sua praça. Garanta sua vaga com a DLuz Digital antes que outro empresário feche na sua frente.
-      </p>
       <a href="https://wa.me/5563981249724?text=Ol%C3%A1%20Duilio!%20Gostaria%20de%20verificar%20a%20disponibilidade%20para%20o%20meu%20setor." target="_blank" class="inline-flex items-center gap-3 px-8 py-4 rounded-lg bg-cyan-accent text-obsidian font-bold text-sm hover:bg-cyan-300 transition shadow-[0_0_30px_rgba(0,229,255,0.3)]">
         <i class="fa-brands fa-whatsapp text-lg"></i>
         <span>Consultar Disponibilidade do Meu Setor</span>
@@ -591,7 +534,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="py-12 border-t border-obsidian-border text-xs text-slate-500 font-mono">
+  <footer class="py-12 text-xs text-slate-500 font-mono">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-3">
         <img src="../assets/img/DLuz_Digital_Simbolo_Infinity_SemFundo.png" alt="DLuz Digital" class="h-6 w-auto" />
@@ -602,15 +545,16 @@
     </div>
   </footer>
 
+  <!-- Sites Incríveis Engine Script -->
+  <script src="../assets/vendor/sites-incriveis.js"></script>
+
   <!-- Simulator Script -->
   <script>
     const linearReplies = {
       'Como a automação do WhatsApp funciona na prática?':
-        "Nosso robô atua como um assistente de vendas dedicado 24/7! ⚡ Ele responde instantaneamente a dúvidas sobre preços, produtos e horários, envia catálogos e links de Pix, e escuta os áudios enviados pelos clientes com precisão. Nada de clientes esperando horas.",
+        "Nosso robô atua como um assistente de vendas dedicado 24/7! ⚡ Ele responde instantaneamente a dúvidas sobre preços, produtos e horários, envia catálogos e links de Pix, e escuta os áudios enviados pelos clientes com precisão.",
       'Como vocês colocam minha empresa no Top 1 do Google Maps?':
-        "Otimizamos as categorias exatas, imagens de alta resolução, geo-tags e ativamos nossa esteira automática de solicitações de avaliações 5 estrelas via WhatsApp. Isso eleva sua empresa para os 3 primeiros lugares onde 70% dos clientes clicam.",
-      'Vocês atendem empresas de Paraíso, Palmas e região?':
-        "Sim! Atendemos tanto comércios e clínicas locais no Tocantins quanto marcas em expansão nacional. Nossa infraestrutura é digital e os resultados são monitorados em tempo real com reuniões periódicas de alinhamento."
+        "Otimizamos as categorias exatas, fotos profissionais, palavras-chave e ativamos nossa esteira automática de solicitações de avaliações 5 estrelas via WhatsApp."
     };
 
     function linearSimulate(question) {
@@ -628,7 +572,7 @@
       container.appendChild(userBubble);
       container.scrollTop = container.scrollHeight;
 
-      status.innerText = "Frya processando resposta...";
+      status.innerText = "Frya processando...";
       status.className = "text-[10px] font-mono text-cyan-accent animate-pulse";
 
       setTimeout(() => {

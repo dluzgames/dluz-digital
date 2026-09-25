@@ -8,7 +8,10 @@
   
   <link rel="icon" type="image/png" href="../assets/img/DLuz_Digital_Simbolo_Infinity_SemFundo.png" />
   
-  <!-- Fonts: Syne (Editorial Display) + Inter (Body) -->
+  <!-- Sites Incríveis Engine CSS -->
+  <link rel="stylesheet" href="../assets/vendor/sites-incriveis.css" />
+
+  <!-- Fonts: Syne (Editorial Display) + Inter (Body) + Instrument Serif -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@500;700;800&family=Instrument+Serif:italic@0;1&display=swap" rel="stylesheet" />
@@ -70,7 +73,7 @@
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
       <div class="flex items-center gap-2">
         <span class="px-2 py-0.5 rounded bg-titanium/10 text-titanium-light font-mono font-semibold text-[11px] border border-titanium/20">MODELO 2</span>
-        <span class="text-titanium-muted font-medium">Editorial Suíço / Studio Monolith — Tipografia Marcante, Tons Titânio e Autoridade Executiva</span>
+        <span class="text-titanium-muted font-medium">Editorial Suíço — Motor Sites Incríveis com Etapas Pinned e Tipografia Monolith</span>
       </div>
       <div class="flex items-center gap-3">
         <a href="index.html" class="text-titanium hover:underline font-medium text-xs flex items-center gap-1">
@@ -89,10 +92,10 @@
       </a>
 
       <nav class="hidden md:flex items-center gap-10 text-xs uppercase tracking-widest text-titanium-muted font-medium">
-        <a href="#manifesto" class="hover:text-titanium-light transition">01 / Manifesto</a>
+        <a href="#etapas-historia" class="hover:text-titanium-light transition">01 / Diagnóstico</a>
         <a href="#pilares" class="hover:text-titanium-light transition">02 / Estrutura</a>
-        <a href="#calculadora" class="hover:text-titanium-light transition">03 / Diagnóstico</a>
-        <a href="#fundador" class="hover:text-titanium-light transition">04 / Liderança</a>
+        <a href="#calculadora" class="hover:text-titanium-light transition">03 / Simulador</a>
+        <a href="#fundador" class="hover:text-titanium-light transition">04 / Diretoria</a>
         <a href="#planos" class="hover:text-titanium-light transition">05 / Aplicação</a>
       </nav>
 
@@ -103,31 +106,29 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Cena 1: Abertura Editorial (Palavras que sobem) -->
   <section class="py-24 lg:py-36 relative border-b editorial-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="max-w-4xl">
-        <div class="text-xs uppercase tracking-[0.25em] text-titanium-muted mb-8 font-medium">
+        <div class="text-xs uppercase tracking-[0.25em] text-titanium-muted mb-8 font-medium" data-fx="surgir">
           Consultoria Tecnológica & Infraestrutura de Vendas
         </div>
 
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold font-display text-titanium-light leading-[1.08] tracking-tight mb-8">
-          Menos ruído. <br />
-          Mais autoridade e <br />
-          <span class="font-serif italic font-normal text-titanium-gold">clientes pagantes no caixa.</span>
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold font-display text-titanium-light leading-[1.08] tracking-tight mb-8" data-fx="palavras">
+          Menos ruído. Mais autoridade e clientes pagantes no caixa.
         </h1>
 
-        <p class="text-lg sm:text-xl text-titanium-muted font-normal leading-relaxed max-w-2xl mb-12">
+        <p class="text-lg sm:text-xl text-titanium-muted font-normal leading-relaxed max-w-2xl mb-12" data-fx="subir" data-fx-atraso="400">
           Substituímos o amadorismo das agências convencionais por engenharia digital sóbria. Redes sociais magnéticas, presença indiscutível no Google Maps e atendimento automatizado em segundos.
         </p>
 
-        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6" data-fx="subir" data-fx-atraso="600">
           <a href="https://wa.me/5563981249724?text=Ol%C3%A1%20Duilio!%20Quero%20uma%20an%C3%A1lise%20estrat%C3%A9gica%20para%20minha%20empresa." target="_blank" class="px-8 py-4 bg-titanium text-charcoal font-display font-bold text-sm tracking-wider uppercase hover:bg-white transition duration-200">
             Solicitar Análise Estrutural
           </a>
-          <a href="#pilares" class="text-xs uppercase tracking-widest text-titanium-muted hover:text-titanium-light transition flex items-center gap-2">
-            <span>Conhecer os 3 Pilares</span>
+          <a href="#etapas-historia" class="text-xs uppercase tracking-widest text-titanium-muted hover:text-titanium-light transition flex items-center gap-2">
+            <span>Ver a Jornada em Etapas</span>
             <i class="fa-solid fa-arrow-down text-[10px]"></i>
           </a>
         </div>
@@ -136,41 +137,53 @@
     </div>
   </section>
 
-  <!-- Section 01: Manifesto / The Problem -->
-  <section id="manifesto" class="py-24 border-b editorial-border bg-charcoal-surface">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+  <!-- Cena 2: Cena Fixa com Etapas do Motor (data-fx-fixa data-fx-altura="4" data-fx-etapas="3") -->
+  <section id="etapas-historia" data-fx-fixa data-fx-altura="4" data-fx-etapas="3" class="border-b editorial-border bg-charcoal-surface">
+    <div class="fx-palco">
+      <div class="max-w-4xl mx-auto px-4 text-center">
         
-        <div class="lg:col-span-4">
-          <span class="text-xs uppercase tracking-widest text-titanium-muted block mb-3 font-mono">01 / DIAGNÓSTICO</span>
-          <h2 class="text-2xl sm:text-3xl font-display font-bold text-titanium-light leading-snug">
-            Por que 90% das empresas jogam dinheiro fora em marketing?
+        <!-- Etapa 1 -->
+        <div class="fx-etapa space-y-6">
+          <span class="text-xs font-mono uppercase tracking-widest text-titanium-muted">01 / O PROBLEMA INVISÍVEL</span>
+          <h2 class="text-3xl sm:text-5xl font-display font-bold text-titanium-light leading-tight">
+            90% das empresas gastam fortunas em postagens que ninguém vê.
           </h2>
+          <p class="text-titanium-muted text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+            Agências tradicionais vendem "calendários de conteúdo" que geram curtidas vazias de conhecidos, mas deixam o caixa no zero a zero.
+          </p>
         </div>
 
-        <div class="lg:col-span-8 space-y-6 text-titanium-muted text-base sm:text-lg leading-relaxed font-light">
-          <p>
-            O comércio local no Tocantins e nas cidades em crescimento foi condicionado a acreditar que contratar uma agência significa receber 12 posts estáticos no mês com frases motivacionais e fotos de banco de imagem.
+        <!-- Etapa 2 -->
+        <div class="fx-etapa space-y-6">
+          <span class="text-xs font-mono uppercase tracking-widest text-titanium-gold">02 / A FRATURA DE ATENDIMENTO</span>
+          <h2 class="text-3xl sm:text-5xl font-display font-bold text-titanium-light leading-tight">
+            O cliente manda mensagem às 21h47 e só é respondido no dia seguinte.
+          </h2>
+          <p class="text-titanium-muted text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+            Nesse intervalo de 10 horas de espera, ele já pesquisou no Google Maps, chamou seu concorrente que atendeu na hora e fechou com ele.
           </p>
-          <p class="text-titanium-light font-normal">
-            A realidade é implacável: o cliente em potencial descobre sua empresa às 21h47 no Instagram ou no Google Maps, manda uma mensagem no WhatsApp e só é respondido no dia seguinte. Naquele intervalo, ele já comprou do seu concorrente.
-          </p>
-          <p>
-            A <strong>DLuz Digital</strong> foi criada para fechar esse vazamento. Criamos uma presença visual que impõe respeito e instalamos tecnologia para que nenhum cliente escape sem atendimento imediato.
+        </div>
+
+        <!-- Etapa 3 -->
+        <div class="fx-etapa space-y-6">
+          <span class="text-xs font-mono uppercase tracking-widest text-titanium-light">03 / A SOLUÇÃO DLUZ</span>
+          <h2 class="text-3xl sm:text-5xl font-display font-bold text-titanium-light leading-tight">
+            Um ecossistema que atende em 3 segundos e fecha a venda.
+          </h2>
+          <p class="text-titanium-muted text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+            IA conversacional que escuta áudio, envia catálogo, tira dúvidas técnicas e coloca o cliente qualificado nas mãos da sua equipe comercial.
           </p>
         </div>
 
       </div>
-
     </div>
   </section>
 
-  <!-- Section 02: The 3 Architectural Plates -->
+  <!-- Cena 3: A Tríade Estrutural -->
   <section id="pilares" class="py-24 border-b editorial-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6" data-fx="subir">
         <div>
           <span class="text-xs uppercase tracking-widest text-titanium-muted block mb-2 font-mono">02 / INFRAESTRUTURA</span>
           <h2 class="text-3xl sm:text-4xl font-display font-bold text-titanium-light">
@@ -184,8 +197,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
-        <!-- Plate 1 -->
-        <div class="border editorial-border p-8 bg-charcoal-surface hover-lift flex flex-col justify-between min-h-[400px]">
+        <div class="border editorial-border p-8 bg-charcoal-surface hover-lift flex flex-col justify-between min-h-[400px]" data-fx="subir">
           <div>
             <div class="text-4xl font-display font-bold text-titanium-muted/40 mb-8">01</div>
             <h3 class="text-xl font-display font-bold text-titanium-light mb-4">
@@ -200,8 +212,7 @@
           </div>
         </div>
 
-        <!-- Plate 2 -->
-        <div class="border editorial-border p-8 bg-charcoal-card hover-lift flex flex-col justify-between min-h-[400px] relative border-titanium-gold/40">
+        <div class="border editorial-border p-8 bg-charcoal-card hover-lift flex flex-col justify-between min-h-[400px] relative border-titanium-gold/40" data-fx="subir" data-fx-atraso="150">
           <div class="absolute -top-3 right-6 px-3 py-0.5 bg-titanium-gold text-charcoal text-[10px] font-mono uppercase font-bold tracking-wider">
             ESSENCIAL
           </div>
@@ -219,8 +230,7 @@
           </div>
         </div>
 
-        <!-- Plate 3 -->
-        <div class="border editorial-border p-8 bg-charcoal-surface hover-lift flex flex-col justify-between min-h-[400px]">
+        <div class="border editorial-border p-8 bg-charcoal-surface hover-lift flex flex-col justify-between min-h-[400px]" data-fx="subir" data-fx-atraso="300">
           <div>
             <div class="text-4xl font-display font-bold text-titanium-muted/40 mb-8">03</div>
             <h3 class="text-xl font-display font-bold text-titanium-light mb-4">
@@ -240,11 +250,11 @@
     </div>
   </section>
 
-  <!-- Section 03: Interactive Lead Leak Calculator -->
-  <section id="calculadora" class="py-24 border-b editorial-border bg-charcoal-surface">
+  <!-- Cena 4: Calculadora Tátil de Vazamento Financeiro -->
+  <section id="calculadora" class="py-24 border-b editorial-border bg-charcoal-surface" data-fx-fundo="#121417" data-fx-tinta="#F3EFEA">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-2xl mx-auto mb-16">
+      <div class="text-center max-w-2xl mx-auto mb-16" data-fx="subir">
         <span class="text-xs uppercase tracking-widest text-titanium-muted block mb-2 font-mono">03 / SIMULADOR FINANCEIRO</span>
         <h2 class="text-3xl sm:text-4xl font-display font-bold text-titanium-light mb-4">
           Quanto a demora no atendimento custa ao seu negócio?
@@ -254,7 +264,7 @@
         </p>
       </div>
 
-      <div class="border editorial-border bg-charcoal p-8 sm:p-12 rounded-none">
+      <div class="border editorial-border bg-charcoal p-8 sm:p-12 rounded-none" data-fx="crescer">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           
           <div class="space-y-8">
@@ -285,7 +295,7 @@
               R$ 22.800
             </div>
             <div class="text-xs text-titanium-muted mb-6">por ano recuperados com atendimento em 3s</div>
-            <a href="https://wa.me/5563981249724?text=Ol%C3%A1%20Duilio!%20Fiz%20a%20simula%C3%A7%C3%A3o%20e%20quero%20estancar%20a%20perda%20de%20clientes%20na%20minha%20empresa." target="_blank" class="w-full py-3 bg-titanium text-charcoal font-display font-bold text-xs uppercase tracking-wider hover:bg-white transition">
+            <a href="https://wa.me/5563981249724?text=Ol%C3%A1%20Duilio!%20Fiz%20a%20simula%C3%A7%C3%A3o%20e%20quero%20estancar%20a%20perda%20de%20clientes." target="_blank" class="w-full py-3 bg-titanium text-charcoal font-display font-bold text-xs uppercase tracking-wider hover:bg-white transition">
               Estancar Essa Perda Agora
             </a>
           </div>
@@ -296,19 +306,19 @@
     </div>
   </section>
 
-  <!-- Section 04: Founder Statement -->
+  <!-- Cena 5: Diretoria Executiva -->
   <section id="fundador" class="py-24 border-b editorial-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        <div class="lg:col-span-5">
+        <div class="lg:col-span-5" data-fx="esquerda">
           <div class="border editorial-border p-2 bg-charcoal-surface">
             <img src="../assets/img/dluz_founder_formal.jpg" alt="Duilio Luz" class="w-full h-auto object-cover filter grayscale contrast-125" />
           </div>
         </div>
 
-        <div class="lg:col-span-7">
+        <div class="lg:col-span-7" data-fx="direita">
           <span class="text-xs uppercase tracking-widest text-titanium-muted block mb-3 font-mono">04 / DIRETORIA EXECUTIVA</span>
           <h2 class="text-3xl sm:text-4xl font-display font-bold text-titanium-light leading-tight mb-8">
             "A reputação da sua empresa é preciosa demais para ser terceirizada a amadores."
@@ -316,7 +326,7 @@
 
           <div class="space-y-6 text-titanium-muted font-light leading-relaxed">
             <p>
-              Sou <strong>Duilio Luz</strong>. Atuo há mais de uma década unindo tecnologia, cinema e inteligência de negócios. Fundei a DLuz Digital porque cansei de ver comércios sérios da nossa região pagando mensalidades a agências que nunca pisaram no balcão de uma loja nem entenderam a dor de fechar uma folha de pagamento.
+              Sou <strong>Duilio Luz</strong>. Atuo há mais de uma década unindo tecnologia, cinema e inteligência de negócios. Fundei a DLuz Digital para entregar solidez técnica e autoridade para empresas sérias da nossa região.
             </p>
             <p>
               Nosso compromisso é direto e pessoal: aqui você conversa com quem constrói e responde pelo código. Se a sua empresa busca maturidade, postura e lucro, estamos prontos.
@@ -341,11 +351,11 @@
     </div>
   </section>
 
-  <!-- Section 05: Application / Pricing -->
+  <!-- Cena 6: Planos -->
   <section id="planos" class="py-24 border-b editorial-border bg-charcoal-surface">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="max-w-3xl mb-16">
+      <div class="max-w-3xl mb-16" data-fx="subir">
         <span class="text-xs uppercase tracking-widest text-titanium-muted block mb-2 font-mono">05 / MODELOS DE ENGAJAMENTO</span>
         <h2 class="text-3xl sm:text-4xl font-display font-bold text-titanium-light">
           Investimento Estruturado
@@ -354,14 +364,10 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
         
-        <!-- Start -->
-        <div class="border editorial-border p-8 bg-charcoal flex flex-col justify-between">
+        <div class="border editorial-border p-8 bg-charcoal flex flex-col justify-between" data-fx="subir">
           <div>
             <div class="text-xs font-mono uppercase tracking-widest text-titanium-muted mb-2">Entrada</div>
             <h3 class="text-xl font-display font-bold text-titanium-light mb-4">Start Local</h3>
-            <p class="text-xs text-titanium-muted mb-6 leading-relaxed font-light">
-              Implementação de soberania inicial no Google Maps e padronização comercial.
-            </p>
             <div class="mb-6 pb-6 border-b editorial-border">
               <span class="text-xs text-titanium-muted">Investimento único</span>
               <div class="text-3xl font-display font-bold text-titanium-light">R$ 697</div>
@@ -370,7 +376,6 @@
               <li>— Otimização Google Maps Top 1</li>
               <li>— Coleta Automatizada de Reviews 5★</li>
               <li>— Padronização WhatsApp Comercial</li>
-              <li>— Proposta Interativa em PDF</li>
             </ul>
           </div>
           <a href="https://wa.me/5563981249724?text=Ol%C3%A1!%20Quero%20aplicar%20para%20o%20Plano%20Start%20Local." target="_blank" class="w-full py-3 border editorial-border text-center text-xs uppercase tracking-widest text-titanium-light hover:bg-titanium hover:text-charcoal transition">
@@ -378,27 +383,22 @@
           </a>
         </div>
 
-        <!-- Escala -->
-        <div class="border editorial-border p-8 bg-charcoal-card flex flex-col justify-between border-titanium-gold/50 relative">
+        <div class="border editorial-border p-8 bg-charcoal-card flex flex-col justify-between border-titanium-gold/50 relative" data-fx="subir" data-fx-atraso="150">
           <div class="absolute -top-3 right-6 px-3 py-0.5 bg-titanium-gold text-charcoal text-[10px] font-mono uppercase font-bold tracking-wider">
             RECOMENDADO
           </div>
           <div>
             <div class="text-xs font-mono uppercase tracking-widest text-titanium-gold mb-2">Crescimento Contínuo</div>
             <h3 class="text-xl font-display font-bold text-titanium-light mb-4">Escala & Automação</h3>
-            <p class="text-xs text-titanium-muted mb-6 leading-relaxed font-light">
-              Infraestrutura completa com atendente inteligente no WhatsApp 24/7 e anúncios.
-            </p>
             <div class="mb-6 pb-6 border-b editorial-border">
               <span class="text-xs text-titanium-muted">Retainer mensal</span>
               <div class="text-3xl font-display font-bold text-titanium-gold">R$ 1.497 <span class="text-xs font-normal text-titanium-muted">/mês</span></div>
             </div>
             <ul class="text-xs text-titanium-light space-y-3 mb-8 font-light">
               <li>— <strong>Atendente Inteligente WhatsApp 24/7</strong></li>
-              <li>— <strong>Landing Page Google Stitch de Alta Velocidade</strong></li>
+              <li>— <strong>Landing Page de Alta Performance Sub-segundo</strong></li>
               <li>— Gestão de Tráfego Pago (Meta & Google)</li>
               <li>— Monitoramento e Manutenção Maps</li>
-              <li>— Relatórios Executivos Quinzenais</li>
             </ul>
           </div>
           <a href="https://wa.me/5563981249724?text=Ol%C3%A1!%20Quero%20aplicar%20para%20o%20Plano%20Escala%20%26%20Automa%C3%A7%C3%A3o." target="_blank" class="w-full py-3.5 bg-titanium-gold text-charcoal font-display font-bold text-xs uppercase tracking-widest text-center hover:bg-white transition">
@@ -406,14 +406,10 @@
           </a>
         </div>
 
-        <!-- Dominação 360 -->
-        <div class="border editorial-border p-8 bg-charcoal flex flex-col justify-between">
+        <div class="border editorial-border p-8 bg-charcoal flex flex-col justify-between" data-fx="subir" data-fx-atraso="300">
           <div>
             <div class="text-xs font-mono uppercase tracking-widest text-titanium-muted mb-2">Exclusivo</div>
             <h3 class="text-xl font-display font-bold text-titanium-light mb-4">Dominação 360</h3>
-            <p class="text-xs text-titanium-muted mb-6 leading-relaxed font-light">
-              Pacote integral com produção audiovisual cinematográfica e prioridade VIP.
-            </p>
             <div class="mb-6 pb-6 border-b editorial-border">
               <span class="text-xs text-titanium-muted">Projeto sob medida</span>
               <div class="text-3xl font-display font-bold text-titanium-light">R$ 2.997 <span class="text-xs font-normal text-titanium-muted">/mês</span></div>
@@ -422,7 +418,6 @@
               <li>— Tudo do Plano Escala & Automação</li>
               <li>— <strong>4 Vídeos Cinematográficos Mensais (Reels)</strong></li>
               <li>— Tráfego Multicanal Avançado</li>
-              <li>— Reativação de Clientes Inativos</li>
               <li>— Canal de Comunicação Direto VIP</li>
             </ul>
           </div>
@@ -447,6 +442,9 @@
     </div>
   </footer>
 
+  <!-- Sites Incríveis Engine Script -->
+  <script src="../assets/vendor/sites-incriveis.js"></script>
+
   <script>
     function calcLoss() {
       const leads = parseInt(document.getElementById('leadsInput').value);
@@ -455,9 +453,8 @@
       document.getElementById('leadsVal').innerText = leads + " contatos";
       document.getElementById('ticketVal').innerText = "R$ " + ticket.toLocaleString('pt-BR');
 
-      // 38% lost leads * ticket * 12 months
       const lostPerMonth = Math.round(leads * 0.38);
-      const recoveredPerYear = Math.round(lostPerMonth * ticket * 0.5 * 12); // Conservative 50% recovery
+      const recoveredPerYear = Math.round(lostPerMonth * ticket * 0.5 * 12);
 
       document.getElementById('resultLoss').innerText = "R$ " + recoveredPerYear.toLocaleString('pt-BR');
     }

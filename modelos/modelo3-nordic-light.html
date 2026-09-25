@@ -8,6 +8,9 @@
   
   <link rel="icon" type="image/png" href="../assets/img/DLuz_Digital_Simbolo_Infinity_SemFundo.png" />
   
+  <!-- Sites Incríveis Engine CSS -->
+  <link rel="stylesheet" href="../assets/vendor/sites-incriveis.css" />
+
   <!-- Fonts: Plus Jakarta Sans + Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -52,7 +55,7 @@
     .nordic-card {
       background: #FFFFFF;
       border: 1px solid #E2E8F0;
-      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
       transition: all 0.25s ease-in-out;
     }
     .nordic-card:hover {
@@ -70,7 +73,7 @@
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
       <div class="flex items-center gap-2">
         <span class="px-2 py-0.5 rounded bg-corporate-accentBg text-corporate-primary font-mono font-semibold text-[11px] border border-corporate-primary/20">MODELO 3</span>
-        <span class="text-corporate-muted font-medium">Nordic Corporate Clean — Modo Claro Impecável, Máxima Credibilidade B2B e Clareza Institucional</span>
+        <span class="text-corporate-muted font-medium">Nordic Corporate Scrolly — Motor Sites Incríveis no Modo Claro Institucional</span>
       </div>
       <div class="flex items-center gap-3">
         <a href="index.html" class="text-corporate-primary hover:underline font-medium text-xs flex items-center gap-1">
@@ -100,23 +103,19 @@
   <header class="bg-white/95 backdrop-blur-md border-b border-corporate-border sticky top-9 z-40">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <!-- Brand Logo for Light Background -->
       <a href="#" class="flex items-center gap-3">
         <img src="../assets/img/DLuz_Digital_Logo_Horizontal_Para_Fundo_Claro.png" alt="DLuz Digital" class="h-10 sm:h-11 w-auto object-contain" />
       </a>
 
-      <!-- Desktop Links -->
       <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-corporate-muted">
         <a href="#solucoes" class="hover:text-corporate-primary transition">Soluções</a>
         <a href="#comparativo" class="hover:text-corporate-primary transition">Por Que a DLuz?</a>
-        <a href="#metodologia" class="hover:text-corporate-primary transition">Metodologia</a>
         <a href="#fundador" class="hover:text-corporate-primary transition">Diretoria</a>
         <a href="#planos" class="hover:text-corporate-primary transition">Planos</a>
       </nav>
 
-      <!-- CTA -->
       <div class="flex items-center gap-4">
-        <a href="https://wa.me/5563981249724?text=Ol%C3%A1!%20Vim%20pelo%20Modelo%203%20(Nordic%20Light)%20da%20DLuz%20Digital." target="_blank" class="px-5 py-2.5 rounded-lg bg-corporate-primary text-white font-bold text-sm hover:bg-corporate-primaryHover transition flex items-center gap-2 shadow-sm">
+        <a href="https://wa.me/5563981249724?text=Ol%C3%A1!%20Vim%20pelo%20Modelo%203%20da%20DLuz%20Digital." target="_blank" class="px-5 py-2.5 rounded-lg bg-corporate-primary text-white font-bold text-sm hover:bg-corporate-primaryHover transition flex items-center gap-2 shadow-sm">
           <i class="fa-solid fa-headset"></i>
           <span>Agendar Diagnóstico Gratuito</span>
         </a>
@@ -125,30 +124,29 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Cena 1: Abertura (Palavras que se montam) -->
   <section class="py-20 lg:py-28 relative overflow-hidden bg-gradient-to-b from-white to-corporate-bg border-b border-corporate-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         
-        <!-- Left: Copywriting -->
         <div class="lg:col-span-7 text-center lg:text-left">
           
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-corporate-accentBg border border-corporate-primary/20 text-xs font-semibold text-corporate-primary mb-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-corporate-accentBg border border-corporate-primary/20 text-xs font-semibold text-corporate-primary mb-6" data-fx="surgir">
             <i class="fa-solid fa-check-circle"></i>
             <span>Infraestrutura Completa de Presença & Automação</span>
           </div>
 
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-corporate-text tracking-tight leading-[1.15] mb-6">
-            Acelere a captação de clientes da sua empresa com <span class="text-corporate-primary">segurança e alto padrão.</span>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-corporate-text tracking-tight leading-[1.15] mb-6" data-fx="palavras">
+            Acelere a captação de clientes da sua empresa com segurança e alto padrão.
           </h1>
 
-          <p class="text-base sm:text-lg text-corporate-muted font-body leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0">
+          <p class="text-base sm:text-lg text-corporate-muted font-body leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0" data-fx="subir" data-fx-atraso="400">
             Unimos o posicionamento de liderança no <strong>Google Maps</strong>, gestão estética de <strong>Redes Sociais</strong> e <strong>Atendimento Inteligente 24/7 no WhatsApp</strong>. Resultados tangíveis para clínicas, comércios e empresas de serviços.
           </p>
 
-          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
-            <a href="https://wa.me/5563981249724?text=Ol%C3%A1!%20Gostaria%20de%20um%20diagn%C3%B3stico%20gratuito%20da%20minha%20empresa." target="_blank" class="w-full sm:w-auto px-7 py-3.5 rounded-lg bg-corporate-primary hover:bg-corporate-primaryHover text-white font-bold text-sm transition flex items-center justify-center gap-2.5 shadow-md">
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10" data-fx="subir" data-fx-atraso="600">
+            <a href="https://wa.me/5563981249724?text=Ol%C3%A1!%20Gostaria%20de%20um%20diagn%C3%B3stico%20gratuito." target="_blank" class="w-full sm:w-auto px-7 py-3.5 rounded-lg bg-corporate-primary hover:bg-corporate-primaryHover text-white font-bold text-sm transition flex items-center justify-center gap-2.5 shadow-md">
               <i class="fa-brands fa-whatsapp text-base"></i>
               <span>Solicitar Diagnóstico Comercial</span>
             </a>
@@ -158,26 +156,25 @@
             </a>
           </div>
 
-          <!-- Trust Badges -->
+          <!-- Números que sobem sozinhos (data-fx="contar") -->
           <div class="pt-8 border-t border-corporate-border grid grid-cols-3 gap-6 text-center lg:text-left">
-            <div>
-              <div class="text-2xl font-extrabold text-corporate-text">100%</div>
+            <div data-fx="surgir">
+              <div class="text-2xl font-extrabold text-corporate-text"><strong data-fx="contar" data-fx-fim="100" data-fx-sufixo="%">0</strong></div>
               <div class="text-xs text-corporate-muted mt-0.5">Foco em Vendas Reais</div>
             </div>
-            <div>
-              <div class="text-2xl font-extrabold text-corporate-primary">Top 1</div>
+            <div data-fx="surgir" data-fx-atraso="150">
+              <div class="text-2xl font-extrabold text-corporate-primary"><strong data-fx="contar" data-fx-fim="1" data-fx-prefixo="TOP ">0</strong></div>
               <div class="text-xs text-corporate-muted mt-0.5">Google Maps na Região</div>
             </div>
-            <div>
-              <div class="text-2xl font-extrabold text-emerald-600">&lt; 3 seg</div>
+            <div data-fx="surgir" data-fx-atraso="300">
+              <div class="text-2xl font-extrabold text-emerald-600"><strong data-fx="contar" data-fx-fim="3.0" data-fx-decimais="1" data-fx-prefixo="< " data-fx-sufixo="s">0</strong></div>
               <div class="text-xs text-corporate-muted mt-0.5">Resposta Automática</div>
             </div>
           </div>
 
         </div>
 
-        <!-- Right: Professional Visual Presentation -->
-        <div class="lg:col-span-5">
+        <div class="lg:col-span-5" data-fx="crescer">
           <div class="nordic-card rounded-2xl p-6 bg-white border border-corporate-border">
             
             <div class="flex items-center justify-between pb-4 border-b border-corporate-border mb-5">
@@ -194,7 +191,6 @@
               </span>
             </div>
 
-            <!-- Founder & Mascot Executive Duo -->
             <div class="relative h-64 rounded-xl overflow-hidden mb-5 border border-corporate-border">
               <img src="../assets/img/dluz_frya_executive.jpg" alt="Duilio Luz e Frya" class="w-full h-full object-cover object-top" />
               <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
@@ -204,7 +200,6 @@
               </div>
             </div>
 
-            <!-- Status Metric Cards -->
             <div class="grid grid-cols-2 gap-3 text-xs">
               <div class="p-3 rounded-lg bg-slate-50 border border-corporate-border">
                 <div class="text-[11px] text-corporate-lightMuted font-medium">Tempo Médio de Atendimento</div>
@@ -224,24 +219,20 @@
     </div>
   </section>
 
-  <!-- Core Services -->
+  <!-- Cena 2: As 3 Soluções -->
   <section id="solucoes" class="py-20 bg-white border-b border-corporate-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="text-center max-w-3xl mx-auto mb-16" data-fx="subir">
         <span class="text-xs font-bold text-corporate-primary uppercase tracking-widest block mb-2">SOLUÇÕES INTEGRADAS</span>
         <h2 class="text-3xl sm:text-4xl font-extrabold text-corporate-text tracking-tight mb-4">
           Tudo o Que Sua Empresa Precisa em um Único Lugar
         </h2>
-        <p class="text-corporate-muted font-body text-base">
-          Elimine a dor de cabeça de contratar múltiplos prestadores de serviço que não dialogam entre si.
-        </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
-        <!-- 1. Google Maps -->
-        <div class="nordic-card rounded-xl p-8 flex flex-col justify-between">
+        <div class="nordic-card rounded-xl p-8 flex flex-col justify-between" data-fx="subir">
           <div>
             <div class="w-12 h-12 rounded-xl bg-sky-50 text-corporate-primary flex items-center justify-center text-xl mb-6 border border-sky-100">
               <i class="fa-solid fa-location-dot"></i>
@@ -257,8 +248,7 @@
           </ul>
         </div>
 
-        <!-- 2. WhatsApp 24/7 -->
-        <div class="nordic-card rounded-xl p-8 flex flex-col justify-between border-corporate-primary/40 relative">
+        <div class="nordic-card rounded-xl p-8 flex flex-col justify-between border-corporate-primary/40 relative" data-fx="subir" data-fx-atraso="150">
           <div class="absolute -top-3 right-6 px-3 py-0.5 rounded-full bg-corporate-primary text-white text-[10px] font-bold uppercase tracking-wider">
             DESTAQUE
           </div>
@@ -277,8 +267,7 @@
           </ul>
         </div>
 
-        <!-- 3. Redes Sociais & Audiovisual -->
-        <div class="nordic-card rounded-xl p-8 flex flex-col justify-between">
+        <div class="nordic-card rounded-xl p-8 flex flex-col justify-between" data-fx="subir" data-fx-atraso="300">
           <div>
             <div class="w-12 h-12 rounded-xl bg-sky-50 text-corporate-primary flex items-center justify-center text-xl mb-6 border border-sky-100">
               <i class="fa-solid fa-photo-film"></i>
@@ -299,18 +288,18 @@
     </div>
   </section>
 
-  <!-- Comparison Table: Traditional Agency vs DLuz Digital -->
+  <!-- Cena 3: Tabela Comparativa -->
   <section id="comparativo" class="py-20 bg-corporate-bg border-b border-corporate-border">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-2xl mx-auto mb-16">
+      <div class="text-center max-w-2xl mx-auto mb-16" data-fx="subir">
         <span class="text-xs font-bold text-corporate-primary uppercase tracking-widest block mb-2">TRANSPARÊNCIA TOTAL</span>
         <h2 class="text-3xl font-extrabold text-corporate-text tracking-tight mb-4">
           A Diferença Entre Quem Vende Promessas e Quem Constrói Resultados
         </h2>
       </div>
 
-      <div class="nordic-card rounded-2xl overflow-hidden bg-white">
+      <div class="nordic-card rounded-2xl overflow-hidden bg-white" data-fx="crescer">
         <div class="grid grid-cols-12 bg-slate-100 p-4 border-b border-corporate-border text-xs font-bold uppercase tracking-wider text-corporate-muted">
           <div class="col-span-6 sm:col-span-5">Critério de Avaliação</div>
           <div class="col-span-3 sm:col-span-3 text-slate-500">Agências Tradicionais</div>
@@ -320,7 +309,7 @@
         <div class="divide-y divide-corporate-border text-xs sm:text-sm">
           
           <div class="grid grid-cols-12 p-4 items-center">
-            <div class="col-span-6 sm:col-span-5 font-semibold text-corporate-text">Tempo de Resposta a Clientes no WhatsApp</div>
+            <div class="col-span-6 sm:col-span-5 font-semibold text-corporate-text">Tempo de Resposta no WhatsApp</div>
             <div class="col-span-3 sm:col-span-3 text-slate-500">2 a 6 horas (ou dia seguinte)</div>
             <div class="col-span-3 sm:col-span-4 font-bold text-emerald-600 flex items-center gap-1.5">
               <i class="fa-solid fa-check-circle"></i> Menos de 3 segundos (24/7)
@@ -329,9 +318,9 @@
 
           <div class="grid grid-cols-12 p-4 items-center">
             <div class="col-span-6 sm:col-span-5 font-semibold text-corporate-text">Foco das Publicações</div>
-            <div class="col-span-3 sm:col-span-3 text-slate-500">Curtidas e frases motivacionais</div>
+            <div class="col-span-3 sm:col-span-3 text-slate-500">Curtidas e frases de efeito</div>
             <div class="col-span-3 sm:col-span-4 font-bold text-corporate-primary flex items-center gap-1.5">
-              <i class="fa-solid fa-check-circle"></i> Contatos diretos no WhatsApp e vendas
+              <i class="fa-solid fa-check-circle"></i> Vendas reais e contatos no WhatsApp
             </div>
           </div>
 
@@ -357,11 +346,11 @@
     </div>
   </section>
 
-  <!-- Founder Section -->
+  <!-- Cena 4: Fundador Duilio Luz -->
   <section id="fundador" class="py-20 bg-white border-b border-corporate-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="nordic-card rounded-2xl p-8 lg:p-12">
+      <div class="nordic-card rounded-2xl p-8 lg:p-12" data-fx="crescer">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
           <div class="lg:col-span-4 flex justify-center">
@@ -378,10 +367,6 @@
 
             <p class="text-corporate-muted font-body text-sm sm:text-base leading-relaxed mb-6">
               Me chamo <strong>Duilio Luz</strong>. Atuo há mais de 10 anos desenvolvendo tecnologia, audiovisual e sistemas de inteligência para o setor corporativo. A <strong>DLuz Digital</strong> nasceu para preencher a lacuna entre o potencial enorme das empresas de Paraíso do Tocantins, Palmas e região, e a carência de soluções digitais realmente sérias e eficazes.
-            </p>
-
-            <p class="text-corporate-muted font-body text-sm sm:text-base leading-relaxed mb-6">
-              Assumo pessoalmente a responsabilidade por cada projeto. Aqui não há promessas vagas nem intermediários despreparados. Entregamos infraestrutura que funciona e atendimento que encanta seu cliente.
             </p>
 
             <div class="flex items-center gap-6 pt-4 border-t border-corporate-border">
@@ -403,39 +388,31 @@
     </div>
   </section>
 
-  <!-- Pricing -->
+  <!-- Cena 5: Planos -->
   <section id="planos" class="py-20 bg-corporate-bg border-b border-corporate-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="text-center max-w-3xl mx-auto mb-16" data-fx="subir">
         <span class="text-xs font-bold text-corporate-primary uppercase tracking-widest block mb-2">TABELA DE INVESTIMENTO</span>
         <h2 class="text-3xl sm:text-4xl font-extrabold text-corporate-text tracking-tight mb-4">
           Planos Claros e Objetivos
         </h2>
-        <p class="text-corporate-muted font-body text-base">
-          Escolha a estrutura adequada para a maturidade do seu negócio.
-        </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
         
-        <!-- Start -->
-        <div class="nordic-card rounded-2xl p-8 bg-white flex flex-col justify-between">
+        <div class="nordic-card rounded-2xl p-8 bg-white flex flex-col justify-between" data-fx="subir">
           <div>
             <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Plano Inicial</div>
             <h3 class="text-xl font-bold text-corporate-text mb-3">Start Local</h3>
-            <p class="text-xs text-corporate-muted mb-6 leading-relaxed">
-              Otimização de presença territorial para atrair quem busca pelo seu serviço na cidade.
-            </p>
             <div class="mb-6 pb-6 border-b border-corporate-border">
               <span class="text-xs text-corporate-lightMuted">Investimento único</span>
               <div class="text-3xl font-extrabold text-corporate-text">R$ 697</div>
             </div>
             <ul class="text-xs text-corporate-muted space-y-3 mb-8">
-              <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-corporate-primary"></i> Otimização Completa Google Maps</li>
-              <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-corporate-primary"></i> Sistema de Reviews 5 Estrelas</li>
-              <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-corporate-primary"></i> Padronização do WhatsApp Comercial</li>
-              <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-corporate-primary"></i> Proposta Comercial em PDF</li>
+              <li>✓ Otimização Completa Google Maps</li>
+              <li>✓ Sistema de Reviews 5 Estrelas</li>
+              <li>✓ Padronização do WhatsApp Comercial</li>
             </ul>
           </div>
           <a href="https://wa.me/5563981249724?text=Ol%C3%A1!%20Quero%20contratar%20o%20Plano%20Start%20Local." target="_blank" class="w-full py-3 rounded-lg bg-slate-100 hover:bg-slate-200 text-corporate-text font-bold text-xs text-center transition">
@@ -443,27 +420,22 @@
           </a>
         </div>
 
-        <!-- Escala -->
-        <div class="nordic-card rounded-2xl p-8 bg-white flex flex-col justify-between border-2 border-corporate-primary relative shadow-lg">
+        <div class="nordic-card rounded-2xl p-8 bg-white flex flex-col justify-between border-2 border-corporate-primary relative shadow-lg" data-fx="subir" data-fx-atraso="150">
           <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-corporate-primary text-white text-[11px] font-bold uppercase tracking-wider shadow">
             MAIS CONTRATADO
           </div>
           <div>
             <div class="text-xs font-bold text-corporate-primary uppercase tracking-wider mb-2">Crescimento Contínuo</div>
             <h3 class="text-xl font-bold text-corporate-text mb-3">Escala & Automação</h3>
-            <p class="text-xs text-corporate-muted mb-6 leading-relaxed">
-              Estrutura com atendente automático no WhatsApp 24/7, landing page rápida e anúncios.
-            </p>
             <div class="mb-6 pb-6 border-b border-corporate-border">
               <span class="text-xs text-corporate-lightMuted">Mensalidade</span>
               <div class="text-3xl font-extrabold text-corporate-primary">R$ 1.497 <span class="text-xs font-normal text-corporate-muted">/mês</span></div>
             </div>
             <ul class="text-xs text-corporate-text space-y-3 mb-8">
-              <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-corporate-primary"></i> <strong>Atendente Automático no WhatsApp 24/7</strong></li>
-              <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-corporate-primary"></i> <strong>Landing Page Google Stitch de Alta Velocidade</strong></li>
-              <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-corporate-primary"></i> Gestão de Tráfego Pago (Google & Meta)</li>
-              <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-corporate-primary"></i> Monitoramento Google Maps</li>
-              <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-corporate-primary"></i> Relatórios Quinzenais de Resultados</li>
+              <li>✓ <strong>Atendente Automático no WhatsApp 24/7</strong></li>
+              <li>✓ <strong>Landing Page de Alta Performance Sub-segundo</strong></li>
+              <li>✓ Gestão de Tráfego Pago (Google & Meta)</li>
+              <li>✓ Monitoramento Google Maps</li>
             </ul>
           </div>
           <a href="https://wa.me/5563981249724?text=Ol%C3%A1!%20Quero%20o%20Plano%20Escala%20%26%20Automa%C3%A7%C3%A3o." target="_blank" class="w-full py-3.5 rounded-lg bg-corporate-primary hover:bg-corporate-primaryHover text-white font-bold text-xs text-center transition shadow-md">
@@ -471,24 +443,19 @@
           </a>
         </div>
 
-        <!-- Dominação 360 -->
-        <div class="nordic-card rounded-2xl p-8 bg-white flex flex-col justify-between">
+        <div class="nordic-card rounded-2xl p-8 bg-white flex flex-col justify-between" data-fx="subir" data-fx-atraso="300">
           <div>
             <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Exclusividade Total</div>
             <h3 class="text-xl font-bold text-corporate-text mb-3">Dominação 360</h3>
-            <p class="text-xs text-corporate-muted mb-6 leading-relaxed">
-              Para empresas que desejam liderança incontestável com produção audiovisual e prioridade.
-            </p>
             <div class="mb-6 pb-6 border-b border-corporate-border">
               <span class="text-xs text-corporate-lightMuted">Mensalidade</span>
               <div class="text-3xl font-extrabold text-corporate-text">R$ 2.997 <span class="text-xs font-normal text-corporate-muted">/mês</span></div>
             </div>
             <ul class="text-xs text-corporate-muted space-y-3 mb-8">
-              <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-corporate-primary"></i> Tudo do Plano Escala</li>
-              <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-corporate-primary"></i> <strong>4 Vídeos Cinematográficos por Mês (Reels)</strong></li>
-              <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-corporate-primary"></i> Tráfego Pago Multicanal Avançado</li>
-              <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-corporate-primary"></i> Reativação Ativa de Base de Clientes</li>
-              <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-corporate-primary"></i> Canal de Comunicação VIP com a Diretoria</li>
+              <li>✓ Tudo do Plano Escala</li>
+              <li>✓ <strong>4 Vídeos Cinematográficos por Mês (Reels)</strong></li>
+              <li>✓ Tráfego Pago Multicanal Avançado</li>
+              <li>✓ Canal de Comunicação VIP com a Diretoria</li>
             </ul>
           </div>
           <a href="https://wa.me/5563981249724?text=Ol%C3%A1!%20Quero%20proposta%20do%20Plano%20Domina%C3%A7%C3%A3o%20360." target="_blank" class="w-full py-3 rounded-lg bg-slate-100 hover:bg-slate-200 text-corporate-text font-bold text-xs text-center transition">
@@ -511,6 +478,9 @@
       <div>&copy; 2026 DLuz Digital. Todos os direitos reservados.</div>
     </div>
   </footer>
+
+  <!-- Sites Incríveis Engine Script -->
+  <script src="../assets/vendor/sites-incriveis.js"></script>
 
 </body>
 </html>

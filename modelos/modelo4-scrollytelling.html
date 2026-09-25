@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DLuz Digital — Experiência Interativa | Modelo 4 (Scrollytelling Showcase)</title>
+  <title>DLuz Digital — Experiência Interativa | Modelo 4 (Cinematic Scrollytelling)</title>
   <meta name="description" content="O que acontece quando seu cliente manda uma mensagem às 21h47? Conheça a jornada de crescimento da DLuz Digital." />
   
   <link rel="icon" type="image/png" href="../assets/img/DLuz_Digital_Simbolo_Infinity_SemFundo.png" />
   
+  <!-- Sites Incríveis Engine CSS -->
+  <link rel="stylesheet" href="../assets/vendor/sites-incriveis.css" />
+
   <!-- Fonts: Plus Jakarta Sans + Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  
-  <!-- Sites Incríveis Engine CSS -->
-  <link rel="stylesheet" href="../assets/vendor/sites-incriveis.css" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -26,9 +26,9 @@
         extend: {
           colors: {
             deep: {
-              DEFAULT: '#0A0C10',
-              surface: '#11141B',
-              card: '#161B24',
+              DEFAULT: '#07090C',
+              surface: '#0F1218',
+              card: '#141822',
               border: 'rgba(255, 255, 255, 0.08)',
             },
             cyan: {
@@ -48,22 +48,25 @@
 
   <style>
     body {
-      background-color: #0A0C10;
+      background-color: #07090C;
       color: #E2E8F0;
     }
     .deep-card {
-      background: #11141B;
+      background: #0F1218;
       border: 1px solid rgba(255, 255, 255, 0.08);
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .deep-card:hover {
-      border-color: rgba(0, 229, 255, 0.3);
+      border-color: rgba(0, 229, 255, 0.35);
       transform: translateY(-2px);
     }
-    .tab-active {
-      background: rgba(0, 229, 255, 0.1) !important;
-      border-color: #00E5FF !important;
-      color: #00E5FF !important;
+    .rail-item {
+      flex: 0 0 380px;
+      margin-right: 28px;
+      background: #0F1218;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 32px;
     }
   </style>
 </head>
@@ -75,7 +78,7 @@
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
       <div class="flex items-center gap-2">
         <span class="px-2 py-0.5 rounded bg-cyan-accent/10 text-cyan-accent font-mono font-semibold text-[11px] border border-cyan-accent/20">MODELO 4</span>
-        <span class="text-slate-400 font-medium">Interactive Scrollytelling — Condução Narrativa Dinâmica em Cenas (Skill Sites Incríveis)</span>
+        <span class="text-slate-400 font-medium">Cinematic Scrollytelling — Experiência Narrativa Pura com Motor Sites Incríveis</span>
       </div>
       <div class="flex items-center gap-3">
         <a href="index.html" class="text-cyan-accent hover:underline font-medium text-xs flex items-center gap-1">
@@ -94,9 +97,9 @@
       </a>
 
       <nav class="hidden md:flex items-center gap-8 text-xs font-mono uppercase tracking-wider text-slate-400">
-        <a href="#cena-problema" class="hover:text-white transition">01. O Cenário</a>
-        <a href="#cena-choque" class="hover:text-white transition">02. Antes & Depois</a>
-        <a href="#cena-motor" class="hover:text-white transition">03. O Motor 24/7</a>
+        <a href="#cena-abertura" class="hover:text-white transition">01. O Ponto de Partida</a>
+        <a href="#cena-comparativo-fixo" class="hover:text-white transition">02. A Fratura</a>
+        <a href="#cena-trilho" class="hover:text-white transition">03. O Motor 24/7</a>
         <a href="#cena-fundador" class="hover:text-white transition">04. Engenharia</a>
         <a href="#cena-fechamento" class="hover:text-white transition">05. Exclusividade</a>
       </nav>
@@ -108,34 +111,33 @@
     </div>
   </header>
 
-  <!-- CENA 1: O Ponto de Atrito (Gancho Imediato) -->
-  <section id="cena-problema" class="py-24 lg:py-36 relative border-b border-deep-border">
+  <!-- CENA 1: O Gancho Imediato (Palavras que sobem) -->
+  <section id="cena-abertura" class="py-24 lg:py-36 relative border-b border-deep-border">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-xs font-mono text-cyan-accent uppercase tracking-widest mb-6" data-fx="surgir">
         CENA 01 / O DILEMA DAS 21H47
       </div>
 
-      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.08] mb-8" data-fx="subir">
-        Um cliente com R$ 1.500 no bolso procura seu serviço agora. <br />
-        <span class="text-cyan-accent">O que acontece nos próximos 3 minutos?</span>
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.08] mb-8" data-fx="palavras">
+        Um cliente com R$ 1.500 no bolso procura seu serviço agora. O que acontece nos próximos 3 minutos?
       </h1>
 
-      <p class="text-lg sm:text-xl text-slate-400 font-body leading-relaxed max-w-3xl mb-12" data-fx="subir">
-        Se sua empresa demora 2 horas para responder no WhatsApp, ou se ele cai numa caixa postal silenciosa, ele abre a ficha do seu concorrente e fecha com ele. Na DLuz Digital, nós transformamos esse momento em venda imediata.
+      <p class="text-lg sm:text-xl text-slate-400 font-body leading-relaxed max-w-3xl mb-12" data-fx="subir" data-fx-atraso="400">
+        Se sua empresa demora horas para responder no WhatsApp, ou se ele cai numa caixa postal silenciosa, ele abre a ficha do seu concorrente e fecha com ele. Na DLuz Digital, nós transformamos esse momento em venda imediata.
       </p>
 
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-deep-border" data-fx="subir">
-        <div class="p-4 rounded-xl bg-deep-surface border border-deep-border">
-          <div class="text-3xl font-extrabold text-white font-mono">74%</div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-deep-border">
+        <div class="p-4 rounded-xl bg-deep-surface border border-deep-border" data-fx="surgir">
+          <div class="text-3xl font-extrabold text-white font-mono"><strong data-fx="contar" data-fx-fim="74" data-fx-sufixo="%">0</strong></div>
           <div class="text-xs text-slate-400 mt-1">Dos consumidores compram de quem responde primeiro.</div>
         </div>
-        <div class="p-4 rounded-xl bg-deep-surface border border-deep-border">
-          <div class="text-3xl font-extrabold text-cyan-accent font-mono">&lt; 3s</div>
+        <div class="p-4 rounded-xl bg-deep-surface border border-deep-border" data-fx="surgir" data-fx-atraso="150">
+          <div class="text-3xl font-extrabold text-cyan-accent font-mono"><strong data-fx="contar" data-fx-fim="3.0" data-fx-decimais="1" data-fx-prefixo="< " data-fx-sufixo="s">0</strong></div>
           <div class="text-xs text-slate-400 mt-1">Tempo de resposta da nossa esteira de inteligência artificial.</div>
         </div>
-        <div class="p-4 rounded-xl bg-deep-surface border border-deep-border">
-          <div class="text-3xl font-extrabold text-white font-mono">Top 1</div>
+        <div class="p-4 rounded-xl bg-deep-surface border border-deep-border" data-fx="surgir" data-fx-atraso="300">
+          <div class="text-3xl font-extrabold text-white font-mono"><strong data-fx="contar" data-fx-fim="1" data-fx-prefixo="TOP ">0</strong></div>
           <div class="text-xs text-slate-400 mt-1">Posicionamento garantido no Google Maps regional.</div>
         </div>
       </div>
@@ -143,226 +145,117 @@
     </div>
   </section>
 
-  <!-- CENA 2: O Choque de Realidade (Antes vs Depois Interativo) -->
-  <section id="cena-choque" class="py-24 border-b border-deep-border bg-deep-surface/30">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <div class="text-xs font-mono text-cyan-accent uppercase tracking-widest mb-2">CENA 02 / AVALIAÇÃO COMPARATIVA</div>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
-          A Diferença Entre Sobreviver e Liderar o Mercado
-        </h2>
-        <p class="text-slate-400 text-sm">
-          Veja lado a lado a experiência do cliente com uma agência tradicional versus o padrão DLuz Digital.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+  <!-- CENA 2: A Cena Fixa com Etapas Narrativas (data-fx-fixa data-fx-altura="4" data-fx-etapas="3") -->
+  <section id="cena-comparativo-fixo" data-fx-fixa data-fx-altura="4" data-fx-etapas="3" class="border-b border-deep-border bg-deep-surface/50">
+    <div class="fx-palco">
+      <div class="max-w-4xl mx-auto px-4 text-center">
         
-        <!-- O Modelo Antigo -->
-        <div class="p-8 rounded-2xl bg-black/40 border border-red-500/20 relative">
-          <div class="flex items-center justify-between mb-6">
-            <span class="text-xs font-mono text-red-400 uppercase tracking-wider font-bold">O Cenário Tradicional</span>
-            <span class="text-xs px-2.5 py-1 rounded bg-red-500/10 text-red-400 border border-red-500/20">Perda Contínua</span>
-          </div>
-          <ul class="space-y-4 text-xs sm:text-sm text-slate-400">
-            <li class="flex items-start gap-3">
-              <i class="fa-solid fa-xmark text-red-400 mt-1"></i>
-              <span>Postagens no Instagram com frases genéricas que ninguém compartilha nem comenta.</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <i class="fa-solid fa-xmark text-red-400 mt-1"></i>
-              <span>Cliente manda mensagem no WhatsApp à noite ou fim de semana e fica no vácuo até segunda-feira.</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <i class="fa-solid fa-xmark text-red-400 mt-1"></i>
-              <span>Ficha no Google Maps abandonada, com fotos antigas e poucas avaliações.</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <i class="fa-solid fa-xmark text-red-400 mt-1"></i>
-              <span>Sensação constante de pagar mensalidade para agência sem ver a cor do dinheiro.</span>
-            </li>
-          </ul>
+        <!-- Etapa 1 -->
+        <div class="fx-etapa space-y-6">
+          <span class="text-xs font-mono uppercase tracking-widest text-red-400">01 / A ESPERA SILENCIOSA</span>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white leading-tight">
+            A mensagem chega no WhatsApp do concorrente às 21h47: silêncio total.
+          </h2>
+          <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+            Sem atendimento, o cliente desiste em 4 minutos. Ele não quer esperar até a manhã seguinte para saber um preço ou horário.
+          </p>
         </div>
 
-        <!-- O Padrão DLuz Digital -->
-        <div class="p-8 rounded-2xl bg-deep-card border border-cyan-accent/30 relative shadow-[0_0_30px_rgba(0,229,255,0.08)]">
-          <div class="flex items-center justify-between mb-6">
-            <span class="text-xs font-mono text-cyan-accent uppercase tracking-wider font-bold">O Padrão DLuz Digital</span>
-            <span class="text-xs px-2.5 py-1 rounded bg-cyan-accent/10 text-cyan-accent border border-cyan-accent/20">Máxima Conversão</span>
-          </div>
-          <ul class="space-y-4 text-xs sm:text-sm text-slate-200">
-            <li class="flex items-start gap-3">
-              <i class="fa-solid fa-check text-cyan-accent mt-1"></i>
-              <span>Vídeos em formato Reels com retenção cinética que posicionam sua empresa como a autoridade #1.</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <i class="fa-solid fa-check text-cyan-accent mt-1"></i>
-              <span>Atendente com inteligência artificial responde em 3 segundos, envia catálogo e agenda clientes 24/7.</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <i class="fa-solid fa-check text-cyan-accent mt-1"></i>
-              <span>Ficha no Top 3 do Google Maps com sistema automático de reviews 5 estrelas.</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <i class="fa-solid fa-check text-cyan-accent mt-1"></i>
-              <span>Exclusividade territorial: nós não atendemos o seu concorrente na mesma cidade.</span>
-            </li>
-          </ul>
+        <!-- Etapa 2 -->
+        <div class="fx-etapa space-y-6">
+          <span class="text-xs font-mono uppercase tracking-widest text-cyan-accent">02 / A RESPOSTA INSTANTÂNEA</span>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white leading-tight">
+            Com a DLuz Digital, a Frya atende em 1.4s com simpatia e precisão.
+          </h2>
+          <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+            A assistente escuta o áudio do cliente, responde as dúvidas sobre os serviços da empresa e apresenta o catálogo com links de agendamento.
+          </p>
+        </div>
+
+        <!-- Etapa 3 -->
+        <div class="fx-etapa space-y-6">
+          <span class="text-xs font-mono uppercase tracking-widest text-emerald-400">03 / O CONTRATO FECHADO</span>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white leading-tight">
+            O Pix é gerado, a consulta é marcada e a venda entra no seu caixa.
+          </h2>
+          <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+            Sua empresa fatura enquanto você dorme, descansa ou atende outros clientes no balcão.
+          </p>
         </div>
 
       </div>
-
     </div>
   </section>
 
-  <!-- CENA 3: O PICO — O Motor Interativo DLuz 24/7 -->
-  <section id="cena-motor" class="py-24 border-b border-deep-border">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <div class="text-xs font-mono text-cyan-accent uppercase tracking-widest mb-2">CENA 03 / O PICO DE ENERGIA</div>
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
-          O Motor Tecnológico DLuz Digital
-        </h2>
-        <p class="text-slate-400 text-sm">
-          Clique nas engrenagens abaixo para ver como cada pilar opera em perfeita sincronia.
-        </p>
+  <!-- CENA 3: O Trilho Horizontal do Motor (data-fx="trilho") -->
+  <section id="cena-trilho" data-fx-fixa data-fx-altura="3" class="border-b border-deep-border">
+    <div class="fx-palco" style="justify-content: flex-start;">
+      <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
+        <span class="text-xs font-mono text-cyan-accent uppercase tracking-widest block mb-2">CENA 03 / O MOTOR EM MOVIMENTO</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white">As 3 Engrenagens Tecnológicas Deslizando na Tela</h2>
       </div>
 
-      <!-- Interactive Tab Selector -->
-      <div class="flex flex-wrap justify-center gap-3 mb-10">
-        <button onclick="switchPillar(0)" id="tab0" class="tab-btn tab-active px-5 py-3 rounded-xl border border-deep-border bg-deep-surface text-xs font-mono font-semibold transition flex items-center gap-2">
-          <i class="fa-solid fa-video"></i>
-          <span>1. Reels & Audiovisual</span>
-        </button>
-        <button onclick="switchPillar(1)" id="tab1" class="tab-btn px-5 py-3 rounded-xl border border-deep-border bg-deep-surface text-xs font-mono font-semibold text-slate-400 transition flex items-center gap-2">
-          <i class="fa-brands fa-whatsapp"></i>
-          <span>2. Atendente IA 24/7</span>
-        </button>
-        <button onclick="switchPillar(2)" id="tab2" class="tab-btn px-5 py-3 rounded-xl border border-deep-border bg-deep-surface text-xs font-mono font-semibold text-slate-400 transition flex items-center gap-2">
-          <i class="fa-solid fa-map-location-dot"></i>
-          <span>3. Top 1 Google Maps</span>
-        </button>
-      </div>
-
-      <!-- Tab Content Panels -->
-      <div class="deep-card rounded-3xl p-8 sm:p-12 border border-deep-border">
+      <div data-fx="trilho" class="flex" style="padding-left: max(1rem, calc((100vw - 80rem) / 2 + 1rem));">
         
-        <!-- Panel 0: Reels -->
-        <div id="panel0" class="pillar-panel grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          <div class="lg:col-span-7">
-            <span class="text-xs font-mono text-cyan-accent uppercase tracking-wider mb-2 block">PILAR AUDÍOVISUAL</span>
-            <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4">
-              Vídeos de Alta Retenção que Transformam Espectadores em Clientes
-            </h3>
-            <p class="text-slate-400 font-body text-sm sm:text-base leading-relaxed mb-6">
-              Aplicamos nossa metodologia proprietária de edição de vídeo: gancho imediato no segundo 0, zero vinhetas sonolentas, ritmo acelerado e design com cartelas em movimento. O resultado é o dobro de retenção e clientes chamando no direct.
+        <article class="rail-item flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-white/[0.04] border border-deep-border text-cyan-accent flex items-center justify-center text-xl mb-6">
+              <i class="fa-solid fa-video"></i>
+            </div>
+            <div class="text-xs font-mono text-cyan-accent mb-1">ENGRENAGEM 01</div>
+            <h3 class="text-xl font-bold text-white mb-3">Reels com Retenção Cinética</h3>
+            <p class="text-xs text-slate-400 leading-relaxed font-body">
+              Vídeos curtos sem enrolação. Gancho no segundo 0, zero vinhetas sonolentas e legendas sincronizadas palavra por palavra que garantem a autoridade da sua marca.
             </p>
-            <div class="grid grid-cols-2 gap-4 text-xs font-mono text-slate-300">
-              <div class="p-3 rounded-lg bg-black/40 border border-deep-border">
-                <div class="text-cyan-accent font-bold text-base">+240%</div>
-                <div>Tempo de retenção em vídeo</div>
-              </div>
-              <div class="p-3 rounded-lg bg-black/40 border border-deep-border">
-                <div class="text-white font-bold text-base">Zero Silêncio</div>
-                <div>Cortes secos e dinamismo</div>
-              </div>
-            </div>
           </div>
-          <div class="lg:col-span-5 flex justify-center">
-            <div class="w-64 h-80 rounded-2xl overflow-hidden border border-deep-border relative">
-              <img src="../assets/img/frya_executive_formal.jpg" alt="Frya Produção" class="w-full h-full object-cover" />
-              <div class="absolute inset-0 bg-gradient-to-t from-deep via-transparent to-transparent"></div>
-              <div class="absolute bottom-3 inset-x-3 text-center text-xs font-bold text-white">
-                Produção Audiovisual DLuz Digital
-              </div>
-            </div>
+          <div class="pt-4 border-t border-deep-border text-[11px] font-mono text-slate-400">
+            +240% DE RETENÇÃO NO INSTAGRAM
           </div>
-        </div>
+        </article>
 
-        <!-- Panel 1: WhatsApp IA (Hidden initially) -->
-        <div id="panel1" class="pillar-panel hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          <div class="lg:col-span-7">
-            <span class="text-xs font-mono text-cyan-accent uppercase tracking-wider mb-2 block">PILAR DE AUTOMAÇÃO</span>
-            <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4">
-              Atendimento Automático em 3 Segundos no WhatsApp e Direct
-            </h3>
-            <p class="text-slate-400 font-body text-sm sm:text-base leading-relaxed mb-6">
-              Nossa assistente não usa fluxogramas robóticos chatos. Ela compreende áudios de clientes com sotaques regionais, tira dúvidas de preços, compartilha catálogos e coleta os dados do cliente para que você receba o contato qualificado pronto para fechamento.
+        <article class="rail-item flex flex-col justify-between border-cyan-accent/40 bg-[#121722]">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-cyan-accent/10 border border-cyan-accent/20 text-cyan-accent flex items-center justify-center text-xl mb-6">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div class="text-xs font-mono text-cyan-accent mb-1">ENGRENAGEM 02</div>
+            <h3 class="text-xl font-bold text-white mb-3">Atendente IA 24/7 no WhatsApp</h3>
+            <p class="text-xs text-slate-400 leading-relaxed font-body">
+              Compreensão natural de áudios regionais, envio imediato de catálogos e orçamentos, e agendamento automático 24 horas por dia.
             </p>
-            <div class="grid grid-cols-2 gap-4 text-xs font-mono text-slate-300">
-              <div class="p-3 rounded-lg bg-black/40 border border-deep-border">
-                <div class="text-cyan-accent font-bold text-base">2.4 seg</div>
-                <div>Tempo médio de resposta</div>
-              </div>
-              <div class="p-3 rounded-lg bg-black/40 border border-deep-border">
-                <div class="text-white font-bold text-base">24/7/365</div>
-                <div>Sem faltas ou feriados</div>
-              </div>
-            </div>
           </div>
-          <div class="lg:col-span-5 flex justify-center">
-            <div class="w-full max-w-xs p-4 rounded-2xl bg-black/60 border border-deep-border text-xs font-mono space-y-2">
-              <div class="text-slate-400 border-b border-deep-border pb-2">SIMULAÇÃO DE FLUXO:</div>
-              <div class="p-2 rounded bg-deep-surface text-slate-300">
-                <span class="text-cyan-accent font-bold">Cliente:</span> "Boa noite, quanto custa o procedimento?"
-              </div>
-              <div class="p-2 rounded bg-cyan-accent/10 border border-cyan-accent/20 text-cyan-accent">
-                <span class="font-bold">Frya IA (em 1.2s):</span> "Olá! Temos opções a partir de R$ 350. Gostaria de agendar para esta quinta?"
-              </div>
-              <div class="text-right text-[10px] text-emerald-400">✓ Venda encaminhada</div>
-            </div>
+          <div class="pt-4 border-t border-deep-border text-[11px] font-mono text-cyan-accent">
+            RESPOSTA EM MENOS DE 3 SEGUNDOS
           </div>
-        </div>
+        </article>
 
-        <!-- Panel 2: Google Maps (Hidden initially) -->
-        <div id="panel2" class="pillar-panel hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          <div class="lg:col-span-7">
-            <span class="text-xs font-mono text-cyan-accent uppercase tracking-wider mb-2 block">PILAR DE GEO-LOCALIZAÇÃO</span>
-            <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4">
-              Dominação do Top 3 no Google Maps
-            </h3>
-            <p class="text-slate-400 font-body text-sm sm:text-base leading-relaxed mb-6">
-              Quando alguém na sua cidade precisa de um dentista, advogado, mecânica ou loja, a busca acontece no Google Maps. Configuramos sua ficha com termos de alta busca e implementamos disparo automático para clientes avaliarem com 5 estrelas.
+        <article class="rail-item flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-white/[0.04] border border-deep-border text-cyan-accent flex items-center justify-center text-xl mb-6">
+              <i class="fa-solid fa-map-location-dot"></i>
+            </div>
+            <div class="text-xs font-mono text-cyan-accent mb-1">ENGRENAGEM 03</div>
+            <h3 class="text-xl font-bold text-white mb-3">Top 1 no Google Maps Local</h3>
+            <p class="text-xs text-slate-400 leading-relaxed font-body">
+              Quem pesquisa no Google quer comprar na hora. Otimizamos sua ficha para dominar o Top 3 e instalamos disparo de reviews 5 estrelas.
             </p>
-            <div class="grid grid-cols-2 gap-4 text-xs font-mono text-slate-300">
-              <div class="p-3 rounded-lg bg-black/40 border border-deep-border">
-                <div class="text-cyan-accent font-bold text-base">Top 1</div>
-                <div>No raio de busca local</div>
-              </div>
-              <div class="p-3 rounded-lg bg-black/40 border border-deep-border">
-                <div class="text-white font-bold text-base">5.0 ★</div>
-                <div>Esteira de reviews positivos</div>
-              </div>
-            </div>
           </div>
-          <div class="lg:col-span-5 flex justify-center">
-            <div class="w-full max-w-xs p-4 rounded-2xl bg-black/60 border border-deep-border text-xs space-y-2">
-              <div class="flex items-center gap-2 font-bold text-white">
-                <i class="fa-solid fa-star text-amber-400"></i>
-                <span>Avaliação Média: 5.0 Estrelas</span>
-              </div>
-              <p class="text-slate-400 text-[11px]">
-                "Melhor atendimento da cidade, responderam meu WhatsApp no mesmo instante!"
-              </p>
-              <div class="text-[10px] font-mono text-slate-500 text-right">Cliente Verificado via Google</div>
-            </div>
+          <div class="pt-4 border-t border-deep-border text-[11px] font-mono text-slate-400">
+            MAIOR VOLUME DE CLIENTES QUALIFICADOS
           </div>
-        </div>
+        </article>
 
       </div>
-
     </div>
   </section>
 
-  <!-- CENA 4: A Engenharia & O Fundador Duilio Luz -->
+  <!-- CENA 4: Engenharia & Liderança -->
   <section id="cena-fundador" class="py-24 border-b border-deep-border bg-deep-surface/40">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        <div class="lg:col-span-5 flex justify-center">
+        <div class="lg:col-span-5 flex justify-center" data-fx="esquerda">
           <div class="relative w-72 h-96 rounded-2xl overflow-hidden border border-deep-border shadow-2xl">
             <img src="../assets/img/dluz_founder_formal.jpg" alt="Duilio Luz" class="w-full h-full object-cover object-top" />
             <div class="absolute inset-0 bg-gradient-to-t from-deep via-transparent to-transparent"></div>
@@ -373,9 +266,9 @@
           </div>
         </div>
 
-        <div class="lg:col-span-7">
+        <div class="lg:col-span-7" data-fx="direita">
           <div class="text-xs font-mono text-cyan-accent uppercase tracking-widest mb-3">
-            CENA 04 / COMPROMISSO DIRETO
+            CENA 04 / COMPROMISSO DE ENGENHARIA
           </div>
           
           <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-6">
@@ -384,17 +277,17 @@
 
           <div class="space-y-4 text-slate-400 font-body text-sm sm:text-base leading-relaxed">
             <p>
-              Com mais de uma década atuando em desenvolvimento de software, automações e audiovisual de alta retenção, eu, <strong>Duilio Luz</strong>, decidi criar a DLuz Digital para entregar às empresas do Tocantins e do Brasil a mesma qualidade técnica utilizada pelas maiores marcas do país.
+              Com mais de uma década desenvolvendo software, automações e audiovisual de alta retenção, eu, <strong>Duilio Luz</strong>, criei a DLuz Digital para entregar às empresas de Paraíso do Tocantins, Palmas e do Brasil a mesma musculatura técnica utilizada pelos maiores players do país.
             </p>
             <p>
-              Não usamos templates pesados do WordPress que demoram 15 segundos para carregar no 4G do cliente. Desenvolvemos com código limpo no padrão Google Stitch, banco de dados ultra-rápido e integração oficial com as APIs do WhatsApp e Meta.
+              Não usamos templates pesados do WordPress que demoram 15 segundos para abrir no celular do cliente. Desenvolvemos com código limpo de alto desempenho, banco de dados ultrarrápido e integração oficial com as APIs do WhatsApp e Meta.
             </p>
           </div>
 
           <div class="mt-8 pt-6 border-t border-deep-border flex flex-wrap items-center gap-6 text-xs font-mono text-slate-300">
-            <div><i class="fa-solid fa-code text-cyan-accent mr-1.5"></i> Google Stitch Architecture</div>
             <div><i class="fa-solid fa-bolt text-cyan-accent mr-1.5"></i> Tempo de Carregamento &lt; 0.6s</div>
             <div><i class="fa-solid fa-lock text-cyan-accent mr-1.5"></i> 100% em Conformidade LGPD</div>
+            <div><i class="fa-solid fa-shield text-cyan-accent mr-1.5"></i> Exclusividade Territorial</div>
           </div>
 
         </div>
@@ -406,7 +299,7 @@
 
   <!-- CENA 5: Exclusividade & Fechamento -->
   <section id="cena-fechamento" class="py-24 border-b border-deep-border text-center">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8" data-fx="crescer">
       
       <div class="text-xs font-mono text-cyan-accent uppercase tracking-widest mb-3">
         CENA 05 / FECHAMENTO & EXCLUSIVIDADE
@@ -422,7 +315,7 @@
 
       <a href="https://wa.me/5563981249724?text=Ol%C3%A1%20Duilio!%20Quero%20garantir%20a%20exclusividade%20do%20meu%20nicho%20com%20a%20DLuz%20Digital." target="_blank" class="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-cyan-accent text-deep font-extrabold text-sm uppercase tracking-wider hover:bg-cyan-300 transition shadow-[0_0_30px_rgba(0,229,255,0.3)]">
         <i class="fa-brands fa-whatsapp text-lg"></i>
-        <span>Consultar Vaga do Meu Nicho</span>
+        <span>Consultar Vaga do Meu Nicho no WhatsApp</span>
       </a>
 
     </div>
@@ -433,7 +326,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-3">
         <img src="../assets/img/DLuz_Digital_Simbolo_Infinity_SemFundo.png" alt="DLuz Digital" class="h-6 w-auto" />
-        <span>DLUZ DIGITAL — SCROLLYTELLING SHOWCASE</span>
+        <span>DLUZ DIGITAL — CINEMATIC SCROLLYTELLING</span>
       </div>
       <div>Paraíso do Tocantins • Palmas • Brasil • (63) 98124-9724</div>
       <div>&copy; 2026 DLuz Digital. Todos os direitos reservados.</div>
@@ -442,28 +335,6 @@
 
   <!-- Sites Incríveis Engine Script -->
   <script src="../assets/vendor/sites-incriveis.js"></script>
-
-  <script>
-    function switchPillar(index) {
-      document.querySelectorAll('.tab-btn').forEach((btn, idx) => {
-        if (idx === index) {
-          btn.classList.add('tab-active');
-          btn.classList.remove('text-slate-400');
-        } else {
-          btn.classList.remove('tab-active');
-          btn.classList.add('text-slate-400');
-        }
-      });
-
-      document.querySelectorAll('.pillar-panel').forEach((panel, idx) => {
-        if (idx === index) {
-          panel.classList.remove('hidden');
-        } else {
-          panel.classList.add('hidden');
-        }
-      });
-    }
-  </script>
 
 </body>
 </html>
