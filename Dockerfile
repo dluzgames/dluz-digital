@@ -7,6 +7,7 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY index.html /usr/share/nginx/html/index.html
 COPY proposta-comercial-modelo.html /usr/share/nginx/html/proposta-comercial-modelo.html
 COPY assets/ /usr/share/nginx/html/assets/
+COPY modelos/ /usr/share/nginx/html/modelos/
 
 EXPOSE 80
 
