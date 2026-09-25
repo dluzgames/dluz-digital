@@ -150,9 +150,20 @@
         if (tipo === "digitar") animarDigitar(el);
         if (tipo === "contar") animarContar(el);
       });
-    }, { threshold: 0.25, rootMargin: "0px 0px -8% 0px" });
+    }, { threshold: 0.05, rootMargin: "0px 0px 50px 0px" });
 
-    alvos.forEach(function (el) { observador.observe(el); });
+    alvos.forEach(function (el) { 
+      observador.observe(el);
+      var r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight && r.bottom > 0) {
+        var tipo = el.dataset.fx;
+        if (tipo === "palavras") animarPalavras(el);
+        el.classList.add("fx-em-cena");
+        if (tipo === "digitar") animarDigitar(el);
+        if (tipo === "contar") animarContar(el);
+        observador.unobserve(el);
+      }
+    });
   }
 
   /* ---------- 2. Cenas fixas com progresso ---------- */
