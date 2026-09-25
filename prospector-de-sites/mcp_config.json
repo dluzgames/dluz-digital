@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "prospector-crm": {
+      "command": "python",
+      "args": [
+        "c:/Users/dluzgg/Documents/antigravity/serene-newton/prospector-de-sites/prospector-mcp.py",
+        "--pasta",
+        "c:/Users/dluzgg/Documents/antigravity/serene-newton/prospector-de-sites/dashboard"
+      ]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@latest"]
+    }
+  }
+}

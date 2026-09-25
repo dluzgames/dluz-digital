@@ -1,0 +1,955 @@
+import os
+
+out_dir = r"c:\Users\dluzgg\Documents\antigravity\serene-newton\prospector-de-sites\dashboard\sites\sr-nails-paraiso"
+os.makedirs(out_dir, exist_ok=True)
+os.makedirs(os.path.join(out_dir, "img"), exist_ok=True)
+
+html_content = """<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SR Nails Studio | Unhas em Fibra de Vidro & Nail Art em Paraíso do Tocantins</title>
+    <meta name="description" content="Studio especializado em Alongamento em Fibra de Vidro, Nail Art Encapsulada e Blindagem Diamante com Sarah Rocha em Paraíso do Tocantins - TO.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rose: {
+                            50: '#FDF8F7',
+                            100: '#FAF0EE',
+                            200: '#F4DFDC',
+                            300: '#E8C5C0',
+                            400: '#D9A19A',
+                            500: '#C97A7E',
+                            600: '#B35D62',
+                            700: '#8F454A',
+                            800: '#6C3337',
+                            900: '#4D2427',
+                        },
+                        gold: {
+                            100: '#FAF4E1',
+                            300: '#EBD89F',
+                            500: '#D4AF37',
+                            600: '#B89326',
+                            700: '#917117',
+                        },
+                        silk: '#FAF7F2',
+                        creme: '#F4EFEA',
+                        dark: '#1C1917',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .serif-italic { font-family: 'Playfair Display', serif; font-style: italic; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(201, 122, 126, 0.15);
+        }
+        .gold-border {
+            border: 1px solid rgba(212, 175, 55, 0.35);
+        }
+        /* Comparador Slider */
+        .before-after-container {
+            position: relative;
+            overflow: hidden;
+            user-select: none;
+        }
+        .before-after-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            overflow: hidden;
+            width: 50%;
+        }
+        .before-after-handle {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: #D4AF37;
+            transform: translateX(-50%);
+            cursor: ew-resize;
+            box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+        }
+        .before-after-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #D4AF37;
+            color: #1C1917;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+            border: 2px solid #FFF;
+        }
+        @keyframes pulse-soft {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .pulse-btn {
+            animation: pulse-soft 2.5s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-silk text-dark font-sans antialiased selection:bg-rose-200 selection:text-rose-900">
+
+    <!-- BARRA SUPERIOR -->
+    <div class="bg-dark text-silk py-2.5 px-4 text-xs font-medium tracking-wide">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
+            <div class="flex items-center gap-2">
+                <span class="inline-block w-2 h-2 rounded-full bg-gold-500 animate-ping"></span>
+                <span>✨ <strong>Studio VIP Sarah Rocha</strong> • Atendimento exclusivo em Paraíso do Tocantins - TO</span>
+            </div>
+            <div class="flex items-center gap-4 text-rose-200">
+                <span>💳 Aceitamos Cartões & PIX</span>
+                <span class="hidden md:inline">•</span>
+                <a href="https://instagram.com/srnailspso" target="_blank" class="hover:text-gold-300 transition-colors flex items-center gap-1">
+                    <span>@srnailspso (1.6k+)</span> ↗
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-50 bg-silk/90 backdrop-blur-md border-b border-rose-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="flex flex-col">
+                <span class="font-serif text-2xl md:text-3xl font-semibold tracking-tight text-dark">
+                    SR <span class="text-rose-600 serif-italic font-normal">Nails</span>
+                </span>
+                <span class="text-[9px] uppercase tracking-[0.28em] text-rose-500 font-semibold -mt-1">
+                    Studio & Alongamentos
+                </span>
+            </a>
+
+            <!-- Navegação Desktop -->
+            <nav class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-stone-600">
+                <a href="#sobre" class="hover:text-rose-600 transition-colors">Sobre o Studio</a>
+                <a href="#procedimentos" class="hover:text-rose-600 transition-colors">Procedimentos</a>
+                <a href="#antes-depois" class="hover:text-rose-600 transition-colors">Antes & Depois</a>
+                <a href="#galeria" class="hover:text-rose-600 transition-colors">Galeria Real</a>
+                <a href="#simulador" class="hover:text-rose-600 transition-colors">Simulador</a>
+            </nav>
+
+            <!-- CTA Direto -->
+            <a href="https://wa.me/5563992903293?text=Ol%C3%A1%20Sarah!%20Vim%20pelo%20site%20da%20SR%20Nails%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio!" 
+               target="_blank"
+               class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-rose-600 hover:bg-rose-700 text-white text-xs font-semibold tracking-wider uppercase shadow-md shadow-rose-600/20 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.54 1.839.814 2.802.814 3.18 0 5.768-2.587 5.768-5.766.001-3.181-2.586-5.767-5.768-5.767zm0 10.362c-.879 0-1.688-.237-2.385-.688l-.17-.11-1.782.467.476-1.737-.118-.189c-.524-.836-.8-1.528-.8-2.505 0-2.536 2.063-4.599 4.601-4.599 2.537 0 4.6 2.063 4.6 4.6 0 2.536-2.063 4.601-4.6 4.601z"/></svg>
+                <span>Agendar Horário</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+        <!-- Detalhes de Fundo -->
+        <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-rose-200/40 rounded-full blur-3xl pointer-events-none -z-10"></div>
+        <div class="absolute -top-24 right-0 w-96 h-96 bg-gold-100/50 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Coluna Texto -->
+                <div class="lg:col-span-7 space-y-7 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-rose-100/80 border border-rose-200 text-rose-800 text-xs font-semibold tracking-wider uppercase">
+                        <span class="w-1.5 h-1.5 rounded-full bg-rose-600"></span>
+                        <span>Sarah Rocha • Nail Designer em Paraíso - TO</span>
+                    </div>
+
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.12] text-dark tracking-tight">
+                        Unhas perfeitas, <br class="hidden sm:inline">
+                        <span class="serif-italic font-medium text-rose-600">naturais e resistentes</span> <br>
+                        feitas para a sua autoestima.
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-stone-600 font-light max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        A união perfeita entre arte, alta durabilidade e cuidado com a saúde das suas unhas. Estrutura ultrafina em <strong>Fibra de Vidro</strong>, curvatura anatômica C e acabamentos encapsulados exclusivos que não descolam e elevam o seu estilo.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="https://wa.me/5563992903293?text=Ol%C3%A1%20Sarah!%20Quero%20agendar%20um%20alongamento%20em%20Fibra%20de%20Vidro!" 
+                           target="_blank"
+                           class="w-full sm:w-auto px-8 py-4 rounded-full bg-dark hover:bg-stone-800 text-silk text-xs uppercase font-semibold tracking-widest shadow-xl shadow-dark/15 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-0.5 text-center flex items-center justify-center gap-3 pulse-btn">
+                            <span>Agendar no WhatsApp</span>
+                            <span class="text-gold-500 font-bold">↗</span>
+                        </a>
+
+                        <a href="#procedimentos" 
+                           class="w-full sm:w-auto px-8 py-4 rounded-full bg-white hover:bg-rose-50 text-stone-800 text-xs uppercase font-semibold tracking-wider border border-rose-200 shadow-sm transition-all duration-300 text-center">
+                            Conhecer Procedimentos ↓
+                        </a>
+                    </div>
+
+                    <!-- Métricas / Confiança -->
+                    <div class="grid grid-cols-3 gap-6 pt-6 border-t border-rose-100 max-w-lg mx-auto lg:mx-0 text-center lg:text-left">
+                        <div>
+                            <p class="font-serif text-2xl lg:text-3xl font-bold text-dark">+1.600</p>
+                            <p class="text-[11px] uppercase tracking-wider text-stone-500 font-medium mt-0.5">Seguidoras Instagram</p>
+                        </div>
+                        <div>
+                            <p class="font-serif text-2xl lg:text-3xl font-bold text-rose-600">25 a 30</p>
+                            <p class="text-[11px] uppercase tracking-wider text-stone-500 font-medium mt-0.5">Dias de Durabilidade</p>
+                        </div>
+                        <div>
+                            <p class="font-serif text-2xl lg:text-3xl font-bold text-gold-600">5.0 ★</p>
+                            <p class="text-[11px] uppercase tracking-wider text-stone-500 font-medium mt-0.5">Satisfação Total</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna Visual (Fotos Reais) -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-sm sm:max-w-md">
+                        
+                        <!-- Imagem Principal (Fibra de Vidro Natural) -->
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/80 aspect-[4/5] bg-stone-100">
+                            <img src="img/fibra_de_vidro_natural.jpg" 
+                                 alt="Alongamento em Fibra de Vidro Natural por Sarah Rocha" 
+                                 class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent"></div>
+                            
+                            <div class="absolute bottom-6 left-6 right-6 text-white">
+                                <span class="inline-block px-3 py-1 rounded-full bg-gold-500/90 text-dark font-bold text-[10px] uppercase tracking-widest mb-1.5 shadow">
+                                    Trabalho Real Sarah Rocha
+                                </span>
+                                <h3 class="font-serif text-xl font-semibold leading-tight">Fibra de Vidro Ultra Natural</h3>
+                                <p class="text-xs text-stone-200 mt-1">Acabamento fino, translúcido e resistente.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card Flutuante 1 (Nail Art Encapsulada) -->
+                        <div class="absolute -bottom-6 -left-6 sm:-left-8 glass-card p-3.5 rounded-2xl shadow-xl flex items-center gap-3.5 max-w-[230px] border border-white">
+                            <img src="img/francesa_ouro_encapsulada.jpg" class="w-12 h-12 rounded-xl object-cover shadow-sm" alt="Nail art encapsulada">
+                            <div>
+                                <p class="text-[11px] font-bold text-dark leading-tight">Encapsulada com Ouro</p>
+                                <p class="text-[10px] text-rose-600 font-medium mt-0.5">Design Exclusivo</p>
+                            </div>
+                        </div>
+
+                        <!-- Card Flutuante 2 (Selo de Qualidade) -->
+                        <div class="absolute -top-6 -right-6 sm:-right-8 w-28 h-28 rounded-full bg-gradient-to-br from-gold-500 to-gold-700 text-white flex flex-col items-center justify-center text-center p-2 shadow-xl border-2 border-white transform rotate-12 hover:rotate-0 transition-transform">
+                            <span class="text-[10px] uppercase tracking-wider font-semibold opacity-90">100%</span>
+                            <span class="font-serif text-base font-bold leading-none my-0.5">Natural</span>
+                            <span class="text-[9px] uppercase tracking-widest opacity-80">Fibra de Vidro</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAIXA MARQUEE -->
+    <div class="border-y border-rose-200/70 bg-creme/60 py-4 overflow-hidden">
+        <div class="flex items-center justify-around gap-8 text-xs font-semibold uppercase tracking-[0.25em] text-rose-800">
+            <span>✦ Fibra de Vidro</span>
+            <span>✦ Nail Art Encapsulada</span>
+            <span>✦ Blindagem Diamante</span>
+            <span>✦ Esmaltação em Gel</span>
+            <span>✦ Manutenção Preventiva</span>
+            <span>✦ Spa das Mãos</span>
+        </div>
+    </div>
+
+    <!-- SEÇÃO DIFERENCIAIS -->
+    <section class="py-24 bg-white" id="sobre">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+                <span class="text-xs uppercase tracking-[0.25em] text-rose-600 font-bold">Excelência & Biossegurança</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-dark">
+                    Por que escolher a <span class="serif-italic text-rose-600">SR Nails</span> em Paraíso?
+                </h2>
+                <p class="text-stone-600 text-sm sm:text-base leading-relaxed">
+                    Você merece um momento só seu, em um ambiente relaxante, com atendimento exclusivo e técnicas que valorizam a beleza natural e a saúde das suas unhas.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Diferencial 1 -->
+                <div class="p-8 rounded-3xl bg-silk border border-rose-100 hover:shadow-xl hover:border-rose-300 transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-2xl bg-rose-200 text-rose-800 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                        💅
+                    </div>
+                    <h3 class="font-serif text-xl font-semibold text-dark mb-3">Curvatura & Espessura Natural</h3>
+                    <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                        Unhas sem aspecto grosso ou artificial. A técnica de curvatura C anatômica garante um formato harmonioso com o seu leito ungueal, leveza e conforto absoluto.
+                    </p>
+                </div>
+
+                <!-- Diferencial 2 -->
+                <div class="p-8 rounded-3xl bg-silk border border-rose-100 hover:shadow-xl hover:border-rose-300 transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-2xl bg-gold-100 text-gold-700 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                        🛡️
+                    </div>
+                    <h3 class="font-serif text-xl font-semibold text-dark mb-3">Máxima Durabilidade</h3>
+                    <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                        Nossos produtos têm adesão molecular que resiste ao dia a dia, água e tarefas diárias por 25 a 30 dias sem quebras ou descolamentos precoces.
+                    </p>
+                </div>
+
+                <!-- Diferencial 3 -->
+                <div class="p-8 rounded-3xl bg-silk border border-rose-100 hover:shadow-xl hover:border-rose-300 transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-2xl bg-rose-200 text-rose-800 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                        ✨
+                    </div>
+                    <h3 class="font-serif text-xl font-semibold text-dark mb-3">Designs Exclusivos & Nail Art</h3>
+                    <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                        De francesas clássicas e baby boomers suaves a encapsulamentos luxuosos com folhas de ouro, borboletas e decorações feitas à mão com riqueza de detalhes.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SEÇÃO ANTES & DEPOIS COM SLIDER -->
+    <section class="py-24 bg-creme" id="antes-depois">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-xs uppercase tracking-[0.25em] text-rose-600 font-bold">Transformação Real</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-dark leading-tight">
+                        A beleza de uma <br>
+                        <span class="serif-italic text-rose-600">transformação impecável</span>.
+                    </h2>
+                    <p class="text-stone-600 text-sm sm:text-base leading-relaxed">
+                        Arraste o botão central para comparar o resultado antes do procedimento e a perfeição de um alongamento estruturado em Fibra de Vidro da SR Nails.
+                    </p>
+                    
+                    <div class="space-y-3 pt-2">
+                        <div class="flex items-center gap-3 text-xs text-stone-700 font-medium">
+                            <span class="w-5 h-5 rounded-full bg-rose-200 text-rose-800 flex items-center justify-center font-bold">✓</span>
+                            <span>Adeus unhas roídas ou quebradiças no dia a dia</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-xs text-stone-700 font-medium">
+                            <span class="w-5 h-5 rounded-full bg-rose-200 text-rose-800 flex items-center justify-center font-bold">✓</span>
+                            <span>Esmalte que dura até a próxima manutenção sem lascar</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-xs text-stone-700 font-medium">
+                            <span class="w-5 h-5 rounded-full bg-rose-200 text-rose-800 flex items-center justify-center font-bold">✓</span>
+                            <span>Mãos elegantes e prontas para qualquer ocasião</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <a href="https://wa.me/5563992903293?text=Ol%C3%A1%20Sarah!%20Vi%20o%20Antes%20e%20Depois%20no%20site%20e%20quero%20renovar%20minhas%20unhas!" 
+                           target="_blank"
+                           class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-rose-600 hover:bg-rose-700 text-white text-xs font-semibold uppercase tracking-wider shadow-md transition-all">
+                            <span>Quero Essa Transformação</span> ↗
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Slider Interativo -->
+                <div class="lg:col-span-7">
+                    <div class="max-w-xl mx-auto rounded-3xl overflow-hidden shadow-2xl border-4 border-white before-after-container aspect-[4/3] bg-stone-200" id="comparadorContainer">
+                        
+                        <!-- Imagem DEPOIS (Fundo) -->
+                        <img src="img/fibra_de_vidro_natural.jpg" class="w-full h-full object-cover" alt="Depois: Alongamento Fibra de Vidro">
+                        <div class="absolute top-4 right-4 bg-dark/80 text-silk text-[10px] uppercase font-bold tracking-widest px-3 py-1.5 rounded-full shadow pointer-events-none">
+                            ✨ Depois: SR Nails
+                        </div>
+
+                        <!-- Imagem ANTES (Sobreposição com recorte) -->
+                        <div class="before-after-overlay" id="comparadorOverlay">
+                            <img src="img/almond_lavanda_flores.jpg" class="w-full h-full object-cover" style="filter: grayscale(80%) brightness(0.9);" alt="Antes: Unhas sem alongamento">
+                            <div class="absolute top-4 left-4 bg-stone-700/80 text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1.5 rounded-full shadow pointer-events-none">
+                                ↺ Antes: Sem Alongamento
+                            </div>
+                        </div>
+
+                        <!-- Linha Divisória e Botão -->
+                        <div class="before-after-handle" id="comparadorHandle">
+                            <div class="before-after-button">
+                                ⇄
+                            </div>
+                        </div>
+
+                    </div>
+                    <p class="text-center text-xs text-stone-500 mt-3 font-medium">
+                        👆 Clique e deslize a linha central para visualizar o Antes e Depois
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCEDIMENTOS & SERVIÇOS -->
+    <section class="py-24 bg-white" id="procedimentos">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+                <span class="text-xs uppercase tracking-[0.25em] text-rose-600 font-bold">Menu Exclusivo</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-dark">
+                    Procedimentos <span class="serif-italic text-rose-600">Assinados</span>
+                </h2>
+                <p class="text-stone-600 text-sm sm:text-base">
+                    Técnicas modernas desenvolvidas para proporcionar beleza, resistência e praticidade ao seu cotidiano.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1 -->
+                <div class="bg-silk p-6 rounded-3xl border border-rose-100 flex flex-col justify-between hover:shadow-xl transition-all duration-300">
+                    <div class="space-y-4">
+                        <div class="h-48 rounded-2xl overflow-hidden mb-4 bg-stone-100">
+                            <img src="img/fibra_de_vidro_natural.jpg" alt="Alongamento em Fibra de Vidro" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-serif text-xl font-bold text-dark">Alongamento em Fibra de Vidro</h3>
+                            <span class="text-rose-600 font-bold text-xs uppercase px-2.5 py-1 bg-rose-100 rounded-full">Top 1</span>
+                        </div>
+                        <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                            Construção fio a fio de alta tecnologia. Proporciona o visual mais natural e resistente do mercado, adaptando-se perfeitamente a qualquer formato.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-rose-100 mt-6 flex items-center justify-between">
+                        <span class="text-xs text-stone-500">Duração: ~2h</span>
+                        <a href="https://wa.me/5563992903293?text=Ol%C3%A1%20Sarah!%20Gostaria%20de%20agendar%20Alongamento%20em%20Fibra%20de%20Vidro." target="_blank" class="text-xs font-bold text-rose-700 hover:text-dark uppercase tracking-wider flex items-center gap-1">Agendar ↗</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-silk p-6 rounded-3xl border border-rose-100 flex flex-col justify-between hover:shadow-xl transition-all duration-300">
+                    <div class="space-y-4">
+                        <div class="h-48 rounded-2xl overflow-hidden mb-4 bg-stone-100">
+                            <img src="img/francesa_vermelha_coracoes.jpg" alt="Nail Art Encapsulada" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-serif text-xl font-bold text-dark">Nail Art Encapsulada</h3>
+                            <span class="text-gold-700 font-bold text-xs uppercase px-2.5 py-1 bg-gold-100 rounded-full">Exclusivo</span>
+                        </div>
+                        <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                            Decorações permanentes seladas sob o gel cristalino. Folhas de ouro, glitter ultrafino, francesas reversas e designs delicados que não desbotam.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-rose-100 mt-6 flex items-center justify-between">
+                        <span class="text-xs text-stone-500">Arte manual</span>
+                        <a href="https://wa.me/5563992903293?text=Ol%C3%A1%20Sarah!%20Gostaria%20de%20agendar%20uma%20Nail%20Art%20Encapsulada." target="_blank" class="text-xs font-bold text-rose-700 hover:text-dark uppercase tracking-wider flex items-center gap-1">Agendar ↗</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-silk p-6 rounded-3xl border border-rose-100 flex flex-col justify-between hover:shadow-xl transition-all duration-300">
+                    <div class="space-y-4">
+                        <div class="h-48 rounded-2xl overflow-hidden mb-4 bg-stone-100">
+                            <img src="img/babyboomer_borboleta_glitter.jpg" alt="Baby Boomer Glamour" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-serif text-xl font-bold text-dark">Baby Boomer & Ombré</h3>
+                            <span class="text-rose-600 font-bold text-xs uppercase px-2.5 py-1 bg-rose-100 rounded-full">Romântico</span>
+                        </div>
+                        <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                            O degradê clássico e sofisticado que combina o rosa suave da base com as pontas alvas ou coloridas, com toques de glitter ou borboletas em 3D.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-rose-100 mt-6 flex items-center justify-between">
+                        <span class="text-xs text-stone-500">Durabilidade 30d</span>
+                        <a href="https://wa.me/5563992903293?text=Ol%C3%A1%20Sarah!%20Gostaria%20de%20agendar%20Baby%20Boomer." target="_blank" class="text-xs font-bold text-rose-700 hover:text-dark uppercase tracking-wider flex items-center gap-1">Agendar ↗</a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-silk p-6 rounded-3xl border border-rose-100 flex flex-col justify-between hover:shadow-xl transition-all duration-300">
+                    <div class="space-y-4">
+                        <div class="h-48 rounded-2xl overflow-hidden mb-4 bg-stone-100">
+                            <img src="img/blindagem_diamante.jpg" alt="Blindagem em Gel Diamante" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-serif text-xl font-bold text-dark">Blindagem Diamante</h3>
+                            <span class="text-stone-700 font-bold text-xs uppercase px-2.5 py-1 bg-stone-200 rounded-full">Proteção</span>
+                        </div>
+                        <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                            Ideal para quem ama suas unhas naturais mas sofre com quebras constantes. Uma armadura transparente que permite o crescimento saudável sem lascar.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-rose-100 mt-6 flex items-center justify-between">
+                        <span class="text-xs text-stone-500">Fortalecimento</span>
+                        <a href="https://wa.me/5563992903293?text=Ol%C3%A1%20Sarah!%20Gostaria%20de%20agendar%20Blindagem%20Diamante." target="_blank" class="text-xs font-bold text-rose-700 hover:text-dark uppercase tracking-wider flex items-center gap-1">Agendar ↗</a>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-silk p-6 rounded-3xl border border-rose-100 flex flex-col justify-between hover:shadow-xl transition-all duration-300">
+                    <div class="space-y-4">
+                        <div class="h-48 rounded-2xl overflow-hidden mb-4 bg-stone-100">
+                            <img src="img/stiletto_black_glamour.jpg" alt="Manutenção Estrutural" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-serif text-xl font-bold text-dark">Manutenção Estruturada</h3>
+                            <span class="text-rose-600 font-bold text-xs uppercase px-2.5 py-1 bg-rose-100 rounded-full">Essencial</span>
+                        </div>
+                        <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                            Cuidado periódico para reposição de fibra, reforço de ponto de tensão, limpeza de cutículas e troca de cor ou arte para manter as unhas sempre novas.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-rose-100 mt-6 flex items-center justify-between">
+                        <span class="text-xs text-stone-500">A cada 20-30 dias</span>
+                        <a href="https://wa.me/5563992903293?text=Ol%C3%A1%20Sarah!%20Gostaria%20de%20agendar%20minha%20Manuten%C3%A7%C3%A3o." target="_blank" class="text-xs font-bold text-rose-700 hover:text-dark uppercase tracking-wider flex items-center gap-1">Agendar ↗</a>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-silk p-6 rounded-3xl border border-rose-100 flex flex-col justify-between hover:shadow-xl transition-all duration-300">
+                    <div class="space-y-4">
+                        <div class="h-48 rounded-2xl overflow-hidden mb-4 bg-stone-100">
+                            <img src="img/almond_lavanda_flores.jpg" alt="Esmaltação em Gel" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-serif text-xl font-bold text-dark">Esmaltação em Gel & Spa</h3>
+                            <span class="text-rose-600 font-bold text-xs uppercase px-2.5 py-1 bg-rose-100 rounded-full">Brilho</span>
+                        </div>
+                        <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                            Secagem instantânea na cabine LED/UV. Sai do studio com as unhas 100% secas, sem borrar na bolsa ou chaves, com brilho espelhado impecável.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-rose-100 mt-6 flex items-center justify-between">
+                        <span class="text-xs text-stone-500">Secagem imediata</span>
+                        <a href="https://wa.me/5563992903293?text=Ol%C3%A1%20Sarah!%20Gostaria%20de%20agendar%20Esmalta%C3%A7%C3%A3o%20em%20Gel." target="_blank" class="text-xs font-bold text-rose-700 hover:text-dark uppercase tracking-wider flex items-center gap-1">Agendar ↗</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- GALERIA REAL DO INSTAGRAM -->
+    <section class="py-24 bg-silk" id="galeria">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div>
+                    <span class="text-xs uppercase tracking-[0.25em] text-rose-600 font-bold">Portfólio Real @srnailspso</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-dark mt-2">
+                        Galeria de <span class="serif-italic text-rose-600">Inspirações</span>
+                    </h2>
+                </div>
+                <a href="https://instagram.com/srnailspso" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-dark uppercase tracking-widest hover:text-rose-600 transition-colors">
+                    <span>Siga @srnailspso no Instagram</span> ↗
+                </a>
+            </div>
+
+            <!-- Grid de Imagens Reais -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+                
+                <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-stone-200 shadow-md">
+                    <img src="img/fibra_de_vidro_natural.jpg" alt="Fibra Natural" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4 text-center">
+                        <span class="text-white text-xs font-serif italic">Fibra de Vidro Natural</span>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-stone-200 shadow-md">
+                    <img src="img/francesa_vermelha_coracoes.jpg" alt="Francesa com Corações" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4 text-center">
+                        <span class="text-white text-xs font-serif italic">Nail Art Romântica</span>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-stone-200 shadow-md">
+                    <img src="img/francesa_ouro_encapsulada.jpg" alt="Francesa Ouro" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4 text-center">
+                        <span class="text-white text-xs font-serif italic">Encapsulada com Ouro</span>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-stone-200 shadow-md">
+                    <img src="img/babyboomer_borboleta_glitter.jpg" alt="Baby Boomer" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4 text-center">
+                        <span class="text-white text-xs font-serif italic">Baby Boomer & Borboletas</span>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-stone-200 shadow-md">
+                    <img src="img/stiletto_black_glamour.jpg" alt="Stiletto Glamour" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4 text-center">
+                        <span class="text-white text-xs font-serif italic">Stiletto Black Glamour</span>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-stone-200 shadow-md">
+                    <img src="img/almond_lavanda_flores.jpg" alt="Almond Lavanda" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4 text-center">
+                        <span class="text-white text-xs font-serif italic">Flores Secas & Lavanda</span>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-stone-200 shadow-md">
+                    <img src="img/quadrada_lilas_geometrica.jpg" alt="Quadrada Geométrica" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4 text-center">
+                        <span class="text-white text-xs font-serif italic">Nail Art Lilás Geométrica</span>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-stone-200 shadow-md">
+                    <img src="img/francesa_reversa_glamour.jpg" alt="Francesa Reversa" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4 text-center">
+                        <span class="text-white text-xs font-serif italic">Francesa Reversa de Luxo</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SIMULADOR INTERATIVO DE AGENDAMENTO -->
+    <section class="py-24 bg-white" id="simulador">
+        <div class="max-w-4xl mx-auto px-6">
+            
+            <div class="bg-creme rounded-3xl p-8 sm:p-12 border border-rose-200 shadow-xl relative overflow-hidden">
+                <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-rose-200/50 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="text-center space-y-3 mb-10">
+                    <span class="text-xs uppercase tracking-[0.25em] text-rose-600 font-bold">Atendimento Personalizado</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-normal text-dark">
+                        Monte seu agendamento em <span class="serif-italic text-rose-600">3 passos</span>
+                    </h2>
+                    <p class="text-stone-600 text-xs sm:text-sm max-w-lg mx-auto">
+                        Selecione as suas preferências abaixo e envie diretamente para o WhatsApp da Sarah com tudo já preenchido.
+                    </p>
+                </div>
+
+                <form id="simuladorForm" class="space-y-8" onsubmit="event.preventDefault(); enviarSimulacao();">
+                    
+                    <!-- Passo 1: Procedimento -->
+                    <div>
+                        <label class="block text-xs uppercase font-bold tracking-wider text-dark mb-3">1. Qual procedimento você gostaria de fazer?</label>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="procedimento" value="Alongamento em Fibra de Vidro" checked class="peer sr-only">
+                                <div class="p-3 text-center rounded-2xl bg-white border border-rose-200 text-xs font-semibold peer-checked:bg-dark peer-checked:text-white peer-checked:border-dark transition-all">
+                                    Fibra de Vidro
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="procedimento" value="Manutenção de Fibra" class="peer sr-only">
+                                <div class="p-3 text-center rounded-2xl bg-white border border-rose-200 text-xs font-semibold peer-checked:bg-dark peer-checked:text-white peer-checked:border-dark transition-all">
+                                    Manutenção
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="procedimento" value="Blindagem Diamante em Gel" class="peer sr-only">
+                                <div class="p-3 text-center rounded-2xl bg-white border border-rose-200 text-xs font-semibold peer-checked:bg-dark peer-checked:text-white peer-checked:border-dark transition-all">
+                                    Blindagem
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="procedimento" value="Esmaltação em Gel" class="peer sr-only">
+                                <div class="p-3 text-center rounded-2xl bg-white border border-rose-200 text-xs font-semibold peer-checked:bg-dark peer-checked:text-white peer-checked:border-dark transition-all">
+                                    Esmaltação Gel
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Passo 2: Formato da Unha -->
+                    <div>
+                        <label class="block text-xs uppercase font-bold tracking-wider text-dark mb-3">2. Qual formato você mais ama?</label>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="formato" value="Almond (Amendoada)" checked class="peer sr-only">
+                                <div class="p-3 text-center rounded-2xl bg-white border border-rose-200 text-xs font-semibold peer-checked:bg-dark peer-checked:text-white peer-checked:border-dark transition-all">
+                                    Almond
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="formato" value="Quadrada Clássica" class="peer sr-only">
+                                <div class="p-3 text-center rounded-2xl bg-white border border-rose-200 text-xs font-semibold peer-checked:bg-dark peer-checked:text-white peer-checked:border-dark transition-all">
+                                    Quadrada
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="formato" value="Stiletto Glamour" class="peer sr-only">
+                                <div class="p-3 text-center rounded-2xl bg-white border border-rose-200 text-xs font-semibold peer-checked:bg-dark peer-checked:text-white peer-checked:border-dark transition-all">
+                                    Stiletto
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="formato" value="Bailarina Sofisticada" class="peer sr-only">
+                                <div class="p-3 text-center rounded-2xl bg-white border border-rose-200 text-xs font-semibold peer-checked:bg-dark peer-checked:text-white peer-checked:border-dark transition-all">
+                                    Bailarina
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Passo 3: Estilo de Decoração -->
+                    <div>
+                        <label class="block text-xs uppercase font-bold tracking-wider text-dark mb-3">3. Deseja Nail Art ou Esmaltação Especial?</label>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="estilo" value="Natural / Nude Chic" checked class="peer sr-only">
+                                <div class="p-3 text-center rounded-2xl bg-white border border-rose-200 text-xs font-semibold peer-checked:bg-dark peer-checked:text-white peer-checked:border-dark transition-all">
+                                    Natural Nude
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="estilo" value="Francesa Reversa" class="peer sr-only">
+                                <div class="p-3 text-center rounded-2xl bg-white border border-rose-200 text-xs font-semibold peer-checked:bg-dark peer-checked:text-white peer-checked:border-dark transition-all">
+                                    Francesa Reversa
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="estilo" value="Encapsulada com Ouro / Glitter" class="peer sr-only">
+                                <div class="p-3 text-center rounded-2xl bg-white border border-rose-200 text-xs font-semibold peer-checked:bg-dark peer-checked:text-white peer-checked:border-dark transition-all">
+                                    Encapsulada Luxo
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="estilo" value="Baby Boomer" class="peer sr-only">
+                                <div class="p-3 text-center rounded-2xl bg-white border border-rose-200 text-xs font-semibold peer-checked:bg-dark peer-checked:text-white peer-checked:border-dark transition-all">
+                                    Baby Boomer
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Botão de Envio -->
+                    <div class="pt-4 text-center">
+                        <button type="submit" 
+                                class="w-full sm:w-auto px-10 py-4 rounded-full bg-rose-600 hover:bg-rose-700 text-white font-semibold text-xs uppercase tracking-widest shadow-xl shadow-rose-600/25 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-3 mx-auto">
+                            <span>Enviar Agendamento no WhatsApp Oficial</span>
+                            <span class="text-gold-300">↗</span>
+                        </button>
+                        <p class="text-[11px] text-stone-500 mt-3">Você será redirecionada para o WhatsApp <strong>(63) 99290-3293</strong> com a mensagem pronta.</p>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SOBRE SARAH ROCHA -->
+    <section class="py-24 bg-silk">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+                
+                <div class="md:col-span-5 text-center md:text-left">
+                    <div class="relative inline-block">
+                        <img src="img/logo_perfil_sarah.jpg" alt="Sarah Rocha Nail Designer" class="w-64 h-64 md:w-80 md:h-80 rounded-3xl object-cover shadow-2xl border-4 border-white">
+                        <div class="absolute -bottom-4 -right-4 px-4 py-2 rounded-full bg-dark text-white text-xs font-serif italic shadow-lg">
+                            Sarah Rocha
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-7 space-y-5">
+                    <span class="text-xs uppercase tracking-[0.25em] text-rose-600 font-bold">Por trás da bancada</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-normal text-dark leading-snug">
+                        "Posso renovar suas unhas e <span class="serif-italic text-rose-600">sua autoestima</span>."
+                    </h2>
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                        Meu propósito na <strong>SR Nails</strong> vai além de simplesmente alongar ou esmaltar: é proporcionar a você a sensação inconfundível de olhar para as próprias mãos e sentir orgulho, elegância e segurança em qualquer situação.
+                    </p>
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                        Cada atendimento em Paraíso do Tocantins é feito com calma, com horário reservado só para você, produtos de alto padrão que respeitam a integridade biológica da unha e muito carinho em cada acabamento.
+                    </p>
+                    
+                    <div class="pt-2 flex items-center gap-4">
+                        <a href="https://instagram.com/srnailspso" target="_blank" class="text-xs font-bold text-dark hover:text-rose-600 uppercase tracking-wider flex items-center gap-1">
+                            Instagram: @srnailspso ↗
+                        </a>
+                        <span class="text-stone-300">•</span>
+                        <span class="text-xs text-stone-500 font-medium">Paraíso do Tocantins - TO</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-silk pt-16 pb-12 border-t border-stone-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-stone-800 text-center md:text-left">
+                
+                <div class="md:col-span-6 space-y-4">
+                    <span class="font-serif text-3xl font-semibold tracking-tight text-white">
+                        SR <span class="text-rose-400 serif-italic font-normal">Nails</span>
+                    </span>
+                    <p class="text-stone-400 text-xs max-w-sm mx-auto md:mx-0 leading-relaxed">
+                        Studio de unhas de alta precisão em Paraíso do Tocantins. Alongamento em Fibra de Vidro, Nail Art Encapsulada e Blindagem Diamante.
+                    </p>
+                </div>
+
+                <div class="md:col-span-3 space-y-3">
+                    <p class="text-xs uppercase font-bold tracking-widest text-gold-500">Contato & Local</p>
+                    <p class="text-xs text-stone-300">📍 Paraíso do Tocantins - TO</p>
+                    <p class="text-xs text-stone-300">📲 WhatsApp: (63) 99290-3293</p>
+                    <p class="text-xs text-stone-300">💳 Aceita Cartões de Crédito & Débito</p>
+                </div>
+
+                <div class="md:col-span-3 space-y-3">
+                    <p class="text-xs uppercase font-bold tracking-widest text-gold-500">Horário de Atendimento</p>
+                    <p class="text-xs text-stone-300">Segunda a Sábado</p>
+                    <p class="text-xs text-stone-400">Atendimento exclusivo com hora marcada</p>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] text-stone-500 text-center">
+                <p>© 2026 SR Nails Studio • Sarah Rocha. Todos os direitos reservados.</p>
+                <p>Desenvolvido com excelência por <strong class="text-rose-400 font-semibold">DLuz Digital</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÃO FLUTUANTE WHATSAPP -->
+    <a href="https://wa.me/5563992903293?text=Ol%C3%A1%20Sarah!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio!" 
+       target="_blank" 
+       class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white flex items-center justify-center shadow-2xl shadow-green-500/40 hover:scale-110 transition-transform pulse-btn"
+       title="Falar no WhatsApp">
+        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.54 1.839.814 2.802.814 3.18 0 5.768-2.587 5.768-5.766.001-3.181-2.586-5.767-5.768-5.767zm0 10.362c-.879 0-1.688-.237-2.385-.688l-.17-.11-1.782.467.476-1.737-.118-.189c-.524-.836-.8-1.528-.8-2.505 0-2.536 2.063-4.599 4.601-4.599 2.537 0 4.6 2.063 4.6 4.6 0 2.536-2.063 4.601-4.6 4.601z"/></svg>
+    </a>
+
+    <!-- SCRIPTS INTERATIVOS -->
+    <script>
+        // Comparador Slider Script
+        const container = document.getElementById('comparadorContainer');
+        const overlay = document.getElementById('comparadorOverlay');
+        const handle = document.getElementById('comparadorHandle');
+        let isDragging = false;
+
+        function setPosition(x) {
+            const rect = container.getBoundingClientRect();
+            let pos = ((x - rect.left) / rect.width) * 100;
+            if (pos < 5) pos = 5;
+            if (pos > 95) pos = 95;
+            overlay.style.width = pos + '%';
+            handle.style.left = pos + '%';
+        }
+
+        container.addEventListener('mousedown', () => isDragging = true);
+        window.addEventListener('mouseup', () => isDragging = false);
+        window.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            setPosition(e.clientX);
+        });
+
+        container.addEventListener('touchstart', () => isDragging = true);
+        window.addEventListener('touchend', () => isDragging = false);
+        window.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            setPosition(e.touches[0].clientX);
+        });
+
+        // Simulador WhatsApp
+        function enviarSimulacao() {
+            const proc = document.querySelector('input[name="procedimento"]:checked')?.value || 'Alongamento em Fibra de Vidro';
+            const formato = document.querySelector('input[name="formato"]:checked')?.value || 'Almond';
+            const estilo = document.querySelector('input[name="estilo"]:checked')?.value || 'Natural Nude';
+
+            const mensagem = `Olá Sarah! Montei meu agendamento pelo site da SR Nails:\n\n✨ *Procedimento:* ${proc}\n💅 *Formato:* ${formato}\n🎨 *Estilo:* ${estilo}\n\nQuais são os dias e horários disponíveis esta semana?`;
+            const encoded = encodeURIComponent(mensagem);
+            window.open(`https://wa.me/5563992903293?text=${encoded}`, '_blank');
+        }
+    </script>
+</body>
+</html>
+"""
+
+# Salvar sr-nails-paraiso.html
+site_path = os.path.join(out_dir, "sr-nails-paraiso.html")
+with open(site_path, "w", encoding="utf-8") as f:
+    f.write(html_content)
+print(f"Site criado: {site_path} ({os.path.getsize(site_path)} bytes)")
+
+# Salvar sr-nails-paraiso-editor.html com a camada de edição visual
+editor_layer = """
+<!-- PROSPECTOR-EDITOR-START -->
+<style id="pe-style">
+#pe-bar{position:fixed;top:0;left:0;right:0;z-index:99999;background:#111;color:#fff;font:14px/1 -apple-system,Segoe UI,Roboto,sans-serif;display:flex;align-items:center;gap:16px;padding:10px 16px;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+#pe-bar button{background:#22c55e;color:#fff;border:0;border-radius:8px;padding:8px 16px;font-weight:600;cursor:pointer}
+#pe-bar button:hover{background:#16a34a}
+body{margin-top:44px !important}
+.pe-hover{outline:2px dashed #C97A7E !important;outline-offset:2px;cursor:pointer}
+[contenteditable="true"]:focus{outline:2px solid #D4AF37 !important;outline-offset:2px}
+</style>
+<div id="pe-bar">
+  <strong>Modo Edição Visual • SR Nails</strong>
+  <span style="opacity:0.8;font-size:12px">Clique em qualquer texto para editar · clique em imagens para trocar</span>
+  <button id="pe-export" type="button">Salvar / Baixar Página</button>
+</div>
+<input type="file" id="pe-file" accept="image/*" style="display:none">
+<script id="pe-script">
+(function(){
+  var TEXT='h1,h2,h3,h4,h5,h6,p,li,a,span,button,td,th,figcaption,blockquote,strong,em';
+  document.querySelectorAll(TEXT).forEach(function(el){
+    if(el.closest('#pe-bar'))return;
+    if(el.children.length===0||el.childElementCount<=1){
+      el.addEventListener('click',function(e){
+        if(el.tagName==='A'||el.tagName==='BUTTON')e.preventDefault();
+        el.setAttribute('contenteditable','true');el.focus();
+      });
+      el.addEventListener('mouseenter',function(){el.classList.add('pe-hover')});
+      el.addEventListener('mouseleave',function(){el.classList.remove('pe-hover')});
+      el.addEventListener('blur',function(){el.removeAttribute('contenteditable')});
+    }
+  });
+  var fileInput=document.getElementById('pe-file'),currentImg=null;
+  document.querySelectorAll('img').forEach(function(img){
+    img.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();currentImg=img;fileInput.click()});
+    img.addEventListener('mouseenter',function(){img.classList.add('pe-hover')});
+    img.addEventListener('mouseleave',function(){img.classList.remove('pe-hover')});
+  });
+  fileInput.addEventListener('change',function(){
+    var f=fileInput.files[0];if(!f||!currentImg)return;
+    var r=new FileReader();
+    r.onload=function(){currentImg.src=r.result;if(currentImg.srcset)currentImg.removeAttribute('srcset')};
+    r.readAsDataURL(f);fileInput.value='';
+  });
+  document.getElementById('pe-export').addEventListener('click',function(){
+    var doc=document.documentElement.cloneNode(true);
+    ['#pe-bar','#pe-style','#pe-script','#pe-file'].forEach(function(s){var n=doc.querySelector(s);if(n)n.remove()});
+    doc.querySelectorAll('[contenteditable]').forEach(function(n){n.removeAttribute('contenteditable')});
+    doc.querySelectorAll('.pe-hover').forEach(function(n){n.classList.remove('pe-hover')});
+    var html='<!DOCTYPE html>\\n'+doc.outerHTML;
+    var blob=new Blob([html],{type:'text/html'});
+    var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='sr-nails-paraiso.html';a.click();
+  });
+})();
+</script>
+<!-- PROSPECTOR-EDITOR-END -->
+"""
+
+editor_html = html_content.replace("</body>", f"{editor_layer}</body>")
+editor_path = os.path.join(out_dir, "sr-nails-paraiso-editor.html")
+with open(editor_path, "w", encoding="utf-8") as f:
+    f.write(editor_html)
+print(f"Editor criado: {editor_path} ({os.path.getsize(editor_path)} bytes)")

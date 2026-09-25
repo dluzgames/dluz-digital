@@ -1,0 +1,57 @@
+{
+  "assinatura": {
+    "nome": "Duilio Luz • DLuz Digital",
+    "apresentacao": "Agência de Soluções Digitais Completas: Sites de Alta Conversão, Tráfego Pago, E-books/PDFs, Transmissões Esportivas & Artes de Jogos",
+    "whatsapp": "5563981249724",
+    "servicos": [
+      "Criação de Sites, Lojas e Landing Pages de Alta Conversão",
+      "Gestão Profissional de Tráfego Pago (Meta Ads & Google Ads)",
+      "Conversão e Diagramação Editorial: Textos para E-books e PDFs Profissionais",
+      "Transmissões Esportivas ao Vivo (Streaming, GC, Narração e Placar)",
+      "Design Esportivo e Gamer: Banners de Jogos, Flyers de Partidas e Thumbnails",
+      "Funis de Vendas e Automação para WhatsApp"
+    ]
+  },
+  "contratante": {
+    "nome": "Dluz Digital",
+    "cpfCnpj": "00.123.456/0001-78",
+    "endereco": "Av. Paulista, 1000 - Conjunto 50",
+    "cidade": "São Paulo - SP",
+    "cidadeUf": "Paraíso do Tocantins",
+    "email": "contato@dluz.com.br",
+    "whatsapp": "+5563981249724"
+  },
+  "prospeccao": {
+    "nichos": [
+      "odontologia",
+      "nutricionistas",
+      "advogados",
+      "psiquiatras",
+      "fisioterapia"
+    ],
+    "cidade": "Paraíso do Tocantins - TO",
+    "leadsPorBusca": 10
+  },
+  "envio": {
+    "modo": "rascunho"
+  },
+  "hostgator": {
+    "usuario": "seuhost",
+    "dominio": "seusite.com.br",
+    "servidor": "br000.hostgator.com.br",
+    "senha": "",
+    "pastaBase": "clientes"
+  },
+  "coolify": {
+    "url": "https://coolify.dluz.com.br",
+    "apiUrl": "https://coolify.dluz.com.br/api/v1",
+    "token": "9|ZFyMfXFPUEKhZG2d6eF8RNHO9f0bVdbawJMLfa3M9c32706c",
+    "projectId": "a96qaj5yukctlrnk31ynhoso",
+    "projectName": "Clientes Sites",
+    "environment": "production",
+    "environmentUuid": "cr8m0qzzynl254n2z2evaxvn",
+    "serverUuid": "y39qmwncbniv5ux9fd7cs2wt",
+    "destinationUuid": "vac5t6k8m8ibrurv9d94iyf9",
+    "baseDomain": "dluz.com.br"
+  }
+}
