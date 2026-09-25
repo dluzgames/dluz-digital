@@ -3,18 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DLuz Digital — Soluções Corporativas em Marketing & Automação | Modelo 3 (Nordic Light)</title>
-  <meta name="description" content="Acelere a aquisição de clientes da sua empresa com inteligência, automação e presença digital de alto padrão." />
+  <title>DLuz Digital | Soluções Corporativas em Marketing, Automação 24/7 & Google Maps</title>
+  <meta name="description" content="Acelere a captação de clientes da sua empresa com inteligência, automação e presença digital de alto padrão. Atendimento em Paraíso do Tocantins, Palmas e em todo o Brasil." />
   
+  <!-- Favicons -->
   <link rel="icon" type="image/png" href="../assets/img/DLuz_Digital_Simbolo_Infinity_SemFundo.png" />
-  
+  <link rel="apple-touch-icon" href="../assets/img/DLuz_Digital_Simbolo_Infinity_SemFundo.png" />
+  <meta property="og:title" content="DLuz Digital | Marketing Corporativo & Automação 24/7" />
+  <meta property="og:description" content="Posicionamento Top 1 no Google Maps, Redes Sociais Estratégicas e Atendimento Automático em menos de 3 segundos no WhatsApp." />
+  <meta property="og:image" content="assets/img/DLuz_Digital_Logo_Horizontal_Para_Fundo_Claro.png" />
+
   <!-- Sites Incríveis Engine CSS -->
   <link rel="stylesheet" href="../assets/vendor/sites-incriveis.css" />
 
-  <!-- Fonts: Plus Jakarta Sans + Inter -->
+  <!-- Fonts: Plus Jakarta Sans (Display) + Inter (Body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <!-- Tailwind CSS CDN -->
@@ -41,6 +46,7 @@
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
             body: ['"Inter"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
           }
         }
       }
@@ -68,30 +74,18 @@
 
 <body class="bg-corporate-bg text-corporate-text font-sans antialiased selection:bg-corporate-primary selection:text-white">
 
-  <!-- Model Switcher Banner -->
-  <aside aria-label="Aviso de protótipo de design" class="bg-white border-b border-corporate-border text-xs py-2 px-4 sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-      <div class="flex items-center gap-2">
-        <span class="px-2 py-0.5 rounded bg-corporate-accentBg text-corporate-primary font-mono font-semibold text-[11px] border border-corporate-primary/20">MODELO 3</span>
-        <span class="text-corporate-muted font-medium">Nordic Corporate Scrolly — Motor Sites Incríveis no Modo Claro Institucional</span>
-      </div>
-      <div class="flex items-center gap-3">
-        <a href="index.html" class="text-corporate-primary hover:underline font-medium text-xs flex items-center gap-1">
-          <i class="fa-solid fa-arrow-left text-[10px]"></i> Ver Todos os 4 Modelos
-        </a>
-      </div>
-    </div>
-  </aside>
-
   <!-- Top Institutional Bar -->
-  <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4">
+  <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 sticky top-0 z-50">
     <div class="max-w-7xl mx-auto flex justify-between items-center">
       <div class="flex items-center gap-4">
         <span><i class="fa-solid fa-shield-halved text-corporate-accent mr-1.5"></i> Consultoria Homologada para Comércio & Serviços</span>
         <span class="hidden sm:inline text-slate-500">|</span>
-        <span class="hidden sm:inline">Tocantins (Paraíso & Palmas) e Brasil</span>
+        <span class="hidden sm:inline">Tocantins (Paraíso & Palmas) e Todo o Brasil</span>
       </div>
       <div class="flex items-center gap-4">
+        <a href="https://www.instagram.com/dluz.digital.pso" target="_blank" class="hover:text-pink-400 transition flex items-center gap-1.5">
+          <i class="fa-brands fa-instagram text-pink-400"></i> @dluz.digital.pso
+        </a>
         <a href="https://wa.me/5563981249724" target="_blank" class="hover:text-white transition flex items-center gap-1">
           <i class="fa-brands fa-whatsapp text-emerald-400"></i> (63) 98124-9724
         </a>
@@ -99,23 +93,30 @@
     </div>
   </div>
 
-  <!-- Navigation -->
+  <!-- Navigation Header -->
   <header class="bg-white/95 backdrop-blur-md border-b border-corporate-border sticky top-0 z-40">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
+      <!-- Brand Logo for Light Background -->
       <a href="#" class="flex items-center gap-3">
         <img src="../assets/img/DLuz_Digital_Logo_Horizontal_Para_Fundo_Claro.png" alt="DLuz Digital" class="h-10 sm:h-11 w-auto object-contain" />
       </a>
 
-      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-corporate-muted">
+      <!-- Desktop Links -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-corporate-muted">
         <a href="#solucoes" class="hover:text-corporate-primary transition">Soluções</a>
+        <a href="#instagram" class="hover:text-pink-600 transition flex items-center gap-1.5"><i class="fa-brands fa-instagram text-pink-500"></i> Gestão de Instagram</a>
         <a href="#comparativo" class="hover:text-corporate-primary transition">Por Que a DLuz?</a>
+        <a href="#simulador" class="hover:text-corporate-primary transition flex items-center gap-1.5">
+          <span class="text-corporate-primary">⚡</span> Teste o Atendente
+        </a>
         <a href="#fundador" class="hover:text-corporate-primary transition">Diretoria</a>
         <a href="#planos" class="hover:text-corporate-primary transition">Planos</a>
       </nav>
 
+      <!-- Action Button -->
       <div class="flex items-center gap-4">
-        <a href="https://wa.me/5563981249724?text=Ol%C3%A1!%20Vim%20pelo%20Modelo%203%20da%20DLuz%20Digital." target="_blank" class="px-5 py-2.5 rounded-lg bg-corporate-primary text-white font-bold text-sm hover:bg-corporate-primaryHover transition flex items-center gap-2 shadow-sm">
+        <a href="https://wa.me/5563981249724?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20DLuz%20Digital%20e%20gostaria%20de%20um%20diagn%C3%B3stico%20gratuito." target="_blank" class="px-5 py-2.5 rounded-lg bg-corporate-primary text-white font-bold text-sm hover:bg-corporate-primaryHover transition flex items-center gap-2 shadow-sm">
           <i class="fa-solid fa-headset"></i>
           <span>Agendar Diagnóstico Gratuito</span>
         </a>
@@ -130,6 +131,7 @@
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         
+        <!-- Left: Copywriting -->
         <div class="lg:col-span-7 text-center lg:text-left">
           
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-corporate-accentBg border border-corporate-primary/20 text-xs font-semibold text-corporate-primary mb-6" data-fx="surgir">
@@ -146,7 +148,7 @@
           </p>
 
           <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10" data-fx="subir" data-fx-atraso="600">
-            <a href="https://wa.me/5563981249724?text=Ol%C3%A1!%20Gostaria%20de%20um%20diagn%C3%B3stico%20gratuito." target="_blank" class="w-full sm:w-auto px-7 py-3.5 rounded-lg bg-corporate-primary hover:bg-corporate-primaryHover text-white font-bold text-sm transition flex items-center justify-center gap-2.5 shadow-md">
+            <a href="https://wa.me/5563981249724?text=Ol%C3%A1!%20Gostaria%20de%20um%20diagn%C3%B3stico%20comercial%20gratuito%20da%20minha%20empresa." target="_blank" class="w-full sm:w-auto px-7 py-3.5 rounded-lg bg-corporate-primary hover:bg-corporate-primaryHover text-white font-bold text-sm transition flex items-center justify-center gap-2.5 shadow-md">
               <i class="fa-brands fa-whatsapp text-base"></i>
               <span>Solicitar Diagnóstico Comercial</span>
             </a>
@@ -174,6 +176,7 @@
 
         </div>
 
+        <!-- Right: Professional Visual Presentation -->
         <div class="lg:col-span-5" data-fx="crescer">
           <div class="nordic-card rounded-2xl p-6 bg-white border border-corporate-border">
             
@@ -182,7 +185,7 @@
                 <img src="../assets/img/DLuz_Digital_Simbolo_Infinity_SemFundo.png" alt="Símbolo" class="h-8 w-auto" />
                 <div>
                   <div class="text-xs font-bold text-corporate-text">Painel de Desempenho</div>
-                  <div class="text-[10px] text-corporate-lightMuted">DLuz Digital OS • Monitoramento Ativo</div>
+                  <div class="text-[10px] text-corporate-lightMuted font-mono">DLuz Digital OS • Monitoramento Ativo</div>
                 </div>
               </div>
               <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-semibold border border-emerald-200">
@@ -191,6 +194,7 @@
               </span>
             </div>
 
+            <!-- Founder & Mascot Executive Duo -->
             <div class="relative h-64 rounded-xl overflow-hidden mb-5 border border-corporate-border">
               <img src="../assets/img/dluz_frya_executive.jpg" alt="Duilio Luz e Frya" class="w-full h-full object-cover object-top" />
               <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
@@ -200,14 +204,15 @@
               </div>
             </div>
 
+            <!-- Status Metric Cards -->
             <div class="grid grid-cols-2 gap-3 text-xs">
               <div class="p-3 rounded-lg bg-slate-50 border border-corporate-border">
                 <div class="text-[11px] text-corporate-lightMuted font-medium">Tempo Médio de Atendimento</div>
-                <div class="text-base font-bold text-corporate-primary mt-1">2.4 Segundos</div>
+                <div class="text-base font-bold text-corporate-primary mt-1 font-mono">2.4 Segundos</div>
               </div>
               <div class="p-3 rounded-lg bg-slate-50 border border-corporate-border">
                 <div class="text-[11px] text-corporate-lightMuted font-medium">Avaliações no Google</div>
-                <div class="text-base font-bold text-amber-500 mt-1">5.0 ★★★★★</div>
+                <div class="text-base font-bold text-amber-500 mt-1 font-mono">5.0 ★★★★★</div>
               </div>
             </div>
 
@@ -219,7 +224,7 @@
     </div>
   </section>
 
-  <!-- Cena 2: As 3 Soluções -->
+  <!-- Cena 2: As 3 Soluções Principais -->
   <section id="solucoes" class="py-20 bg-white border-b border-corporate-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -228,10 +233,14 @@
         <h2 class="text-3xl sm:text-4xl font-extrabold text-corporate-text tracking-tight mb-4">
           Tudo o Que Sua Empresa Precisa em um Único Lugar
         </h2>
+        <p class="text-corporate-muted font-body text-base">
+          Elimine a dor de cabeça de contratar múltiplos fornecedores que não conversam entre si.
+        </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
+        <!-- 1. Google Maps -->
         <div class="nordic-card rounded-xl p-8 flex flex-col justify-between" data-fx="subir">
           <div>
             <div class="w-12 h-12 rounded-xl bg-sky-50 text-corporate-primary flex items-center justify-center text-xl mb-6 border border-sky-100">
@@ -248,7 +257,8 @@
           </ul>
         </div>
 
-        <div class="nordic-card rounded-xl p-8 flex flex-col justify-between border-corporate-primary/40 relative" data-fx="subir" data-fx-atraso="150">
+        <!-- 2. WhatsApp 24/7 -->
+        <div class="nordic-card rounded-xl p-8 flex flex-col justify-between border-corporate-primary/40 relative shadow-sm" data-fx="subir" data-fx-atraso="150">
           <div class="absolute -top-3 right-6 px-3 py-0.5 rounded-full bg-corporate-primary text-white text-[10px] font-bold uppercase tracking-wider">
             DESTAQUE
           </div>
@@ -267,19 +277,22 @@
           </ul>
         </div>
 
+        <!-- 3. Gestão de Instagram & Perfil Magnético -->
         <div class="nordic-card rounded-xl p-8 flex flex-col justify-between" data-fx="subir" data-fx-atraso="300">
           <div>
-            <div class="w-12 h-12 rounded-xl bg-sky-50 text-corporate-primary flex items-center justify-center text-xl mb-6 border border-sky-100">
-              <i class="fa-solid fa-photo-film"></i>
+            <div class="w-12 h-12 rounded-xl bg-pink-50 text-pink-600 flex items-center justify-center text-xl mb-6 border border-pink-100">
+              <i class="fa-brands fa-instagram"></i>
             </div>
-            <h3 class="text-xl font-bold text-corporate-text mb-3">Redes Sociais & Audiovisual Magnético</h3>
+            <h3 class="text-xl font-bold text-corporate-text mb-3">Gestão de Instagram & Perfil Magnético</h3>
             <p class="text-sm text-corporate-muted leading-relaxed mb-6 font-body">
-              Construção de autoridade com design alinhado à classe do seu negócio. Vídeos curtos (Reels) dinâmicos e carrosséis explicativos que transformam seguidores em clientes reais no direct.
+              Transformação completa do perfil da sua empresa: Bio magnética de alta conversão, Destaques estratégicos, Carrosséis semanais educativos (1080×1350px) e postagens constantes que geram autoridade e atraem novos clientes no direct.
             </p>
           </div>
           <ul class="text-xs text-corporate-muted space-y-2 border-t border-corporate-border pt-4">
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-corporate-primary"></i> Design corporativo de alto nível</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-corporate-primary"></i> Roteiros e vídeos com foco em fechamento</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-corporate-primary"></i> Bio magnética & destaques padronizados</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-corporate-primary"></i> Carrosséis semanais de alta retenção (1080×1350)</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-corporate-primary"></i> Calendário editorial & constância sem estresse</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-corporate-primary"></i> Parcerias mensais com foco em conversão</li>
           </ul>
         </div>
 
@@ -288,7 +301,7 @@
     </div>
   </section>
 
-  <!-- Cena 3: Tabela Comparativa -->
+  <!-- Cena 3: Tabela Comparativa (Agência Tradicional vs DLuz Digital) -->
   <section id="comparativo" class="py-20 bg-corporate-bg border-b border-corporate-border">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -297,6 +310,9 @@
         <h2 class="text-3xl font-extrabold text-corporate-text tracking-tight mb-4">
           A Diferença Entre Quem Vende Promessas e Quem Constrói Resultados
         </h2>
+        <p class="text-corporate-muted text-sm">
+          Entenda por que empresas maduras migram da agência tradicional para a DLuz Digital.
+        </p>
       </div>
 
       <div class="nordic-card rounded-2xl overflow-hidden bg-white" data-fx="crescer">
@@ -346,8 +362,265 @@
     </div>
   </section>
 
+  <!-- Seção: Gestão de Instagram & Perfil Magnético -->
+  <section id="instagram" class="py-24 bg-white border-b border-corporate-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Cabeçalho da Seção -->
+      <div class="text-center max-w-3xl mx-auto mb-16" data-fx="subir">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-pink-50 border border-pink-200 text-xs font-bold text-pink-600 mb-4">
+          <i class="fa-brands fa-instagram text-pink-500"></i> GESTÃO E PARCERIAS DE INSTAGRAM
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-corporate-text tracking-tight mb-4">
+          Transformamos o Instagram da Sua Empresa em Uma Vitrine Executiva Que Vende
+        </h2>
+        <p class="text-corporate-muted font-body text-base sm:text-lg leading-relaxed">
+          Você não precisa ser escravo das redes sociais nem perder horas do seu dia gravando vídeos ou pensando no que postar. A DLuz Digital assume o seu perfil com estética refinada, estratégia semanal e foco total em fechamento no direct.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Pilares em Grid (7 colunas) -->
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6" data-fx="esquerda">
+          
+          <!-- Pilar 1: Bio & Destaques -->
+          <div class="nordic-card rounded-2xl p-6 bg-corporate-bg border border-corporate-border hover:border-pink-300 transition group">
+            <div class="w-12 h-12 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition duration-300">
+              <i class="fa-solid fa-id-card-clip"></i>
+            </div>
+            <h3 class="text-lg font-bold text-corporate-text mb-2">Bio & Destaques Magnéticos</h3>
+            <p class="text-xs text-corporate-muted leading-relaxed font-body">
+              Reestruturação completa da biografia com proposta única de valor, links inteligentes de conversão e capas padronizadas para os Destaques institucionais (Quem Somos, Serviços, Resultados, Depoimentos e Localização).
+            </p>
+          </div>
+
+          <!-- Pilar 2: Carrosséis Semanais -->
+          <div class="nordic-card rounded-2xl p-6 bg-corporate-bg border border-corporate-border hover:border-sky-300 transition group">
+            <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition duration-300">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <h3 class="text-lg font-bold text-corporate-text mb-2">Carrosséis Semanais (1080×1350)</h3>
+            <p class="text-xs text-corporate-muted leading-relaxed font-body">
+              Produção de carrosséis deslizáveis com storytelling e design limpo. Textos educativos que tocam nas maiores dores do seu cliente, retêm a atenção, aumentam salvamentos e geram autoridade imediata.
+            </p>
+          </div>
+
+          <!-- Pilar 3: Posts Semanais & Calendário -->
+          <div class="nordic-card rounded-2xl p-6 bg-corporate-bg border border-corporate-border hover:border-emerald-300 transition group">
+            <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition duration-300">
+              <i class="fa-solid fa-calendar-check"></i>
+            </div>
+            <h3 class="text-lg font-bold text-corporate-text mb-2">Constância com Posts Semanais</h3>
+            <p class="text-xs text-corporate-muted leading-relaxed font-body">
+              Cronograma editorial rigoroso mantendo seu feed sempre ativo e profissional. Acabou a sensação de perfil abandonado ou postagens desleixadas a cada dois meses.
+            </p>
+          </div>
+
+          <!-- Pilar 4: Parcerias Recorrentes & Vendas -->
+          <div class="nordic-card rounded-2xl p-6 bg-corporate-bg border border-corporate-border hover:border-indigo-300 transition group">
+            <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition duration-300">
+              <i class="fa-solid fa-handshake-simple"></i>
+            </div>
+            <h3 class="text-lg font-bold text-corporate-text mb-2">Parcerias Recorrentes Mensais</h3>
+            <p class="text-xs text-corporate-muted leading-relaxed font-body">
+              Atuamos como o braço estratégico de marketing da sua empresa. Cada post possui gancho comercial para direcionar clientes qualificados direto para o Direct e WhatsApp.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Card Mockup de Perfil Executivo (5 colunas) -->
+        <div class="lg:col-span-5" data-fx="direita">
+          <div class="nordic-card rounded-2xl p-8 bg-white border-2 border-slate-200 shadow-xl relative overflow-hidden">
+            
+            <!-- Etiqueta no Topo -->
+            <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-6">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-pink-500 to-amber-400 p-0.5">
+                  <div class="w-full h-full rounded-full bg-white flex items-center justify-center font-bold text-corporate-text text-sm">
+                    <i class="fa-solid fa-building text-corporate-primary"></i>
+                  </div>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-corporate-text flex items-center gap-1">
+                    <span>suaempresa.oficial</span>
+                    <i class="fa-solid fa-circle-check text-corporate-primary text-[10px]"></i>
+                  </div>
+                  <span class="text-[11px] text-corporate-lightMuted">Perfil Otimizado pela DLuz Digital</span>
+                </div>
+              </div>
+              <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[10px] font-bold border border-emerald-200">
+                Padrão Executivo
+              </span>
+            </div>
+
+            <!-- Demonstração dos Destaques -->
+            <div class="mb-6">
+              <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block mb-3">Destaques Estratégicos Ativos:</span>
+              <div class="flex items-center justify-between gap-2 text-center overflow-x-auto pb-2">
+                <div class="flex flex-col items-center gap-1">
+                  <div class="w-12 h-12 rounded-full border-2 border-slate-200 flex items-center justify-center text-corporate-primary bg-slate-50 text-sm">
+                    <i class="fa-solid fa-briefcase"></i>
+                  </div>
+                  <span class="text-[10px] font-semibold text-corporate-muted">Serviços</span>
+                </div>
+                <div class="flex flex-col items-center gap-1">
+                  <div class="w-12 h-12 rounded-full border-2 border-slate-200 flex items-center justify-center text-emerald-600 bg-slate-50 text-sm">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <span class="text-[10px] font-semibold text-corporate-muted">Depoimentos</span>
+                </div>
+                <div class="flex flex-col items-center gap-1">
+                  <div class="w-12 h-12 rounded-full border-2 border-slate-200 flex items-center justify-center text-pink-600 bg-slate-50 text-sm">
+                    <i class="fa-solid fa-award"></i>
+                  </div>
+                  <span class="text-[10px] font-semibold text-corporate-muted">Resultados</span>
+                </div>
+                <div class="flex flex-col items-center gap-1">
+                  <div class="w-12 h-12 rounded-full border-2 border-slate-200 flex items-center justify-center text-indigo-600 bg-slate-50 text-sm">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                  </div>
+                  <span class="text-[10px] font-semibold text-corporate-muted">Como Chegar</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- O que entregamos para o seu perfil -->
+            <div class="bg-corporate-bg rounded-xl p-5 mb-6 border border-corporate-border">
+              <div class="text-xs font-bold text-corporate-text mb-3 flex items-center gap-2">
+                <i class="fa-solid fa-circle-check text-corporate-primary"></i>
+                <span>O que inclui a Gestão de Instagram:</span>
+              </div>
+              <ul class="text-xs text-corporate-muted space-y-2">
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-emerald-500 text-[11px]"></i>
+                  <span>Bio magnética reescrita para alta conversão</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-emerald-500 text-[11px]"></i>
+                  <span>Capas vetoriais padronizadas para Destaques</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-emerald-500 text-[11px]"></i>
+                  <span>Carrosséis semanais educativos (1080×1350px)</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-emerald-500 text-[11px]"></i>
+                  <span>Cronograma semanal com postagens no feed</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-emerald-500 text-[11px]"></i>
+                  <span>Ganchos de copy direcionando para o WhatsApp</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Botão de Ação -->
+            <a href="https://wa.me/5563981249724?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20DLuz%20Digital%20e%20quero%20uma%20parceria%20para%20gest%C3%A3o%20e%20otimiza%C3%A7%C3%A3o%20do%20meu%20Instagram." target="_blank" class="w-full py-3.5 rounded-xl bg-corporate-primary hover:bg-corporate-primaryHover text-white font-bold text-xs text-center flex items-center justify-center gap-2 transition shadow-md">
+              <i class="fa-brands fa-whatsapp text-emerald-300 text-sm"></i>
+              <span>Quero Uma Parceria Para o Meu Instagram</span>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Simulador de Atendimento WhatsApp em Modo Claro -->
+  <section id="simulador" class="py-20 bg-corporate-bg border-b border-corporate-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-5" data-fx="esquerda">
+          <span class="text-xs font-bold text-corporate-primary uppercase tracking-widest block mb-2">EXPERIÊNCIA INTERATIVA</span>
+          <h2 class="text-3xl font-extrabold text-corporate-text tracking-tight mb-4">
+            Veja a Velocidade de Resposta do Nosso Atendente
+          </h2>
+          <p class="text-corporate-muted font-body text-base mb-6 leading-relaxed">
+            Seu cliente não quer esperar para tirar uma dúvida ou agendar um atendimento. Clique em uma das perguntas ao lado para testar a Frya (nossa IA de atendimento):
+          </p>
+
+          <div class="space-y-3 mb-6 text-sm text-corporate-muted">
+            <div class="flex items-center gap-2.5">
+              <i class="fa-solid fa-check text-corporate-primary"></i>
+              <span>Escuta e entende áudios de clientes</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <i class="fa-solid fa-check text-corporate-primary"></i>
+              <span>Compartilha links de Pix e catálogos</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <i class="fa-solid fa-check text-corporate-primary"></i>
+              <span>Opera 24 horas por dia sem interrupções</span>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-corporate-accentBg border border-corporate-primary/20 text-xs text-corporate-primary font-medium">
+            <i class="fa-solid fa-circle-info mr-1.5"></i>
+            Esta mesma tecnologia pode ser ativada na sua empresa em menos de 48 horas.
+          </div>
+        </div>
+
+        <!-- Light iOS WhatsApp Mockup -->
+        <div class="lg:col-span-7 flex justify-center" data-fx="direita">
+          <div class="w-full max-w-md bg-slate-100 rounded-3xl p-3 border border-corporate-border shadow-xl">
+            
+            <!-- WhatsApp Header -->
+            <div class="bg-white p-3.5 rounded-2xl flex items-center justify-between mb-3 border border-corporate-border shadow-sm">
+              <div class="flex items-center gap-3">
+                <div class="relative w-10 h-10 rounded-full overflow-hidden border border-corporate-primary">
+                  <img src="../assets/img/frya_executive_formal.jpg" alt="Frya" class="w-full h-full object-cover" />
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 absolute bottom-0 right-0 border-2 border-white"></span>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-corporate-text flex items-center gap-1.5">
+                    <span>Frya &middot; DLuz Digital</span>
+                    <i class="fa-solid fa-circle-check text-corporate-primary text-[10px]"></i>
+                  </div>
+                  <div class="text-[10px] font-semibold text-emerald-600" id="liveBotStatus">Online &middot; Resposta em 2.4s</div>
+                </div>
+              </div>
+              <span class="text-xs text-corporate-lightMuted font-mono">DLUZ-AI</span>
+            </div>
+
+            <!-- Chat Window -->
+            <div id="liveChatMessages" class="h-72 overflow-y-auto px-2 py-3 space-y-3 font-body text-xs text-slate-800">
+              <div class="flex justify-start">
+                <div class="max-w-[85%] bg-white p-3 rounded-xl rounded-tl-none border border-corporate-border shadow-sm leading-relaxed">
+                  <p>Olá! Eu sou a <strong>Frya</strong>, assistente corporativa da <strong>DLuz Digital</strong>.</p>
+                  <p class="mt-1 text-slate-600">Como podemos ajudar sua empresa a atrair mais clientes hoje? Selecione uma opção abaixo para testar:</p>
+                  <div class="text-[9px] text-slate-400 text-right mt-1.5 font-mono">Agora &middot; ✓✓</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Question Options -->
+            <div class="p-2 border-t border-corporate-border bg-white rounded-xl mt-2 space-y-1.5">
+              <button onclick="simularMensagem('Como funciona o atendimento automático no WhatsApp?')" class="w-full text-left px-3 py-2 rounded-lg bg-slate-50 hover:bg-corporate-accentBg border border-corporate-border hover:border-corporate-primary text-xs text-corporate-text transition flex items-center justify-between">
+                <span>⚡ O que a automação no WhatsApp faz?</span>
+                <i class="fa-solid fa-chevron-right text-[10px] text-corporate-primary"></i>
+              </button>
+              <button onclick="simularMensagem('Como a DLuz Digital coloca minha empresa no Top 1 do Google Maps?')" class="w-full text-left px-3 py-2 rounded-lg bg-slate-50 hover:bg-corporate-accentBg border border-corporate-border hover:border-corporate-primary text-xs text-corporate-text transition flex items-center justify-between">
+                <span>📍 Como funciona o Top 1 no Maps?</span>
+                <i class="fa-solid fa-chevron-right text-[10px] text-corporate-primary"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
   <!-- Cena 4: Fundador Duilio Luz -->
-  <section id="fundador" class="py-20 bg-white border-b border-corporate-border">
+  <section id="fundador" class="py-20 bg-corporate-bg border-b border-corporate-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="nordic-card rounded-2xl p-8 lg:p-12" data-fx="crescer">
@@ -376,7 +649,7 @@
               </div>
               <div class="h-8 w-px bg-corporate-border"></div>
               <div class="text-xs text-corporate-muted">
-                Paraíso do Tocantins • Palmas • Brasil
+                Paraíso do Tocantins &bull; Palmas &bull; Brasil
               </div>
             </div>
 
@@ -388,8 +661,8 @@
     </div>
   </section>
 
-  <!-- Cena 5: Planos -->
-  <section id="planos" class="py-20 bg-corporate-bg border-b border-corporate-border">
+  <!-- Cena 5: Tabela de Investimento -->
+  <section id="planos" class="py-20 bg-white border-b border-corporate-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-16" data-fx="subir">
@@ -397,22 +670,29 @@
         <h2 class="text-3xl sm:text-4xl font-extrabold text-corporate-text tracking-tight mb-4">
           Planos Claros e Objetivos
         </h2>
+        <p class="text-corporate-muted font-body text-base">
+          Escolha a estrutura adequada para o momento da sua empresa. Todos com relatórios semanais e suporte direto.
+        </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
         
+        <!-- Start -->
         <div class="nordic-card rounded-2xl p-8 bg-white flex flex-col justify-between" data-fx="subir">
           <div>
             <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Plano Inicial</div>
             <h3 class="text-xl font-bold text-corporate-text mb-3">Start Local</h3>
+            <p class="text-xs text-corporate-muted mb-6 leading-relaxed">
+              Otimização de presença territorial para atrair quem busca pelo seu serviço na cidade.
+            </p>
             <div class="mb-6 pb-6 border-b border-corporate-border">
               <span class="text-xs text-corporate-lightMuted">Investimento único</span>
-              <div class="text-3xl font-extrabold text-corporate-text">R$ 697</div>
+              <div class="text-3xl font-extrabold text-corporate-text font-mono">R$ 697</div>
             </div>
             <ul class="text-xs text-corporate-muted space-y-3 mb-8">
-              <li>✓ Otimização Completa Google Maps</li>
-              <li>✓ Sistema de Reviews 5 Estrelas</li>
-              <li>✓ Padronização do WhatsApp Comercial</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-corporate-primary"></i> Otimização Completa Google Maps</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-corporate-primary"></i> Sistema de Reviews 5 Estrelas</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-corporate-primary"></i> Padronização do WhatsApp Comercial</li>
             </ul>
           </div>
           <a href="https://wa.me/5563981249724?text=Ol%C3%A1!%20Quero%20contratar%20o%20Plano%20Start%20Local." target="_blank" class="w-full py-3 rounded-lg bg-slate-100 hover:bg-slate-200 text-corporate-text font-bold text-xs text-center transition">
@@ -420,6 +700,7 @@
           </a>
         </div>
 
+        <!-- Escala (Mais Contratado) -->
         <div class="nordic-card rounded-2xl p-8 bg-white flex flex-col justify-between border-2 border-corporate-primary relative shadow-lg" data-fx="subir" data-fx-atraso="150">
           <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-corporate-primary text-white text-[11px] font-bold uppercase tracking-wider shadow">
             MAIS CONTRATADO
@@ -427,15 +708,18 @@
           <div>
             <div class="text-xs font-bold text-corporate-primary uppercase tracking-wider mb-2">Crescimento Contínuo</div>
             <h3 class="text-xl font-bold text-corporate-text mb-3">Escala & Automação</h3>
+            <p class="text-xs text-corporate-muted mb-6 leading-relaxed">
+              Estrutura com atendente automático no WhatsApp 24/7, landing page rápida e anúncios.
+            </p>
             <div class="mb-6 pb-6 border-b border-corporate-border">
               <span class="text-xs text-corporate-lightMuted">Mensalidade</span>
-              <div class="text-3xl font-extrabold text-corporate-primary">R$ 1.497 <span class="text-xs font-normal text-corporate-muted">/mês</span></div>
+              <div class="text-3xl font-extrabold text-corporate-primary font-mono">R$ 1.497 <span class="text-xs font-normal text-corporate-muted">/mês</span></div>
             </div>
             <ul class="text-xs text-corporate-text space-y-3 mb-8">
-              <li>✓ <strong>Atendente Automático no WhatsApp 24/7</strong></li>
-              <li>✓ <strong>Landing Page de Alta Performance Sub-segundo</strong></li>
-              <li>✓ Gestão de Tráfego Pago (Google & Meta)</li>
-              <li>✓ Monitoramento Google Maps</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-corporate-primary"></i> <strong>Atendente Automático no WhatsApp 24/7</strong></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-corporate-primary"></i> <strong>Landing Page de Alta Performance Sub-segundo</strong></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-corporate-primary"></i> Gestão de Tráfego Pago (Google & Meta)</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-corporate-primary"></i> Monitoramento Google Maps</li>
             </ul>
           </div>
           <a href="https://wa.me/5563981249724?text=Ol%C3%A1!%20Quero%20o%20Plano%20Escala%20%26%20Automa%C3%A7%C3%A3o." target="_blank" class="w-full py-3.5 rounded-lg bg-corporate-primary hover:bg-corporate-primaryHover text-white font-bold text-xs text-center transition shadow-md">
@@ -443,19 +727,24 @@
           </a>
         </div>
 
+        <!-- Dominação 360 -->
         <div class="nordic-card rounded-2xl p-8 bg-white flex flex-col justify-between" data-fx="subir" data-fx-atraso="300">
           <div>
             <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Exclusividade Total</div>
             <h3 class="text-xl font-bold text-corporate-text mb-3">Dominação 360</h3>
+            <p class="text-xs text-corporate-muted mb-6 leading-relaxed">
+              Para empresas que desejam liderança incontestável com produção audiovisual e prioridade.
+            </p>
             <div class="mb-6 pb-6 border-b border-corporate-border">
               <span class="text-xs text-corporate-lightMuted">Mensalidade</span>
-              <div class="text-3xl font-extrabold text-corporate-text">R$ 2.997 <span class="text-xs font-normal text-corporate-muted">/mês</span></div>
+              <div class="text-3xl font-extrabold text-corporate-text font-mono">R$ 2.997 <span class="text-xs font-normal text-corporate-muted">/mês</span></div>
             </div>
             <ul class="text-xs text-corporate-muted space-y-3 mb-8">
-              <li>✓ Tudo do Plano Escala</li>
-              <li>✓ <strong>4 Vídeos Cinematográficos por Mês (Reels)</strong></li>
-              <li>✓ Tráfego Pago Multicanal Avançado</li>
-              <li>✓ Canal de Comunicação VIP com a Diretoria</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-corporate-primary"></i> Tudo do Plano Escala</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-corporate-primary"></i> <strong>Gestão de Instagram (Bio, Destaques & Carrosséis Semanais)</strong></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-corporate-primary"></i> <strong>4 Vídeos Cinematográficos por Mês (Reels)</strong></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-corporate-primary"></i> Tráfego Pago Multicanal Avançado</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-corporate-primary"></i> Canal de Comunicação VIP com a Diretoria</li>
             </ul>
           </div>
           <a href="https://wa.me/5563981249724?text=Ol%C3%A1!%20Quero%20proposta%20do%20Plano%20Domina%C3%A7%C3%A3o%20360." target="_blank" class="w-full py-3 rounded-lg bg-slate-100 hover:bg-slate-200 text-corporate-text font-bold text-xs text-center transition">
@@ -465,6 +754,40 @@
 
       </div>
 
+      <!-- Chamada para Parceria Exclusiva de Instagram -->
+      <div class="mt-16 nordic-card rounded-2xl p-8 lg:p-10 bg-gradient-to-r from-slate-900 via-corporate-surface to-slate-900 text-white border border-slate-700 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl" data-fx="crescer">
+        <div class="max-w-2xl">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-500/20 border border-pink-400/30 text-xs font-bold text-pink-300 mb-3">
+            <i class="fa-brands fa-instagram"></i> PARCERIAS RECORRENTES SOB MEDIDA
+          </span>
+          <h3 class="text-2xl font-bold mb-2">Procura apenas a Gestão e Otimização do seu Instagram?</h3>
+          <p class="text-sm text-slate-300 leading-relaxed font-body">
+            Se sua empresa quer focar especificamente na reformulação de Bio & Destaques, Carrosséis semanais educativos e postagens constantes no feed, criamos um pacote de parceria mensal personalizado para o seu nicho.
+          </p>
+        </div>
+        <a href="https://wa.me/5563981249724?text=Ol%C3%A1!%20Gostaria%20de%20uma%20proposta%20personalizada%20de%20Parceria%20para%20Gest%C3%A3o%20de%20Instagram." target="_blank" class="px-6 py-4 rounded-xl bg-pink-600 hover:bg-pink-500 text-white font-bold text-xs flex items-center gap-2.5 transition shadow-lg shrink-0">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Solicitar Proposta para Instagram</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Chamada Final de Exclusividade -->
+  <section class="py-20 bg-corporate-bg border-b border-corporate-border text-center">
+    <div class="max-w-4xl mx-auto px-4" data-fx="crescer">
+      <span class="text-xs font-bold text-corporate-primary uppercase tracking-widest block mb-2">POLÍTICA DE EXCLUSIVIDADE</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-corporate-text tracking-tight mb-4">
+        Apenas 1 Empresa Por Segmento em Cada Região
+      </h2>
+      <p class="text-corporate-muted font-body text-base max-w-xl mx-auto mb-8">
+        Garantimos que sua empresa não terá conflito de interesses na mesma praça. Garanta a exclusividade do seu nicho antes do seu concorrente.
+      </p>
+      <a href="https://wa.me/5563981249724?text=Ol%C3%A1%20Duilio!%20Gostaria%20de%20consultar%20a%20disponibilidade%20para%20o%20meu%20nicho." target="_blank" class="inline-flex items-center gap-3 px-8 py-4 rounded-lg bg-corporate-primary hover:bg-corporate-primaryHover text-white font-bold text-sm transition shadow-md">
+        <i class="fa-brands fa-whatsapp text-lg"></i>
+        <span>Consultar Disponibilidade do Meu Setor</span>
+      </a>
     </div>
   </section>
 
@@ -474,13 +797,70 @@
       <div class="flex items-center gap-3">
         <img src="../assets/img/DLuz_Digital_Logo_Horizontal_Para_Fundo_Claro.png" alt="DLuz Digital" class="h-8 w-auto" />
       </div>
-      <div>Paraíso do Tocantins • Palmas • Brasil • (63) 98124-9724</div>
+      <div>Paraíso do Tocantins &bull; Palmas &bull; Brasil &bull; (63) 98124-9724</div>
       <div>&copy; 2026 DLuz Digital. Todos os direitos reservados.</div>
     </div>
   </footer>
 
+  <!-- Floating WhatsApp Action Button -->
+  <a href="https://wa.me/5563981249724?text=Ol%C3%A1%20DLuz%20Digital!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-emerald-500 text-white flex items-center justify-center text-2xl shadow-xl hover:scale-110 transition duration-300 group" title="Falar no WhatsApp">
+    <span class="absolute w-full h-full rounded-full bg-emerald-400/40 animate-ping"></span>
+    <i class="fa-brands fa-whatsapp relative z-10"></i>
+  </a>
+
   <!-- Sites Incríveis Engine Script -->
   <script src="../assets/vendor/sites-incriveis.js"></script>
+
+  <!-- Script do Simulador WhatsApp -->
+  <script>
+    const respostasSimulador = {
+      'Como funciona o atendimento automático no WhatsApp?':
+        "Nosso assistente opera 24 horas por dia! ⚡ Ele tira dúvidas frequentes sobre seus produtos e serviços, envia catálogos e orçamentos, escuta os áudios enviados pelos clientes com precisão e já encaminha o contato pronto para a compra.",
+      'Como a DLuz Digital coloca minha empresa no Top 1 do Google Maps?':
+        "Otimizamos todos os pontos exigidos pelo algoritmo do Google: palavras-chave locais, fotos profissionais, categorização precisa e ativamos nossa esteira automática de solicitações de avaliações 5 estrelas via WhatsApp após cada atendimento."
+    };
+
+    function simularMensagem(pergunta) {
+      const container = document.getElementById('liveChatMessages');
+      const status = document.getElementById('liveBotStatus');
+
+      const userDiv = document.createElement('div');
+      userDiv.className = 'flex justify-end';
+      userDiv.innerHTML = `
+        <div class="max-w-[85%] bg-corporate-primary text-white p-3 rounded-xl rounded-tr-none shadow-sm leading-relaxed">
+          <p>${pergunta}</p>
+          <div class="text-[9px] text-sky-100 text-right mt-1 font-mono">Agora &middot; ✓✓</div>
+        </div>
+      `;
+      container.appendChild(userDiv);
+      container.scrollTop = container.scrollHeight;
+
+      status.innerText = "Frya digitando...";
+      status.className = "text-[10px] font-semibold text-corporate-primary animate-pulse";
+
+      setTimeout(() => {
+        status.innerText = "Online &middot; Resposta em 2.4s";
+        status.className = "text-[10px] font-semibold text-emerald-600";
+
+        const resposta = respostasSimulador[pergunta] || "Entendido! Podemos detalhar o projeto ideal para o seu negócio diretamente no WhatsApp oficial.";
+        const botDiv = document.createElement('div');
+        botDiv.className = 'flex justify-start';
+        botDiv.innerHTML = `
+          <div class="max-w-[85%] bg-white p-3 rounded-xl rounded-tl-none border border-corporate-border shadow-sm leading-relaxed text-slate-800">
+            <p>${resposta}</p>
+            <div class="mt-2 pt-2 border-t border-corporate-border flex items-center justify-between">
+              <a href="https://wa.me/5563981249724?text=${encodeURIComponent(pergunta)}" target="_blank" class="text-[10px] font-bold text-corporate-primary hover:underline flex items-center gap-1">
+                <i class="fa-brands fa-whatsapp text-emerald-500"></i> Falar com Especialista &rarr;
+              </a>
+              <span class="text-[9px] text-slate-400 font-mono">Agora &middot; ✓✓</span>
+            </div>
+          </div>
+        `;
+        container.appendChild(botDiv);
+        container.scrollTop = container.scrollHeight;
+      }, 700);
+    }
+  </script>
 
 </body>
 </html>
