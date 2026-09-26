@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refrigeração Bom Clima — Ar-Condicionado e Refrigeração em Paraíso do Tocantins</title>
+    <meta name="description" content="Instalação, manutenção, higienização de ar-condicionado split, conserto de geladeiras e lavadoras em Paraíso do Tocantins. Atendimento rápido e com garantia.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0284C7;
+            --primary-dark: #0369A1;
+            --primary-light: #E0F2FE;
+            --accent: #EA580C;
+            --accent-hover: #C2410C;
+            --dark: #0F172A;
+            --dark-surface: #1E293B;
+            --text-main: #334155;
+            --text-muted: #64748B;
+            --bg-light: #F8FAFC;
+            --border: #E2E8F0;
+            --white: #FFFFFF;
+            --font-sans: 'Plus Jakarta Sans', sans-serif;
+            --font-heading: 'Outfit', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--text-main);
+            background-color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background-color: var(--dark);
+            color: #94A3B8;
+            font-size: 13px;
+            padding: 8px 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .top-bar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .top-bar-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .top-bar-item svg {
+            width: 14px;
+            height: 14px;
+            fill: var(--primary);
+        }
+
+        /* Header / Navbar */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 14px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
+        }
+        .logo-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
+        }
+        .logo-text h1 {
+            font-family: var(--font-heading);
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--dark);
+            line-height: 1.1;
+            letter-spacing: -0.5px;
+        }
+        .logo-text span {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .btn-call {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
+            padding: 8px 14px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+        .btn-call:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+        .btn-header-wpp {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #25D366;
+            color: #FFFFFF;
+            font-weight: 700;
+            font-size: 14px;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-header-wpp:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: radial-gradient(circle at top right, #E0F2FE 0%, #FFFFFF 65%);
+            padding: 60px 20px 70px;
+            overflow: hidden;
+        }
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 48px;
+            align-items: center;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            font-weight: 700;
+            font-size: 13px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(2, 132, 199, 0.2);
+        }
+        .hero-badge span {
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.2);
+        }
+        .hero h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 800;
+            color: var(--dark);
+            line-height: 1.15;
+            letter-spacing: -1px;
+            margin-bottom: 18px;
+        }
+        .hero h2 span {
+            color: var(--primary);
+        }
+        .hero p {
+            font-size: 17px;
+            color: var(--text-muted);
+            margin-bottom: 28px;
+            max-width: 540px;
+        }
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 32px;
+        }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #25D366;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 16px;
+            text-decoration: none;
+            padding: 16px 28px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+            transition: all 0.2s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.45);
+        }
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: var(--white);
+            color: var(--dark);
+            font-weight: 700;
+            font-size: 15px;
+            text-decoration: none;
+            padding: 16px 24px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: all 0.2s ease;
+        }
+        .btn-secondary:hover {
+            border-color: var(--primary);
+            background: var(--bg-light);
+        }
+        .hero-proof {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            padding-top: 18px;
+            border-top: 1px solid var(--border);
+        }
+        .proof-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        .proof-item svg {
+            width: 18px;
+            height: 18px;
+            fill: #16A34A;
+        }
+
+        /* Hero Card / Solicitador Rápido */
+        .hero-card {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 32px 28px;
+            box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+            border: 1px solid var(--border);
+            position: relative;
+        }
+        .card-header-badge {
+            background: #FEF3C7;
+            color: #92400E;
+            font-weight: 700;
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 6px;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+        .hero-card h3 {
+            font-family: var(--font-heading);
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 6px;
+        }
+        .hero-card p {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .quick-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .quick-option-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 13px 16px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s ease;
+            background: var(--white);
+        }
+        .quick-option-btn:hover {
+            border-color: var(--primary);
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            transform: translateX(4px);
+        }
+        .quick-option-btn .opt-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .quick-option-btn .icon {
+            font-size: 18px;
+        }
+        .quick-option-btn .arrow {
+            color: var(--primary);
+            font-weight: 800;
+        }
+
+        /* Seção Serviços */
+        .services-section {
+            padding: 80px 20px;
+            background-color: var(--bg-light);
+        }
+        .section-header {
+            text-align: center;
+            max-width: 640px;
+            margin: 0 auto 50px;
+        }
+        .section-tag {
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--primary);
+            margin-bottom: 8px;
+            display: block;
+        }
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: clamp(28px, 3.5vw, 38px);
+            font-weight: 800;
+            color: var(--dark);
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+        .section-subtitle {
+            font-size: 16px;
+            color: var(--text-muted);
+        }
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+        .service-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+            transition: all 0.25s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 36px rgba(2, 132, 199, 0.08);
+            border-color: rgba(2, 132, 199, 0.3);
+        }
+        .service-icon-box {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            background: var(--primary-light);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .service-card h4 {
+            font-family: var(--font-heading);
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+        .service-card p {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .service-features {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+        .service-features li {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+        .service-features li svg {
+            width: 14px;
+            height: 14px;
+            fill: #16A34A;
+            flex-shrink: 0;
+        }
+        .service-cta-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--primary);
+            text-decoration: none;
+            transition: gap 0.2s;
+        }
+        .service-cta-link:hover {
+            gap: 10px;
+            color: var(--primary-dark);
+        }
+
+        /* Banner Calor Paraíso */
+        .weather-alert-banner {
+            max-width: 1200px;
+            margin: 0 auto 50px;
+            background: linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%);
+            border: 1px solid #FDBA74;
+            border-radius: 20px;
+            padding: 24px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .weather-content {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .weather-icon {
+            font-size: 36px;
+        }
+        .weather-text h4 {
+            font-family: var(--font-heading);
+            font-size: 18px;
+            font-weight: 800;
+            color: #9A3412;
+            margin-bottom: 2px;
+        }
+        .weather-text p {
+            font-size: 14px;
+            color: #C2410C;
+        }
+        .btn-weather-wpp {
+            background: #EA580C;
+            color: #FFFFFF;
+            font-weight: 700;
+            font-size: 14px;
+            padding: 12px 22px;
+            border-radius: 10px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
+            transition: all 0.2s;
+        }
+        .btn-weather-wpp:hover {
+            background: #C2410C;
+            transform: translateY(-1px);
+        }
+
+        /* Seção Sobre / Por que escolher */
+        .about-section {
+            padding: 80px 20px;
+            background: var(--white);
+        }
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        .about-info h3 {
+            font-family: var(--font-heading);
+            font-size: clamp(28px, 3.5vw, 40px);
+            font-weight: 800;
+            color: var(--dark);
+            line-height: 1.2;
+            margin-bottom: 18px;
+        }
+        .about-info p {
+            font-size: 16px;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: var(--bg-light);
+            border-radius: 16px;
+            padding: 18px;
+            border: 1px solid var(--border);
+        }
+        .stat-num {
+            font-family: var(--font-heading);
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+        .stat-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+        .about-address-card {
+            background: var(--dark);
+            color: var(--white);
+            border-radius: 24px;
+            padding: 36px 30px;
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
+        }
+        .about-address-card h4 {
+            font-family: var(--font-heading);
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #38BDF8;
+        }
+        .address-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 18px;
+            font-size: 14px;
+            color: #CBD5E1;
+        }
+        .address-detail svg {
+            width: 20px;
+            height: 20px;
+            fill: #38BDF8;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .business-hours-badge {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.15);
+            color: #38BDF8;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 6px 12px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        /* Depoimentos */
+        .reviews-section {
+            padding: 70px 20px;
+            background: var(--bg-light);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .reviews-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .review-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+        .stars {
+            color: #F59E0B;
+            font-size: 16px;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+        }
+        .review-text {
+            font-size: 14px;
+            color: var(--text-main);
+            margin-bottom: 16px;
+            font-style: italic;
+        }
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .reviewer-avatar {
+            width: 36px;
+            height: 36px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 13px;
+        }
+        .reviewer-meta h5 {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--dark);
+        }
+        .reviewer-meta span {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* CTA Footer */
+        .cta-banner {
+            padding: 70px 20px;
+            background: linear-gradient(135deg, var(--dark) 0%, #1E3A8A 100%);
+            color: var(--white);
+            text-align: center;
+        }
+        .cta-banner-content {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+        .cta-banner h3 {
+            font-family: var(--font-heading);
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 800;
+            margin-bottom: 14px;
+            line-height: 1.2;
+        }
+        .cta-banner p {
+            font-size: 16px;
+            color: #93C5FD;
+            margin-bottom: 28px;
+        }
+
+        /* Footer */
+        footer {
+            background: #090D16;
+            color: #64748B;
+            padding: 36px 20px 24px;
+            font-size: 13px;
+        }
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            padding-bottom: 24px;
+        }
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 20px auto 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 12px;
+        }
+
+        /* Floating WhatsApp Button */
+        .float-wpp {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #25D366;
+            color: var(--white);
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+            z-index: 999;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            animation: pulse-wpp 2s infinite;
+        }
+        .float-wpp:hover {
+            transform: scale(1.08);
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+        }
+        .float-wpp svg {
+            width: 34px;
+            height: 34px;
+            fill: currentColor;
+        }
+
+        @keyframes pulse-wpp {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+            70% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        /* Responsividade */
+        @media (max-width: 900px) {
+            .hero-container, .about-container {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+            .hero {
+                padding: 40px 16px 50px;
+            }
+            .btn-call {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <div class="top-bar-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <span>Atendimento em toda Paraíso do Tocantins - TO</span>
+            </div>
+            <div class="top-bar-item">
+                <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                <span>Segunda a Sexta: 07h às 18h | Sábado: 07h às 12h</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo-box">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <h1>Bom Clima</h1>
+                    <span>Refrigeração & Climatização</span>
+                </div>
+            </a>
+            <div class="header-actions">
+                <a href="tel:6336024147" class="btn-call">
+                    📞 (63) 3602-4147
+                </a>
+                <a href="https://wa.me/5563984288009?text=Ol%C3%A1%2C%20vi%20o%20site%20da%20Bom%20Clima%20e%20gostaria%20de%20um%20or%C3%A7amento%20de%20refrigera%C3%A7%C3%A3o!" target="_blank" class="btn-header-wpp">
+                    <span>Falar no WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-text-content">
+                <div class="hero-badge">
+                    <span></span> Especialistas em Refrigeração em Paraíso do Tocantins
+                </div>
+                <h2>Seu Ar Parou de Gelar? <span>A Gente Resolve Rápido.</span></h2>
+                <p>Instalação de ar-condicionado split, manutenção preventiva, recarga de gás e conserto de geladeiras e lavadoras. Atendimento em domicílio e comércio com garantia no serviço.</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/5563984288009?text=Ol%C3%A1%2C%20preciso%20de%20atendimento%20para%20ar-condicionado%20em%20Para%C3%ADso!" target="_blank" class="btn-primary">
+                        <span>Chamar Técnico no WhatsApp</span>
+                    </a>
+                    <a href="tel:6336024147" class="btn-secondary">
+                        <span>Ligar no Fixo (63) 3602-4147</span>
+                    </a>
+                </div>
+                <div class="hero-proof">
+                    <div class="proof-item">
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        <span>Visita Técnica no Local</span>
+                    </div>
+                    <div class="proof-item">
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        <span>Peças com Garantia</span>
+                    </div>
+                    <div class="proof-item">
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        <span>Orçamento Sem Enrolação</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Solicitador Rápido 1-Clique -->
+            <div class="hero-card">
+                <div class="card-header-badge">Atendimento Express</div>
+                <h3>Qual serviço você precisa hoje?</h3>
+                <p>Selecione abaixo para abrir o WhatsApp com o chamado pronto:</p>
+                <div class="quick-options">
+                    <a href="https://wa.me/5563984288009?text=Ol%C3%A1%2C%20meu%20ar-condicionado%20n%C3%A3o%20est%C3%A1%20gelando%20direito%20e%20preciso%20de%20uma%20visita%20t%C3%A9cnica!" target="_blank" class="quick-option-btn">
+                        <div class="opt-left">
+                            <span class="icon">❄️</span>
+                            <span>Ar-condicionado não gela</span>
+                        </div>
+                        <span class="arrow">→</span>
+                    </a>
+                    <a href="https://wa.me/5563984288009?text=Ol%C3%A1%2C%20comprei%20um%20ar-condicionado%20novo%20e%20preciso%20instalar!" target="_blank" class="quick-option-btn">
+                        <div class="opt-left">
+                            <span class="icon">🔧</span>
+                            <span>Instalar ar split novo</span>
+                        </div>
+                        <span class="arrow">→</span>
+                    </a>
+                    <a href="https://wa.me/5563984288009?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20limpeza%20e%20higieniza%C3%A7%C3%A3o%20no%20meu%20ar-condicionado!" target="_blank" class="quick-option-btn">
+                        <div class="opt-left">
+                            <span class="icon">🧼</span>
+                            <span>Limpeza e higienização de ar</span>
+                        </div>
+                        <span class="arrow">→</span>
+                    </a>
+                    <a href="https://wa.me/5563984288009?text=Ol%C3%A1%2C%20minha%20geladeira%20ou%20freezer%20apresentou%20defeito%20e%20preciso%20de%20conserto!" target="_blank" class="quick-option-btn">
+                        <div class="opt-left">
+                            <span class="icon">🧊</span>
+                            <span>Conserto de Geladeira ou Freezer</span>
+                        </div>
+                        <span class="arrow">→</span>
+                    </a>
+                    <a href="https://wa.me/5563984288009?text=Ol%C3%A1%2C%20preciso%20de%20manuten%C3%A7%C3%A3o%20em%20m%C3%A1quina%20de%20lavar%20ou%20tanquinho!" target="_blank" class="quick-option-btn">
+                        <div class="opt-left">
+                            <span class="icon">🧺</span>
+                            <span>Máquina de Lavar / Tanquinho</span>
+                        </div>
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Calor em Paraíso -->
+    <div style="padding: 0 20px;">
+        <div class="weather-alert-banner">
+            <div class="weather-content">
+                <span class="weather-icon">☀️</span>
+                <div class="weather-text">
+                    <h4>Paraíso do Tocantins não perdoa: mantenha seu ar 100%!</h4>
+                    <p>Limpeza preventiva evita mau cheiro, reduz o consumo de energia e protege a saúde da sua família.</p>
+                </div>
+            </div>
+            <a href="https://wa.me/5563984288009?text=Ol%C3%A1%2C%20quero%20agendar%20uma%20limpeza%20preventiva%20no%20meu%20ar!" target="_blank" class="btn-weather-wpp">
+                Agendar Limpeza
+            </a>
+        </div>
+    </div>
+
+    <!-- Serviços -->
+    <section class="services-section" id="servicos">
+        <div class="section-header">
+            <span class="section-tag">O Que Fazemos</span>
+            <h3 class="section-title">Soluções Completas em Climatização e Refrigeração</h3>
+            <p class="section-subtitle">Técnicos capacitados para resolver qualquer problema em residências, escritórios e comércios de Paraíso.</p>
+        </div>
+
+        <div class="services-grid">
+            <!-- Card 1 -->
+            <div class="service-card">
+                <div>
+                    <div class="service-icon-box">❄️</div>
+                    <h4>Instalação de Ar Split</h4>
+                    <p>Instalação profissional de aparelhos split convencionais e Inverter de todas as marcas e capacidades (9.000 a 36.000 BTUs).</p>
+                    <ul class="service-features">
+                        <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Vácuo na tubulação de cobre</li>
+                        <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Suporte reforçado e fiação correta</li>
+                        <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Teste de rendimento térmico</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/5563984288009?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20para%20instala%C3%A7%C3%A3o%20de%20ar%20split!" target="_blank" class="service-cta-link">
+                    Solicitar Orçamento <span>→</span>
+                </a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="service-card">
+                <div>
+                    <div class="service-icon-box">🧼</div>
+                    <h4>Higienização Profunda</h4>
+                    <p>Limpeza técnica com produtos específicos para eliminação de mofo, bactérias e sujeira acumulada na serpentina e turbina.</p>
+                    <ul class="service-features">
+                        <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Ar mais puro sem rinite e alergias</li>
+                        <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Economia de energia de até 30%</li>
+                        <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Sem bagunça na sua casa</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/5563984288009?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20higieniza%C3%A7%C3%A3o%20no%20meu%20ar!" target="_blank" class="service-cta-link">
+                    Agendar Limpeza <span>→</span>
+                </a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="service-card">
+                <div>
+                    <div class="service-icon-box">🔧</div>
+                    <h4>Manutenção & Carga de Gás</h4>
+                    <p>Diagnóstico preciso quando o ar liga mas não gela, pinga água na sala, faz barulho ou apresenta códigos de erro no display.</p>
+                    <ul class="service-features">
+                        <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Recarga de gás (R410A, R22, R32)</li>
+                        <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Troca de capacitores e sensores</li>
+                        <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Desobstrução de dreno e vazamento</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/5563984288009?text=Ol%C3%A1%2C%20preciso%20de%20manuten%C3%A7%C3%A3o%2Frecarga%20de%20g%C3%A1s%20no%20ar!" target="_blank" class="service-cta-link">
+                    Chamar para Conserto <span>→</span>
+                </a>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="service-card">
+                <div>
+                    <div class="service-icon-box">🧊</div>
+                    <h4>Geladeiras & Freezers</h4>
+                    <p>Conserto e assistência técnica em refrigeradores duplex, frost-free, freezers horizontais/verticais e balcões comerciais.</p>
+                    <ul class="service-features">
+                        <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Troca de motor / compressor</li>
+                        <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Troca de borracha e vedação</li>
+                        <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Termostato, relé e sensores</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/5563984288009?text=Ol%C3%A1%2C%20minha%20geladeira%2Ffreezer%20precisa%20de%20conserto!" target="_blank" class="service-cta-link">
+                    Consertar Geladeira <span>→</span>
+                </a>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="service-card">
+                <div>
+                    <div class="service-icon-box">🧺</div>
+                    <h4>Máquinas de Lavar</h4>
+                    <p>Manutenção especializada em lavadoras e tanquinhos das principais marcas: Brastemp, Consul, Electrolux, Colormaq e Mueller.</p>
+                    <ul class="service-features">
+                        <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Não centrifuga ou não solta água</li>
+                        <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Troca de correia, bomba e retentor</li>
+                        <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Ruídos fortes e trepidação</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/5563984288009?text=Ol%C3%A1%2C%20minha%20m%C3%A1quina%20de%20lavar%20precisa%20de%20conserto!" target="_blank" class="service-cta-link">
+                    Consertar Lavadora <span>→</span>
+                </a>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="service-card">
+                <div>
+                    <div class="service-icon-box">🏢</div>
+                    <h4>Contratos Comerciais</h4>
+                    <p>Manutenção periódica para empresas, lojas, escolas e consultórios em Paraíso com atendimento prioritário e laudo técnico.</p>
+                    <ul class="service-features">
+                        <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Visitas mensais programadas</li>
+                        <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Conforto térmico para seus clientes</li>
+                        <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Emissão de nota e recibo</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/5563984288009?text=Ol%C3%A1%2C%20gostaria%20de%20um%20plano%20comercial%20para%20minha%20empresa!" target="_blank" class="service-cta-link">
+                    Falar com Especialista <span>→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre & Endereço -->
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-info">
+                <span class="section-tag">Tradição & Confiança</span>
+                <h3>Atendendo Paraíso do Tocantins com Honestidade e Preço Justo</h3>
+                <p>Na Refrigeração Bom Clima você fala direto com quem entende. Seja na nossa oficina no Setor Oeste ou na sua casa, entregamos um diagnóstico sincero e peças de primeira linha para o seu equipamento durar muito mais.</p>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-num">+10</div>
+                        <div class="stat-label">Anos de experiência técnica</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-num">+3.500</div>
+                        <div class="stat-label">Aparelhos instalados e consertados</div>
+                    </div>
+                </div>
+                <a href="https://wa.me/5563984288009?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20a%20Refrigera%C3%A7%C3%A3o%20Bom%20Clima!" target="_blank" class="btn-primary">
+                    <span>Falar no WhatsApp Agora</span>
+                </a>
+            </div>
+
+            <!-- Card de Endereço -->
+            <div class="about-address-card">
+                <h4>Onde Estamos em Paraíso</h4>
+                <div class="address-detail">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    <div>
+                        <strong>Oficina & Atendimento:</strong><br>
+                        Rua Bernardino Maciel, Qd. 24, nº 2254<br>
+                        Setor Oeste — Paraíso do Tocantins - TO
+                    </div>
+                </div>
+                <div class="address-detail">
+                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    <div>
+                        <strong>Telefones de Contato:</strong><br>
+                        WhatsApp: (63) 98428-8009<br>
+                        Telefone Fixo: (63) 3602-4147
+                    </div>
+                </div>
+                <div class="business-hours-badge">
+                    ⏰ Aberto de Segunda a Sexta das 07h às 18h | Sábado até 12h
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="reviews-section">
+        <div class="section-header" style="margin-bottom: 36px;">
+            <span class="section-tag">Quem Já Fez o Serviço</span>
+            <h3 class="section-title">O que dizem os clientes em Paraíso</h3>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"Instalaram dois ar split aqui em casa no Jardim Paulista. Trabalho limpo, sem quebração à toa e gelando que é uma beleza. Recomendo demais!"</p>
+                <div class="reviewer-info">
+                    <div class="reviewer-avatar">MS</div>
+                    <div class="reviewer-meta">
+                        <h5>Marcos Silva</h5>
+                        <span>Jardim Paulista, Paraíso</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"Minha geladeira parou de gelar no fim de semana, chamei e vieram no mesmo dia. Trocaram a peça com preço justo e garantia. Nota 10 pelo atendimento."</p>
+                <div class="reviewer-info">
+                    <div class="reviewer-avatar">RA</div>
+                    <div class="reviewer-meta">
+                        <h5>Renata Alencar</h5>
+                        <span>Centro, Paraíso</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"Fiz a limpeza dos ares da minha loja no Setor Oeste. O ar voltou a gelar como novo e o cheiro de mofo sumiu. Técnicos pontuais e educados."</p>
+                <div class="reviewer-info">
+                    <div class="reviewer-avatar">CO</div>
+                    <div class="reviewer-meta">
+                        <h5>Carlos Oliveira</h5>
+                        <span>Setor Oeste, Paraíso</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-banner">
+        <div class="cta-banner-content">
+            <h3>Não Passe Calor em Paraíso do Tocantins</h3>
+            <p>Mande uma mensagem agora no WhatsApp da Bom Clima e solicite seu orçamento sem compromisso.</p>
+            <a href="https://wa.me/5563984288009?text=Ol%C3%A1%2C%20preciso%20de%20um%20or%C3%A7amento%20com%20a%20Refrigera%C3%A7%C3%A3o%20Bom%20Clima!" target="_blank" class="btn-primary" style="font-size: 17px; padding: 18px 36px;">
+                <span>Conversar no WhatsApp Agora</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="logo-box">
+                <div class="logo-icon" style="width: 36px; height: 36px;">
+                    <svg viewBox="0 0 24 24" style="width: 20px; height: 20px;"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93"/></svg>
+                </div>
+                <div class="logo-text">
+                    <h1 style="color: #F8FAFC; font-size: 18px;">Bom Clima</h1>
+                    <span style="color: #38BDF8;">Refrigeração & Climatização</span>
+                </div>
+            </div>
+            <div>
+                <span>Atendimento: <strong>(63) 98428-8009</strong> | <strong>(63) 3602-4147</strong></span>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Refrigeração Bom Clima. Todos os direitos reservados. Paraíso do Tocantins - TO.</span>
+            <span>Desenvolvido com tecnologia de alta conversão por <strong>Duilio Luz • DLuz Digital</strong></span>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante de WhatsApp -->
+    <a href="https://wa.me/5563984288009?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20de%20refrigera%C3%A7%C3%A3o%20em%20Para%C3%ADso!" target="_blank" class="float-wpp" title="Chamar no WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.45 1.03 2.62.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.59.21-1.09.15-1.19-.06-.1-.22-.16-.47-.28z"/>
+        </svg>
+    </a>
+
+</body>
+</html>

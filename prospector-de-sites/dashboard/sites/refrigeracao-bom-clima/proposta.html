@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Demonstração do Novo Site — Refrigeração Bom Clima</title>
+<style>
+  :root {
+    --bg: #F8FAFC;
+    --ink: #0F172A;
+    --muted: #64748B;
+    --acc: #0284C7;
+    --card: #FFFFFF;
+    --line: #E2E8F0;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+  .stage { width: min(1200px, 96vw); margin: 0 auto; }
+  header { padding: 48px 0 28px; text-align: center; }
+  .kicker {
+    font-size: 13px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--acc);
+    font-weight: 800;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: clamp(26px, 4vw, 40px);
+    font-weight: 800;
+    letter-spacing: -.02em;
+    color: var(--ink);
+  }
+  h1 em { font-style: normal; color: var(--acc); }
+  .sub {
+    color: var(--muted);
+    max-width: 580px;
+    margin: 14px auto 0;
+    font-size: 16px;
+  }
+  .autor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 18px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .autor b { color: var(--ink); }
+  .frame {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+    margin-top: 24px;
+  }
+  .frame .bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border-bottom: 1px solid var(--line);
+    background: #F1F5F9;
+  }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: #CBD5E1; }
+  .bar span { font-size: 12px; color: var(--muted); margin-left: 8px; font-family: monospace; }
+  iframe {
+    display: block;
+    width: 100%;
+    height: 78vh;
+    min-height: 520px;
+    border: 0;
+    background: #fff;
+  }
+  .cta { text-align: center; padding: 44px 0 60px; }
+  .cta p { color: var(--muted); max-width: 520px; margin: 0 auto 20px; font-size: 15px; }
+  .btn {
+    display: inline-block;
+    background: #25D366;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 16px 36px;
+    border-radius: 12px;
+    font-size: 16px;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
+    transition: transform .2s, box-shadow .2s;
+  }
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(37, 211, 102, 0.4);
+  }
+  .micro { font-size: 13px; color: var(--muted); margin-top: 10px; }
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 24px 0 32px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">Demonstração de Site para a Equipe</div>
+    <h1>Refrigeração Bom Clima, veja como ficou a <em>nova versão</em> do seu site</h1>
+    <p class="sub">Já está montado e pronto para você testar no celular. Veja como o cliente clica e já cai no WhatsApp com o pedido de orçamento pronto.</p>
+    <div class="autor">Desenvolvido por <b>Duilio Luz • DLuz Digital</b> · Paraíso do Tocantins</div>
+  </header>
+</div>
+
+<div class="stage">
+  <div class="frame">
+    <div class="bar">
+      <i class="dot"></i><i class="dot"></i><i class="dot"></i>
+      <span>refrigeracao-bom-clima.html (Visualização em Tempo Real)</span>
+    </div>
+    <iframe src="refrigeracao-bom-clima.html" title="Nova versão"></iframe>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="cta">
+    <p>Se gostou do modelo e quer colocar no ar no domínio próprio da oficina, me chame no WhatsApp pra gente combinar!</p>
+    <a class="btn" href="https://wa.me/5563981249724?text=Ol%C3%A1%2C%20Duilio!%20Vi%20a%20demonstra%C3%A7%C3%A3o%20do%20site%20da%20Refrigera%C3%A7%C3%A3o%20Bom%20Clima%20e%20gostei." target="_blank" rel="noopener">Falar com Duilio no WhatsApp</a>
+    <div class="micro">Sem compromisso — a demonstração fica disponível para vocês avaliarem.</div>
+  </div>
+</div>
+
+<footer>Esta página é uma apresentação privada criada por Duilio Luz • DLuz Digital para a equipe da Refrigeração Bom Clima.</footer>
+</body>
+</html>
