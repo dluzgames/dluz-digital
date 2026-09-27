@@ -4,9 +4,10 @@ FROM nginx:alpine
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Static website assets
-COPY index.html /usr/share/nginx/html/index.html
-COPY proposta-comercial-modelo.html /usr/share/nginx/html/proposta-comercial-modelo.html
+COPY *.html /usr/share/nginx/html/
+COPY favicon.svg /usr/share/nginx/html/favicon.svg
 COPY assets/ /usr/share/nginx/html/assets/
+COPY models/ /usr/share/nginx/html/models/
 COPY modelos/ /usr/share/nginx/html/modelos/
 
 EXPOSE 80

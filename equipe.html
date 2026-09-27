@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#050506" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <title>Equipe — DLuz Digital | Especialistas em Alta Performance & IA</title>
+    <meta name="description" content="Conheça a equipe executiva da DLuz Digital: Inteligência comercial, copywriting, arquitetura web e produção audiovisual cinematográfica." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html, body {
+        height: auto !important;
+        min-height: 100vh !important;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        margin: 0;
+        background: #050506;
+        color: #f1f2f6;
+        font-family: 'Archivo', sans-serif;
+      }
+      .page-wrap {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 40px 24px 100px;
+      }
+      .top-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0 60px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .brand-box {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: #fff;
+      }
+      .brand-box img {
+        height: 26px;
+        width: auto;
+        filter: drop-shadow(0 0 10px rgba(16, 185, 129, 0.4));
+      }
+      .brand-title {
+        font-size: 18px;
+        font-weight: 800;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+      .brand-sub {
+        font-size: 14px;
+        color: #10b981;
+        font-weight: 700;
+        margin-left: 4px;
+      }
+      .nav-links {
+        display: flex;
+        gap: 28px;
+      }
+      .nav-links a {
+        color: #94a3b8;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        transition: color 0.3s;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .nav-links a:hover, .nav-links a.active {
+        color: #fff;
+      }
+      .nav-links sup {
+        font-size: 10px;
+        color: #10b981;
+      }
+      .actions-box {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .menu-btn {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        color: #fff;
+        padding: 8px 18px;
+        border-radius: 99px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        backdrop-filter: blur(10px);
+        transition: all 0.3s;
+      }
+      .menu-btn:hover {
+        background: rgba(255, 255, 255, 0.12);
+        border-color: rgba(255, 255, 255, 0.25);
+      }
+      .hero-section {
+        padding: 70px 0 60px;
+        text-align: center;
+      }
+      .badge-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(16, 185, 129, 0.1);
+        border: 1px solid rgba(16, 185, 129, 0.3);
+        color: #10b981;
+        padding: 6px 16px;
+        border-radius: 99px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+      }
+      .hero-title {
+        font-size: clamp(34px, 5.5vw, 62px);
+        font-weight: 850;
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+        margin: 0 0 20px;
+        text-transform: uppercase;
+      }
+      .hero-title span {
+        background: linear-gradient(135deg, #fff 40%, #10b981 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .hero-desc {
+        max-width: 740px;
+        margin: 0 auto;
+        font-size: 18px;
+        color: #94a3b8;
+        line-height: 1.6;
+      }
+
+      .section-header {
+        margin: 70px 0 32px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .section-badge {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 6px 14px;
+        border-radius: 99px;
+      }
+      .badge-commercial {
+        background: rgba(56, 189, 248, 0.1);
+        border: 1px solid rgba(56, 189, 248, 0.3);
+        color: #38bdf8;
+      }
+      .badge-audiovisual {
+        background: rgba(244, 63, 94, 0.1);
+        border: 1px solid rgba(244, 63, 94, 0.3);
+        color: #f43f5e;
+      }
+      .section-line {
+        flex: 1;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+      }
+      @media (max-width: 1024px) {
+        .team-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 640px) {
+        .team-grid {
+          grid-template-columns: 1fr;
+        }
+        .nav-links {
+          display: none;
+        }
+      }
+
+      .member-card {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
+        padding: 30px 26px;
+        backdrop-filter: blur(10px);
+        transition: all 0.35s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .member-card:hover {
+        background: rgba(255, 255, 255, 0.04);
+        border-color: rgba(16, 185, 129, 0.35);
+        transform: translateY(-4px);
+        box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.5);
+      }
+      .member-top {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 18px;
+      }
+      .avatar-pill {
+        width: 50px;
+        height: 50px;
+        border-radius: 14px;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: 800;
+        color: #fff;
+      }
+      .avatar-commercial {
+        border-color: rgba(56, 189, 248, 0.3);
+        color: #38bdf8;
+      }
+      .avatar-audiovisual {
+        border-color: rgba(244, 63, 94, 0.3);
+        color: #f43f5e;
+      }
+      .member-name {
+        font-size: 20px;
+        font-weight: 800;
+        color: #fff;
+        margin: 0 0 4px;
+      }
+      .member-role {
+        font-size: 12px;
+        color: #94a3b8;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+      .member-desc {
+        font-size: 14.5px;
+        color: #cbd5e1;
+        line-height: 1.55;
+        margin: 0 0 18px;
+      }
+      .member-tag {
+        align-self: flex-start;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 4px 10px;
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.05);
+        color: #94a3b8;
+      }
+
+      .cta-box {
+        margin-top: 90px;
+        background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(6, 182, 212, 0.04));
+        border: 1px solid rgba(16, 185, 129, 0.25);
+        border-radius: 28px;
+        padding: 50px 40px;
+        text-align: center;
+      }
+      .cta-title {
+        font-size: 32px;
+        font-weight: 800;
+        color: #fff;
+        margin: 0 0 16px;
+      }
+      .cta-desc {
+        font-size: 16px;
+        color: #94a3b8;
+        max-width: 600px;
+        margin: 0 auto 30px;
+        line-height: 1.6;
+      }
+      .cta-btn {
+        background: #10b981;
+        color: #050506;
+        padding: 16px 36px;
+        border-radius: 99px;
+        font-size: 15px;
+        font-weight: 800;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.3s;
+        box-shadow: 0 0 30px rgba(16, 185, 129, 0.3);
+      }
+      .cta-btn:hover {
+        background: #34d399;
+        transform: translateY(-2px);
+        box-shadow: 0 0 45px rgba(16, 185, 129, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrap">
+      <header class="top-nav">
+        <a href="index.html" class="brand-box">
+          <img src="assets/dluz_infinity.png" alt="DLuz Digital" />
+          <span class="brand-title">DLuz</span>
+          <span class="brand-sub">Digital</span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="index.html#solucoes"><sup>01</sup>Soluções 3D</a>
+          <a href="metodologia.html"><sup>02</sup>Metodologia</a>
+          <a href="resultados.html"><sup>03</sup>Resultados</a>
+          <a href="equipe.html" class="active"><sup>04</sup>Equipe</a>
+        </nav>
+
+        <div class="actions-box">
+          <a href="contato.html" class="menu-btn">Contato</a>
+          <a href="menu.html" class="menu-btn">Menu ☰</a>
+        </div>
+      </header>
+
+      <section class="hero-section">
+        <div class="badge-tag">Time Executivo & Especialistas</div>
+        <h1 class="hero-title">Os Talentos por Trás da <span>DLuz Digital</span></h1>
+        <p class="hero-desc">
+          Uma equipe multidisciplinar de alta performance que une estratégia comercial cirúrgica,
+          engenharia de software e produção audiovisual para acelerar o faturamento da sua empresa.
+        </p>
+      </section>
+
+      <!-- Frente Comercial, Marketing & Web -->
+      <div class="section-header">
+        <span class="section-badge badge-commercial">Frente Comercial, Marketing & Web</span>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="team-grid">
+        <!-- Luiz -->
+        <div class="member-card">
+          <div>
+            <div class="member-top">
+              <div class="avatar-pill avatar-commercial">LZ</div>
+              <div>
+                <h3 class="member-name">Luiz</h3>
+                <div class="member-role">Orquestrador Geral & Gestão Comercial</div>
+              </div>
+            </div>
+            <p class="member-desc">
+              Coordena a operação executiva, gerencia o fluxo de fechamento de contratos de alto valor, emissão de propostas estratégicas e acompanhamento contínuo no CRM.
+            </p>
+          </div>
+          <span class="member-tag">Gestão & CRM</span>
+        </div>
+
+        <!-- Hunter -->
+        <div class="member-card">
+          <div>
+            <div class="member-top">
+              <div class="avatar-pill avatar-commercial">HT</div>
+              <div>
+                <h3 class="member-name">Hunter</h3>
+                <div class="member-role">Inteligência de Mercado & Prospecção</div>
+              </div>
+            </div>
+            <p class="member-desc">
+              Mapeia negócios e oportunidades locais no Google Maps e Instagram, identificando lacunas de presença digital e insumos para abordagens comerciais cirúrgicas.
+            </p>
+          </div>
+          <span class="member-tag">Prospecção Ativa</span>
+        </div>
+
+        <!-- Ana -->
+        <div class="member-card">
+          <div>
+            <div class="member-top">
+              <div class="avatar-pill avatar-commercial">AN</div>
+              <div>
+                <h3 class="member-name">Ana</h3>
+                <div class="member-role">Copywriting Estratégico & Conversão</div>
+              </div>
+            </div>
+            <p class="member-desc">
+              Desenvolve mensagens de alta persuasão para WhatsApp e Direct, construindo abordagens consultivas, pitches irrecusáveis e chamadas para ação focadas em conversão.
+            </p>
+          </div>
+          <span class="member-tag">Copy & Conversão</span>
+        </div>
+
+        <!-- Marina -->
+        <div class="member-card">
+          <div>
+            <div class="member-top">
+              <div class="avatar-pill avatar-commercial">MR</div>
+              <div>
+                <h3 class="member-name">Marina</h3>
+                <div class="member-role">Storytelling & Narrativas de Marca</div>
+              </div>
+            </div>
+            <p class="member-desc">
+              Estrutura a história e identidade de cada cliente, documenta cases de sucesso auditados e posiciona a marca com autoridade inabalável no mercado regional.
+            </p>
+          </div>
+          <span class="member-tag">Branding & Autoridade</span>
+        </div>
+
+        <!-- Carlos -->
+        <div class="member-card">
+          <div>
+            <div class="member-top">
+              <div class="avatar-pill avatar-commercial">CR</div>
+              <div>
+                <h3 class="member-name">Carlos</h3>
+                <div class="member-role">Redação Técnica & Governança</div>
+              </div>
+            </div>
+            <p class="member-desc">
+              Produz textos institucionais, detalhamento de escopo dos serviços, termos de proposta comercial e documentações corporativas com máxima clareza e precisão.
+            </p>
+          </div>
+          <span class="member-tag">Conteúdo Estruturado</span>
+        </div>
+
+        <!-- Julia -->
+        <div class="member-card">
+          <div>
+            <div class="member-top">
+              <div class="avatar-pill avatar-commercial">JL</div>
+              <div>
+                <h3 class="member-name">Julia</h3>
+                <div class="member-role">Roteirização de Pitch & Demonstrações</div>
+              </div>
+            </div>
+            <p class="member-desc">
+              Desenvolve roteiros de retenção máxima (Regra do Segundo Zero) para apresentações e demonstrações interativas de 1 minuto que encantam clientes em reuniões.
+            </p>
+          </div>
+          <span class="member-tag">Pitches Executivos</span>
+        </div>
+
+        <!-- Pedro -->
+        <div class="member-card">
+          <div>
+            <div class="member-top">
+              <div class="avatar-pill avatar-commercial">PD</div>
+              <div>
+                <h3 class="member-name">Pedro</h3>
+                <div class="member-role">Direção de Arte & Design 3D</div>
+              </div>
+            </div>
+            <p class="member-desc">
+              Cria mockups 3D de dispositivos móveis, sistemas de design, paletas cromáticas corporativas e arquitetura visual com acabamento estético internacional.
+            </p>
+          </div>
+          <span class="member-tag">Design 3D & UI</span>
+        </div>
+
+        <!-- Victor -->
+        <div class="member-card">
+          <div>
+            <div class="member-top">
+              <div class="avatar-pill avatar-commercial">VC</div>
+              <div>
+                <h3 class="member-name">Victor</h3>
+                <div class="member-role">Engenharia Frontend & Arquiteto Web</div>
+              </div>
+            </div>
+            <p class="member-desc">
+              Desenvolve interfaces interativas e landing pages ultra-rápidas em Three.js, GSAP e Tailwind, com arquitetura cloud conteinerizada de altíssima disponibilidade.
+            </p>
+          </div>
+          <span class="member-tag">Frontend & Three.js</span>
+        </div>
+
+        <!-- Maya -->
+        <div class="member-card">
+          <div>
+            <div class="member-top">
+              <div class="avatar-pill avatar-commercial">MY</div>
+              <div>
+                <h3 class="member-name">Maya</h3>
+                <div class="member-role">Automação Digital & Presença Omnicanal</div>
+              </div>
+            </div>
+            <p class="member-desc">
+              Gerencia esteiras de publicação multicanal, distribuição automatizada de carrosséis e rotinas de engajamento contínuo em redes sociais e canais proprietários.
+            </p>
+          </div>
+          <span class="member-tag">Automação de Canais</span>
+        </div>
+      </div>
+
+      <!-- Frente de Produção Audiovisual -->
+      <div class="section-header">
+        <span class="section-badge badge-audiovisual">Frente de Produção Audiovisual</span>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="team-grid">
+        <!-- Atlas -->
+        <div class="member-card">
+          <div>
+            <div class="member-top">
+              <div class="avatar-pill avatar-audiovisual">AT</div>
+              <div>
+                <h3 class="member-name">Atlas</h3>
+                <div class="member-role">Pesquisa, Direção & Roteiro Audiovisual</div>
+              </div>
+            </div>
+            <p class="member-desc">
+              Planejamento de conteúdo cinematográfico, pesquisa de tendências virais e direção de roteiro com gancho instantâneo (segundo zero) sem enrolações.
+            </p>
+          </div>
+          <span class="member-tag">Direção Audiovisual</span>
+        </div>
+
+        <!-- Vox -->
+        <div class="member-card">
+          <div>
+            <div class="member-top">
+              <div class="avatar-pill avatar-audiovisual">VX</div>
+              <div>
+                <h3 class="member-name">Vox</h3>
+                <div class="member-role">Locução Oficial & Sound Design</div>
+              </div>
+            </div>
+            <p class="member-desc">
+              Síntese de voz com timbre encorpado de estúdio, design de efeitos sonoros contextuais (cliques mecânicos, impactos, whoosh) e masterização acústica contínua.
+            </p>
+          </div>
+          <span class="member-tag">Locução & SFX</span>
+        </div>
+
+        <!-- Iris -->
+        <div class="member-card">
+          <div>
+            <div class="member-top">
+              <div class="avatar-pill avatar-audiovisual">IR</div>
+              <div>
+                <h3 class="member-name">Iris</h3>
+                <div class="member-role">Direção Visual & Composição Cinética</div>
+              </div>
+            </div>
+            <p class="member-desc">
+              Composição determinística de cena com HyperFrames e GSAP, aplicando punch zooms dinâmicos, alternância de planos de câmera e overlays gráficos de retenção.
+            </p>
+          </div>
+          <span class="member-tag">Composição & VFX</span>
+        </div>
+
+        <!-- Argos -->
+        <div class="member-card">
+          <div>
+            <div class="member-top">
+              <div class="avatar-pill avatar-audiovisual">AG</div>
+              <div>
+                <h3 class="member-name">Argos</h3>
+                <div class="member-role">Revisão Técnica & QA Broadcast</div>
+              </div>
+            </div>
+            <p class="member-desc">
+              Inspeção rigorosa quadro a quadro: cortes secos sem micro-silêncio, calibração sonora exata a -14 LUFS, renderização NVENC em 60 FPS e conformidade total de entrega.
+            </p>
+          </div>
+          <span class="member-tag">QA & Masterização 4K</span>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <section class="cta-box">
+        <h2 class="cta-title">Pronto para ter este time acelerando sua empresa?</h2>
+        <p class="cta-desc">
+          Agende um diagnóstico exclusivo com a diretoria da DLuz Digital ou fale agora mesmo com nossa inteligência artificial executiva no WhatsApp.
+        </p>
+        <a href="contato.html" class="cta-btn">
+          Falar com a Equipe no WhatsApp ➔
+        </a>
+      </section>
+    </div>
+  </body>
+</html>

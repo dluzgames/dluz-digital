@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#050506" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <title>Metodologia — DLuz Digital | Os 4 Pilares de Alta Performance</title>
+    <meta name="description" content="Conheça a metodologia executiva da DLuz Digital: Resposta Instantânea Sub-3s, Exclusividade Territorial, Design Executivo e Automação com Retorno." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html, body {
+        height: auto !important;
+        min-height: 100vh !important;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        margin: 0;
+        background: #050506;
+        color: #f1f2f6;
+        font-family: 'Archivo', sans-serif;
+      }
+      .page-wrap {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 24px 80px;
+      }
+      .top-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0 60px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .brand-box {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: #fff;
+      }
+      .brand-box img {
+        height: 26px;
+        width: auto;
+      }
+      .brand-title {
+        font-size: 18px;
+        font-weight: 800;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+      .brand-sub {
+        font-size: 14px;
+        color: #10b981;
+        font-weight: 600;
+        margin-left: 4px;
+      }
+      .nav-links {
+        display: flex;
+        gap: 32px;
+      }
+      .nav-links a {
+        color: #94a3b8;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        transition: color 0.3s;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .nav-links a:hover, .nav-links a.active {
+        color: #fff;
+      }
+      .nav-links sup {
+        font-size: 10px;
+        color: #10b981;
+      }
+      .actions-box {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .menu-btn {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        color: #fff;
+        padding: 8px 18px;
+        border-radius: 99px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        backdrop-filter: blur(10px);
+        transition: all 0.3s;
+      }
+      .menu-btn:hover {
+        background: rgba(255, 255, 255, 0.12);
+        border-color: rgba(255, 255, 255, 0.25);
+      }
+      .hero-section {
+        padding: 80px 0 60px;
+        text-align: center;
+      }
+      .badge-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(59, 130, 246, 0.1);
+        border: 1px solid rgba(59, 130, 246, 0.3);
+        color: #60a5fa;
+        padding: 6px 16px;
+        border-radius: 99px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+      }
+      .badge-tag::before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        background: #3b82f6;
+        border-radius: 50%;
+        box-shadow: 0 0 10px #3b82f6;
+      }
+      .hero-title {
+        font-size: clamp(38px, 6vw, 68px);
+        font-weight: 850;
+        line-height: 1.05;
+        letter-spacing: -0.02em;
+        margin: 0 0 24px;
+        text-transform: uppercase;
+      }
+      .hero-title span {
+        background: linear-gradient(135deg, #fff 40%, #3b82f6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .hero-desc {
+        max-width: 720px;
+        margin: 0 auto;
+        font-size: 18px;
+        color: #94a3b8;
+        line-height: 1.6;
+      }
+      .pillars-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+        margin-top: 60px;
+      }
+      @media (max-width: 860px) {
+        .pillars-grid {
+          grid-template-columns: 1fr;
+        }
+        .nav-links {
+          display: none;
+        }
+      }
+      .pillar-card {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 24px;
+        padding: 40px;
+        backdrop-filter: blur(20px);
+        transition: transform 0.3s, border-color 0.3s;
+        position: relative;
+        overflow: hidden;
+      }
+      .pillar-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(59, 130, 246, 0.3);
+      }
+      .pillar-num {
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        color: #3b82f6;
+        margin-bottom: 16px;
+      }
+      .pillar-title {
+        font-size: 26px;
+        font-weight: 800;
+        margin: 0 0 16px;
+        color: #fff;
+      }
+      .pillar-desc {
+        font-size: 16px;
+        color: #94a3b8;
+        line-height: 1.6;
+        margin-bottom: 24px;
+      }
+      .pillar-highlight {
+        background: rgba(255, 255, 255, 0.04);
+        border-radius: 12px;
+        padding: 16px 20px;
+        font-size: 14px;
+        color: #e2e8f0;
+        border-left: 3px solid #3b82f6;
+      }
+      .cta-bottom {
+        margin-top: 80px;
+        text-align: center;
+        background: radial-gradient(circle at center, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+        padding: 60px 20px;
+        border-radius: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .cta-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        background: #10b981;
+        color: #050506;
+        padding: 18px 40px;
+        border-radius: 14px;
+        font-size: 16px;
+        font-weight: 800;
+        text-decoration: none;
+        transition: all 0.3s;
+        margin-top: 24px;
+      }
+      .cta-btn:hover {
+        background: #34d399;
+        transform: scale(1.03);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrap">
+      <header class="top-nav">
+        <a href="index.html" class="brand-box">
+          <img src="assets/dluz_infinity.png" alt="DLuz Digital" />
+          <span class="brand-title">DLuz</span>
+          <span class="brand-sub">Digital</span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="index.html#solucoes"><sup>01</sup>Soluções 3D</a>
+          <a href="metodologia.html" class="active"><sup>02</sup>Metodologia</a>
+          <a href="resultados.html"><sup>03</sup>Resultados</a>
+          <a href="equipe.html"><sup>04</sup>Equipe</a>
+        </nav>
+
+        <div class="actions-box">
+          <a href="contato.html" class="menu-btn">Contato</a>
+          <a href="menu.html" class="menu-btn">Menu ☰</a>
+        </div>
+      </header>
+
+      <section class="hero-section">
+        <div class="badge-tag">Engenharia Comercial & IA Proprietária</div>
+        <h1 class="hero-title">Os 4 Pilares da <span>Metodologia DLuz</span></h1>
+        <p class="hero-desc">
+          Não acreditamos em fórmulas genéricas ou templates lentos. Construímos ecossistemas digitais de alta tração com exclusividade territorial e foco em retorno sobre investimento.
+        </p>
+      </section>
+
+      <div class="pillars-grid">
+        <!-- Pilar 1 -->
+        <div class="pillar-card">
+          <div class="pillar-num">01 / VELOCIDADE SUB-3S</div>
+          <h2 class="pillar-title">Resposta Instantânea que Vende</h2>
+          <p class="pillar-desc">
+            80% dos clientes compram do primeiro concorrente que responde no WhatsApp. Nossa IA proprietária Frya responde qualquer lead em menos de 3 segundos, qualifica o perfil e agenda a reunião antes que ele pesquise outra opção.
+          </p>
+          <div class="pillar-highlight">
+            <strong>Impacto:</strong> Eliminação total de leads frios e aumento médio de +350% nas conversões de primeiro contato.
+          </div>
+        </div>
+
+        <!-- Pilar 2 -->
+        <div class="pillar-card">
+          <div class="pillar-num">02 / BLINDAGEM REGIONAL</div>
+          <h2 class="pillar-title">Exclusividade Territorial 100%</h2>
+          <p class="pillar-desc">
+            Não atendemos concorrentes no mesmo segmento e cidade. Ao firmar parceria com a DLuz Digital, você garante que nossa equipe, algoritmos e estratégias trabalham exclusivamente para fazer sua marca dominar a região.
+          </p>
+          <div class="pillar-highlight">
+            <strong>Garantia:</strong> Cláusula restritiva oficial em contrato garantindo sua proteção territorial.
+          </div>
+        </div>
+
+        <!-- Pilar 3 -->
+        <div class="pillar-card">
+          <div class="pillar-num">03 / ARQUITETURA MODERNA</div>
+          <h2 class="pillar-title">Design Executivo & Carregamento Sub-s</h2>
+          <p class="pillar-desc">
+            Sites lentos perdem 53% das visitas antes da página carregar. Desenvolvemos interfaces estáticas compiladas com Astro 5, Three.js 3D interativo e Cloudflare Edge, garantindo carregamento em menos de 0.8s.
+          </p>
+          <div class="pillar-highlight">
+            <strong>Padrão:</strong> Google PageSpeed Score 98+ em mobile e desktop com experiência imersiva internacional.
+          </div>
+        </div>
+
+        <!-- Pilar 4 -->
+        <div class="pillar-card">
+          <div class="pillar-num">04 / RETORNO COMPROVADO</div>
+          <h2 class="pillar-title">Automação com Foco em ROI (10x)</h2>
+          <p class="pillar-desc">
+            Tráfego não é sobre cliques vazios, é sobre caixa no final do mês. Nossas esteiras conectam Google Ads, Meta Ads e CRM num funil fechado, calculando CAC e LTV para escala contínua com ROI médio superior a 10 vezes.
+          </p>
+          <div class="pillar-highlight">
+            <strong>Resultado:</strong> Previsibilidade de faturamento semanal com dashboards transparentes em tempo real.
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-bottom">
+        <h2 style="font-size: 32px; margin: 0 0 12px;">Quer aplicar essa metodologia na sua empresa?</h2>
+        <p style="color: #94a3b8; font-size: 16px; margin: 0;">Consulte a disponibilidade de exclusividade para o seu nicho agora mesmo.</p>
+        <a href="contato.html" class="cta-btn">CONSULTAR DISPONIBILIDADE NA MINHA CIDADE ➔</a>
+      </div>
+    </div>
+  </body>
+</html>

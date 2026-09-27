@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#050506" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <title>Contato — DLuz Digital | Soluções Executivas & IA</title>
+    <meta name="description" content="Entre em contato com a DLuz Digital. Atendimento inteligente 24/7 via IA Frya ou agendamento direto com a diretoria." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html, body {
+        height: auto !important;
+        min-height: 100vh !important;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        margin: 0;
+        background: #050506;
+        color: #f1f2f6;
+        font-family: 'Archivo', sans-serif;
+      }
+      .page-wrap {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 24px 80px;
+      }
+      .top-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0 60px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .brand-box {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: #fff;
+      }
+      .brand-box img {
+        height: 26px;
+        width: auto;
+      }
+      .brand-title {
+        font-size: 18px;
+        font-weight: 800;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+      .brand-sub {
+        font-size: 14px;
+        color: #10b981;
+        font-weight: 600;
+        margin-left: 4px;
+      }
+      .nav-links {
+        display: flex;
+        gap: 32px;
+      }
+      .nav-links a {
+        color: #94a3b8;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        transition: color 0.3s;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .nav-links a:hover, .nav-links a.active {
+        color: #fff;
+      }
+      .nav-links sup {
+        font-size: 10px;
+        color: #10b981;
+      }
+      .actions-box {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .menu-btn {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        color: #fff;
+        padding: 8px 18px;
+        border-radius: 99px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        backdrop-filter: blur(10px);
+        transition: all 0.3s;
+      }
+      .menu-btn:hover {
+        background: rgba(255, 255, 255, 0.12);
+        border-color: rgba(255, 255, 255, 0.25);
+      }
+      .hero-section {
+        padding: 80px 0 60px;
+        text-align: center;
+      }
+      .badge-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(16, 185, 129, 0.1);
+        border: 1px solid rgba(16, 185, 129, 0.3);
+        color: #10b981;
+        padding: 6px 16px;
+        border-radius: 99px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+      }
+      .badge-tag::before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        background: #10b981;
+        border-radius: 50%;
+        box-shadow: 0 0 10px #10b981;
+      }
+      .hero-title {
+        font-size: clamp(38px, 6vw, 68px);
+        font-weight: 850;
+        line-height: 1.05;
+        letter-spacing: -0.02em;
+        margin: 0 0 24px;
+        text-transform: uppercase;
+      }
+      .hero-title span {
+        background: linear-gradient(135deg, #fff 40%, #10b981 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .hero-desc {
+        max-width: 680px;
+        margin: 0 auto;
+        font-size: 18px;
+        color: #94a3b8;
+        line-height: 1.6;
+      }
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin-top: 60px;
+      }
+      @media (max-width: 860px) {
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+        .nav-links {
+          display: none;
+        }
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 24px;
+        padding: 40px;
+        backdrop-filter: blur(20px);
+        position: relative;
+        overflow: hidden;
+      }
+      .glass-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.4), transparent);
+      }
+      .card-title {
+        font-size: 24px;
+        font-weight: 750;
+        margin: 0 0 12px;
+        color: #fff;
+      }
+      .card-sub {
+        font-size: 15px;
+        color: #94a3b8;
+        line-height: 1.5;
+        margin-bottom: 30px;
+      }
+      .whatsapp-cta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px;
+        background: rgba(16, 185, 129, 0.05);
+        border: 1px solid rgba(16, 185, 129, 0.2);
+        border-radius: 20px;
+        margin-bottom: 30px;
+      }
+      .wa-icon {
+        width: 64px;
+        height: 64px;
+        background: #10b981;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 30px rgba(16, 185, 129, 0.35);
+      }
+      .wa-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        background: #10b981;
+        color: #050506;
+        padding: 18px 36px;
+        border-radius: 14px;
+        font-size: 16px;
+        font-weight: 800;
+        text-decoration: none;
+        transition: all 0.3s;
+        box-shadow: 0 8px 24px rgba(16, 185, 129, 0.25);
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .wa-btn:hover {
+        background: #34d399;
+        transform: translateY(-2px);
+        box-shadow: 0 12px 30px rgba(16, 185, 129, 0.4);
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+      .form-group label {
+        display: block;
+        font-size: 13px;
+        font-weight: 600;
+        color: #cbd5e1;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      .form-input {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 14px 18px;
+        color: #fff;
+        font-family: inherit;
+        font-size: 15px;
+        box-sizing: border-box;
+        transition: border-color 0.3s;
+      }
+      .form-input:focus {
+        outline: none;
+        border-color: #10b981;
+        background: rgba(16, 185, 129, 0.02);
+      }
+      .submit-btn {
+        width: 100%;
+        background: #fff;
+        color: #050506;
+        border: none;
+        padding: 16px;
+        border-radius: 12px;
+        font-size: 15px;
+        font-weight: 800;
+        cursor: pointer;
+        transition: all 0.3s;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      .submit-btn:hover {
+        background: #10b981;
+        color: #fff;
+        box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
+      }
+      .features-list {
+        list-style: none;
+        padding: 0;
+        margin: 24px 0 0;
+      }
+      .features-list li {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 14px;
+        color: #94a3b8;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .features-list li:last-child {
+        border-bottom: none;
+      }
+      .features-list li span {
+        color: #10b981;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrap">
+      <header class="top-nav">
+        <a href="index.html" class="brand-box">
+          <img src="assets/dluz_infinity.png" alt="DLuz Digital" />
+          <span class="brand-title">DLuz</span>
+          <span class="brand-sub">Digital</span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="index.html#solucoes"><sup>01</sup>Soluções 3D</a>
+          <a href="metodologia.html"><sup>02</sup>Metodologia</a>
+          <a href="resultados.html"><sup>03</sup>Resultados</a>
+          <a href="equipe.html"><sup>04</sup>Equipe</a>
+        </nav>
+
+        <div class="actions-box">
+          <a href="contato.html" class="menu-btn" style="border-color: #10b981; color: #10b981;">Contato</a>
+          <a href="menu.html" class="menu-btn">Menu ☰</a>
+        </div>
+      </header>
+
+      <section class="hero-section">
+        <div class="badge-tag">Atendimento Executivo & IA 24/7</div>
+        <h1 class="hero-title">Fale Diretamente com a <span>DLuz Digital</span></h1>
+        <p class="hero-desc">
+          Agende um diagnóstico estratégico de faturamento para sua empresa ou converse em tempo real com nossa assistente de inteligência artificial executiva no WhatsApp.
+        </p>
+      </section>
+
+      <div class="contact-grid">
+        <!-- Card WhatsApp -->
+        <div class="glass-card">
+          <h2 class="card-title">Atendimento Imediato no WhatsApp</h2>
+          <p class="card-sub">
+            Conecte-se instantaneamente com a IA Frya para tirar dúvidas, consultar disponibilidade regional e agendar reunião com a diretoria.
+          </p>
+
+          <div class="whatsapp-cta">
+            <div class="wa-icon">💬</div>
+            <h3 style="margin: 0 0 8px; font-size: 20px;">Frya IA — Ativa Agora</h3>
+            <p style="margin: 0 0 20px; font-size: 14px; color: #94a3b8;">
+              Tempo médio de resposta: <strong>2.4 segundos</strong> • 24 horas por dia
+            </p>
+            <a
+              href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20um%20diagn%C3%B3stico%20executivo%20da%20DLuz%20Digital"
+              target="_blank"
+              class="wa-btn"
+            >
+              INICIAR CONVERSA NO WHATSAPP ➔
+            </a>
+          </div>
+
+          <ul class="features-list">
+            <li><span>✓</span> Qualificação de negócio em menos de 2 minutos</li>
+            <li><span>✓</span> Checagem de Exclusividade Territorial para sua cidade</li>
+            <li><span>✓</span> Acesso direto ao conselho estratégico Duilio Luz</li>
+          </ul>
+        </div>
+
+        <!-- Card Form -->
+        <div class="glass-card">
+          <h2 class="card-title">Solicitar Diagnóstico de Escala</h2>
+          <p class="card-sub">
+            Preencha os dados da sua empresa para nossa diretoria analisar seus canais digitais antes da reunião.
+          </p>
+
+          <form id="contactForm" onsubmit="event.preventDefault(); alert('Diagnóstico solicitado com sucesso! Nossa diretoria entrará em contato em menos de 10 minutos via WhatsApp.');">
+            <div class="form-group">
+              <label>Nome do Responsável</label>
+              <input type="text" class="form-input" placeholder="Seu nome completo" required />
+            </div>
+
+            <div class="form-group">
+              <label>WhatsApp Comercial</label>
+              <input type="tel" class="form-input" placeholder="(DDD) 99999-9999" required />
+            </div>
+
+            <div class="form-group">
+              <label>Nome da Empresa & Segmento</label>
+              <input type="text" class="form-input" placeholder="Ex: Clínica Sorriso / Odontologia" required />
+            </div>
+
+            <div class="form-group">
+              <label>Cidade & Estado</label>
+              <input type="text" class="form-input" placeholder="Ex: São Paulo - SP" required />
+            </div>
+
+            <button type="submit" class="submit-btn">
+              SOLICITAR DIAGNÓSTICO GRATUITO ➔
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
