@@ -416,9 +416,14 @@ return n.jsxs("group", { ref: r, onPointerOver: w, onPointerOut: _, onClick: A, 
 function Xn(){
   return n.jsxs("header",{className:"hud__top",children:[
     n.jsxs("a",{className:"brand",href:"index.html","aria-label":"DLuz Digital — Início",children:[
-      n.jsx("img",{src:"assets/dluz_infinity.png",alt:"DLuz Digital",style:{height:"22px",width:"auto",marginRight:"8px",filter:"drop-shadow(0 0 8px rgba(16,185,129,0.4))"}}),
-      n.jsx("span",{className:"brand__word",children:"DLuz"}),
-      n.jsx("span",{className:"brand__sub",children:"Digital"})
+      n.jsx("img",{src:"assets/dluz_infinity.png",alt:"DLuz Digital",style:{height:"30px",width:"auto",marginRight:"10px",filter:"drop-shadow(0 0 10px rgba(16,185,129,0.45))"}}),
+      n.jsxs("div",{className:"brand__text",style:{display:"flex",flexDirection:"column",gap:"2px"},children:[
+        n.jsxs("div",{style:{display:"flex",alignItems:"baseline",gap:"5px",lineHeight:"1.1"},children:[
+          n.jsx("span",{className:"brand__word",children:"DLuz"}),
+          n.jsx("span",{className:"brand__sub",children:"Digital"})
+        ]}),
+        n.jsx("span",{className:"brand__tagline",children:"MARKETING DIGITAL"})
+      ]})
     ]}),
     n.jsxs("nav",{className:"nav","aria-label":"Primary",children:[
       n.jsxs("a",{href:"#solucoes",children:[n.jsx("sup",{children:"01"}),"Soluções 3D"]}),

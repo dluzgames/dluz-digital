@@ -43,8 +43,35 @@
         text-decoration: none;
         color: #fff;
       }
+      .brand-text {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+      .brand-row {
+        display: flex;
+        align-items: baseline;
+        gap: 5px;
+        line-height: 1.1;
+      }
+      .brand-tagline {
+        font-size: 10.5px;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #38bdf8;
+        line-height: 1;
+        display: block;
+        white-space: nowrap;
+      }
+      @media (max-width: 600px) {
+        .brand-tagline {
+          font-size: 8.5px;
+          letter-spacing: 0.12em;
+        }
+      }
       .brand-box img {
-        height: 26px;
+        height: 30px;
         width: auto;
       }
       .brand-title {
@@ -240,8 +267,13 @@
       <header class="top-nav">
         <a href="index.html" class="brand-box">
           <img src="assets/dluz_infinity.png" alt="DLuz Digital" />
-          <span class="brand-title">DLuz</span>
-          <span class="brand-sub">Digital</span>
+          <div class="brand-text">
+            <div class="brand-row">
+              <span class="brand-title">DLuz</span>
+              <span class="brand-sub">Digital</span>
+            </div>
+            <span class="brand-tagline">MARKETING DIGITAL</span>
+          </div>
         </a>
 
         <nav class="nav-links">
