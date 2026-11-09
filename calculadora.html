@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#050506" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<title>Calculadora de Serviços — DLuz Digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root { --bg: #050506; --fg: #f1f2f6; --dim: #94a3b8; --line: rgba(255,255,255,.08); --green: #10b981; --blue: #38bdf8; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--fg); font-family: 'Archivo', sans-serif; overflow-x: hidden; }
+  .page-wrap { max-width: 1200px; margin: 0 auto; padding: 40px 16px 120px; }
+  .top-nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 20px 0 40px; border-bottom: 1px solid var(--line); }
+  .brand-box { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; }
+  .brand-box img { height: 30px; width: auto; }
+  .brand-row { display: flex; align-items: baseline; gap: 5px; line-height: 1.1; }
+  .brand-title { font-size: 18px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; }
+  .brand-sub { font-size: 14px; color: var(--green); font-weight: 600; margin-left: 4px; }
+  .brand-tagline { font-size: 10.5px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: var(--blue); display: block; }
+  .menu-btn { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); color: #fff; padding: 8px 18px; border-radius: 99px; font-size: 13px; font-weight: 600; text-decoration: none; }
+  .hero { padding: 50px 0 30px; }
+  .badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(16,185,129,.1); border: 1px solid rgba(16,185,129,.3); color: var(--green); padding: 6px 16px; border-radius: 99px; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 20px; }
+  h1 { font-size: clamp(32px, 5vw, 56px); font-weight: 850; line-height: 1.05; letter-spacing: -.02em; margin: 0 0 14px; text-transform: uppercase; }
+  h1 span { background: linear-gradient(135deg, #fff 40%, var(--green) 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .hero p { color: var(--dim); max-width: 680px; font-size: 17px; line-height: 1.6; margin: 0; }
+  .layout { display: grid; grid-template-columns: 1fr 380px; gap: 28px; align-items: start; margin-top: 30px; }
+  .layout > *, .item .t { min-width: 0; }
+  .card { background: rgba(255,255,255,.02); border: 1px solid var(--line); border-radius: 20px; padding: 8px 24px 16px; margin-bottom: 18px; }
+  .card h2 { font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--green); margin: 18px 0 6px; }
+  .item { display: grid; grid-template-columns: 24px 1fr auto auto; gap: 14px; align-items: center; padding: 12px 0; border-top: 1px solid var(--line); }
+  .item:first-of-type { border-top: 0; }
+  .item input[type=checkbox] { width: 19px; height: 19px; accent-color: var(--green); margin: 0; cursor: pointer; }
+  .item .t { cursor: pointer; }
+  .item .t strong { display: block; font-size: 15px; font-weight: 650; }
+  .item .t small { color: var(--dim); font-size: 13px; }
+  .qty, .price { font-family: 'JetBrains Mono', monospace; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1); color: #fff; border-radius: 8px; padding: 7px 8px; font-size: 13px; }
+  .qty { width: 54px; text-align: center; }
+  .price { width: 96px; text-align: right; }
+  .qty:focus, .price:focus, .field:focus { outline: none; border-color: var(--green); }
+  .unit { color: var(--dim); font-size: 11px; display: block; text-align: right; margin-top: 3px; }
+  .summary { position: sticky; top: 20px; background: rgba(255,255,255,.03); border: 1px solid rgba(16,185,129,.25); border-radius: 22px; padding: 26px; }
+  .summary h3 { margin: 0 0 16px; font-size: 20px; font-weight: 800; }
+  label.lbl { display: block; font-size: 12px; font-weight: 600; color: #cbd5e1; text-transform: uppercase; letter-spacing: .05em; margin: 14px 0 6px; }
+  .field { width: 100%; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1); border-radius: 10px; padding: 11px 14px; color: #fff; font: inherit; font-size: 14px; }
+  .disc { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+  .disc button { font: inherit; font-size: 12px; font-weight: 700; padding: 6px 10px; border-radius: 99px; border: 1px solid rgba(255,255,255,.15); background: transparent; color: var(--dim); cursor: pointer; }
+  .disc button.on { background: var(--green); border-color: var(--green); color: #050506; }
+  .disc input { width: 64px; }
+  .row { display: flex; justify-content: space-between; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 14px; color: var(--dim); }
+  .row strong { color: #fff; font-family: 'JetBrains Mono', monospace; font-weight: 500; }
+  .row s { color: #64748b; font-family: 'JetBrains Mono', monospace; margin-right: 6px; }
+  .total { font-size: 34px; font-weight: 850; letter-spacing: -.02em; margin-top: 4px; }
+  .total small { font-size: 14px; color: var(--dim); font-weight: 600; }
+  .btn { display: block; width: 100%; margin-top: 10px; padding: 14px; border-radius: 12px; font: inherit; font-weight: 800; font-size: 14px; letter-spacing: .04em; text-transform: uppercase; cursor: pointer; border: 0; }
+  .btn.go { background: var(--green); color: #050506; }
+  .btn.go:hover { background: #34d399; }
+  .btn.ghost { background: transparent; border: 1px solid rgba(255,255,255,.15); color: #fff; }
+  .btn.ghost:hover { border-color: rgba(255,255,255,.35); }
+  .tools { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
+  .tools button { font: inherit; font-size: 13px; font-weight: 600; padding: 8px 16px; border-radius: 99px; border: 1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.04); color: #fff; cursor: pointer; }
+  .tools button:hover { border-color: var(--green); color: var(--green); }
+  .status { min-height: 1.3em; font-size: 13px; color: var(--green); margin: 10px 0 0; }
+  .note { color: var(--dim); font-size: 13px; line-height: 1.5; }
+  @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } .summary { position: static; } }
+  @media (max-width: 560px) {
+    .item { grid-template-columns: 24px 1fr; }
+    .item .ctl { grid-column: 2; display: flex; gap: 10px; align-items: center; }
+    .unit { display: inline; margin: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+  <header class="top-nav">
+    <a href="index.html" class="brand-box">
+      <img src="assets/dluz_infinity.png" alt="DLuz Digital" />
+      <div>
+        <div class="brand-row"><span class="brand-title">DLuz</span><span class="brand-sub">Digital</span></div>
+        <span class="brand-tagline">Marketing Digital</span>
+      </div>
+    </a>
+    <a href="index.html" class="menu-btn">← Voltar ao site</a>
+  </header>
+
+  <section class="hero">
+    <div class="badge">Uso interno · tabela base</div>
+    <h1>Calculadora de <span>Serviços</span></h1>
+    <p>Marque o que o cliente quer, ajuste quantidade e preço se precisar e aplique o desconto de pacote. Os preços que você mudar ficam salvos neste aparelho.</p>
+  </section>
+
+  <div class="layout">
+    <div>
+      <div class="tools">
+        <button type="button" data-preset="site">Site + manutenção</button>
+        <button type="button" data-preset="essencial">Essencial</button>
+        <button type="button" data-preset="completo">Completo</button>
+        <button type="button" data-preset="premium">Premium</button>
+        <button type="button" id="limpar">Desmarcar tudo</button>
+      </div>
+      <div class="card" id="g-unico"><h2>Implementação · pagamento único</h2></div>
+      <div class="card" id="g-ano"><h2>Anual</h2></div>
+      <div class="card" id="g-mes"><h2>Mensalidade</h2></div>
+      <p class="note">Verba de anúncios fica fora da mensalidade e é paga direto ao Meta/Google pelo cliente. Sugestão em cidade de ~60 mil hab.: R$ 450 a R$ 900/mês. <button type="button" id="resetPrecos" style="background:none;border:0;color:#38bdf8;font:inherit;cursor:pointer;padding:0;text-decoration:underline">Voltar aos preços padrão</button></p>
+    </div>
+
+    <aside class="summary" aria-live="polite">
+      <h3>Orçamento</h3>
+      <label class="lbl" for="cliente">Cliente</label>
+      <input class="field" id="cliente" placeholder="Nome da empresa" />
+
+      <label class="lbl">Desconto na implementação</label>
+      <div class="disc" data-disc="unico">
+        <button type="button" data-v="0">0%</button><button type="button" data-v="10">10%</button><button type="button" data-v="20">20%</button><button type="button" data-v="25">25%</button>
+        <input class="field" type="number" min="0" max="90" step="1" aria-label="Desconto implementação %" />
+      </div>
+      <label class="lbl">Desconto na mensalidade</label>
+      <div class="disc" data-disc="mes">
+        <button type="button" data-v="0">0%</button><button type="button" data-v="10">10%</button><button type="button" data-v="15">15%</button><button type="button" data-v="20">20%</button>
+        <input class="field" type="number" min="0" max="90" step="1" aria-label="Desconto mensalidade %" />
+      </div>
+
+      <div id="resumo" style="margin-top:18px"></div>
+
+      <button class="btn go" type="button" id="whats">Enviar orçamento no WhatsApp</button>
+      <button class="btn ghost" type="button" id="copiar">Copiar resumo</button>
+      <p class="status" id="status"></p>
+    </aside>
+  </div>
+</div>
+
+<script>
+// ===== Tabela base da DLuz Digital (preços de Paraíso do Tocantins) =====
+// tipo: unico | ano | mes  ·  qtd: true = permite quantidade (lojas, perfis)
+const SERVICOS = [
+  { id: "site",    tipo: "unico", nome: "Criação de site", desc: "Vitrine/landing, WhatsApp, mapa, página de links", valor: 1080 },
+  { id: "sitefix", tipo: "unico", nome: "Correção ou ampliação de site existente", desc: "Ajustes, novas seções, velocidade", valor: 300 },
+  { id: "gmn",     tipo: "unico", nome: "Otimização do Google Meu Negócio", desc: "Por perfil/loja: fotos, descrição, horários, site", valor: 240, qtd: true },
+  { id: "dados",   tipo: "unico", nome: "Padronização de dados + nova bio", desc: "Endereço e telefone iguais, link da bio no site", valor: 150 },
+  { id: "face",    tipo: "unico", nome: "Facebook + Meta Business + Pixel", desc: "Página ligada ao Instagram, Pixel no site", valor: 270 },
+  { id: "ident",   tipo: "unico", nome: "Identidade das redes", desc: "Modelos de carrossel e capas de destaque", valor: 300 },
+  { id: "ads",     tipo: "unico", nome: "Setup de tráfego pago", desc: "Conta, públicos locais e campanhas iniciais", valor: 240 },
+  { id: "dominio", tipo: "ano",   nome: "Domínio próprio", desc: "Registro e renovação do endereço", valor: 65 },
+  { id: "social",  tipo: "mes",   nome: "Gestão de Instagram + Facebook", desc: "8 carrosséis/mês (2 por semana), legendas, stories", valor: 540 },
+  { id: "perfil",  tipo: "mes",   nome: "Perfil extra de Instagram", desc: "Para segunda loja ou marca", valor: 110, qtd: true },
+  { id: "trafego", tipo: "mes",   nome: "Gestão de tráfego pago", desc: "Campanhas, criativos, otimização, relatório", valor: 360 },
+  { id: "gmnmes",  tipo: "mes",   nome: "Gestão do Google Meu Negócio", desc: "4 posts/mês, fotos, respostas de avaliação", valor: 150 },
+  { id: "gmnextra",tipo: "mes",   nome: "Google — perfil/loja adicional", desc: "Cada loja a mais", valor: 90, qtd: true },
+  { id: "manut",   tipo: "mes",   nome: "Manutenção de site", desc: "Hospedagem, segurança, backup, atualizações", valor: 150 },
+  { id: "capta",   tipo: "mes",   nome: "Captação de fotos/vídeos + 4 Reels", desc: "1 dia na loja por mês", valor: 420 },
+];
+const IMPL_BASE = ["gmn", "dados", "face", "ident", "ads"];
+const PRESETS = {
+  site:      { itens: ["site", "dominio", "manut"], dU: 0, dM: 0 },
+  essencial: { itens: [...IMPL_BASE, "social", "gmnmes", "manut"], dU: 25, dM: 17.5 },
+  completo:  { itens: [...IMPL_BASE, "social", "trafego", "gmnmes", "manut"], dU: 25, dM: 17.5 },
+  premium:   { itens: [...IMPL_BASE, "social", "trafego", "gmnmes", "manut", "capta"], dU: 25, dM: 17.5 },
+};
+const DLUZ_WHATSAPP = ""; // opcional: número do cliente/da DLuz. Vazio = escolher o contato no WhatsApp.
+const K_PRECOS = "dluz-calc-precos", K_ESTADO = "dluz-calc-estado";
+
+// ===== Lógica =====
+const $ = s => document.querySelector(s);
+const brl = v => "R$ " + Math.round(v).toLocaleString("pt-BR");
+const ler = k => { try { return JSON.parse(localStorage.getItem(k) || "null"); } catch (e) { return null; } };
+const gravar = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
+
+const precosSalvos = ler(K_PRECOS) || {};
+const sufixo = { unico: "", ano: "/ano", mes: "/mês" };
+SERVICOS.forEach(s => {
+  const el = document.createElement("div");
+  el.className = "item";
+  el.innerHTML = `<input type="checkbox" id="c-${s.id}" data-id="${s.id}">
+    <label class="t" for="c-${s.id}"><strong>${s.nome}</strong><small>${s.desc}</small></label>
+    <span class="ctl" style="display:contents">
+      ${s.qtd ? `<input class="qty" type="number" min="1" value="1" data-q="${s.id}" aria-label="Quantidade">` : `<span></span>`}
+      <span><input class="price" type="number" min="0" step="10" data-p="${s.id}" value="${precosSalvos[s.id] ?? s.valor}" aria-label="Preço"><span class="unit">${s.qtd ? "cada" : ""}${sufixo[s.tipo]}</span></span>
+    </span>`;
+  $("#g-" + s.tipo).appendChild(el);
+});
+
+const desc = { unico: 0, mes: 0 };
+function setDesc(g, v) {
+  desc[g] = Math.max(0, Math.min(90, Number(v) || 0));
+  document.querySelectorAll(`[data-disc="${g}"] button`).forEach(b => b.classList.toggle("on", Number(b.dataset.v) === desc[g]));
+  $(`[data-disc="${g}"] input`).value = desc[g];
+}
+
+function estado() {
+  return SERVICOS.filter(s => $("#c-" + s.id).checked).map(s => {
+    const qtd = s.qtd ? Math.max(1, Number($(`[data-q="${s.id}"]`).value) || 1) : 1;
+    const preco = Number($(`[data-p="${s.id}"]`).value) || 0;
+    return { ...s, qtd, preco, sub: qtd * preco };
+  });
+}
+
+function render() {
+  const sel = estado();
+  const soma = t => sel.filter(s => s.tipo === t).reduce((a, s) => a + s.sub, 0);
+  const u = soma("unico"), a = soma("ano"), m = soma("mes");
+  const uF = u * (1 - desc.unico / 100), mF = m * (1 - desc.mes / 100);
+  $("#resumo").innerHTML = `
+    <div class="row"><span>Implementação</span><span>${desc.unico && u ? `<s>${brl(u)}</s>` : ""}<strong>${brl(uF)}</strong></span></div>
+    ${a ? `<div class="row"><span>Anual</span><strong>${brl(a)}/ano</strong></div>` : ""}
+    <div class="row" style="border:0"><span>Mensalidade</span>${desc.mes && m ? `<s>${brl(m)}</s>` : ""}</div>
+    <div class="total">${brl(mF)}<small>/mês</small></div>
+    <p class="note" style="margin:6px 0 0">Primeiro pagamento: <strong style="color:#fff">${brl(uF + a + mF)}</strong>${sel.some(s => s.id === "trafego") ? " · + verba de anúncios" : ""}</p>`;
+  gravar(K_ESTADO, { itens: sel.map(s => [s.id, s.qtd]), desc, cliente: $("#cliente").value });
+  return { sel, u, a, m, uF, mF };
+}
+
+function resumoTexto() {
+  const r = render();
+  const cli = $("#cliente").value.trim();
+  const lista = t => r.sel.filter(s => s.tipo === t).map(s => `• ${s.nome}${s.qtd > 1 ? ` (${s.qtd}x)` : ""}: ${brl(s.sub)}${sufixo[t]}`);
+  const L = [`*Orçamento DLuz Digital${cli ? " · " + cli : ""}*`, ""];
+  if (lista("unico").length) L.push("*Implementação (pagamento único)*", ...lista("unico"), desc.unico ? `Total: ~${brl(r.u)}~ *${brl(r.uF)}* (${desc.unico}% de desconto no pacote)` : `Total: *${brl(r.uF)}*`, "");
+  if (lista("ano").length) L.push("*Anual*", ...lista("ano"), "");
+  if (lista("mes").length) L.push("*Mensalidade*", ...lista("mes"), desc.mes ? `Total: ~${brl(r.m)}~ *${brl(r.mF)}/mês* (${desc.mes}% de desconto no pacote)` : `Total: *${brl(r.mF)}/mês*`, "");
+  if (r.sel.some(s => s.id === "trafego")) L.push("Verba dos anúncios à parte, paga direto ao Meta.");
+  return L.join("\n").trim();
+}
+
+function aplicar(itens, dU, dM) {
+  SERVICOS.forEach(s => { $("#c-" + s.id).checked = false; const q = $(`[data-q="${s.id}"]`); if (q) q.value = 1; });
+  itens.forEach(([id, q]) => { const c = $("#c-" + id); if (c) c.checked = true; const qi = $(`[data-q="${id}"]`); if (qi && q) qi.value = q; });
+  setDesc("unico", dU); setDesc("mes", dM); render();
+}
+
+document.addEventListener("input", e => {
+  if (e.target.matches("[data-p]")) { precosSalvos[e.target.dataset.p] = Number(e.target.value) || 0; gravar(K_PRECOS, precosSalvos); }
+  if (e.target.matches(".disc input")) setDesc(e.target.closest(".disc").dataset.disc, e.target.value);
+  render();
+});
+document.addEventListener("change", e => { if (e.target.matches("input[type=checkbox]")) render(); });
+document.querySelectorAll(".disc button").forEach(b => b.addEventListener("click", () => { setDesc(b.closest(".disc").dataset.disc, b.dataset.v); render(); }));
+document.querySelectorAll("[data-preset]").forEach(b => b.addEventListener("click", () => {
+  const p = PRESETS[b.dataset.preset]; aplicar(p.itens.map(id => [id, 1]), p.dU, p.dM);
+}));
+$("#limpar").addEventListener("click", () => aplicar([], 0, 0));
+$("#resetPrecos").addEventListener("click", () => {
+  SERVICOS.forEach(s => { $(`[data-p="${s.id}"]`).value = s.valor; delete precosSalvos[s.id]; });
+  gravar(K_PRECOS, precosSalvos); render();
+});
+$("#copiar").addEventListener("click", async () => {
+  const t = resumoTexto();
+  try { await navigator.clipboard.writeText(t); $("#status").textContent = "Resumo copiado."; }
+  catch (e) { $("#status").textContent = "Não deu para copiar automaticamente neste navegador."; }
+});
+$("#whats").addEventListener("click", () => window.open(`https://wa.me/${DLUZ_WHATSAPP}?text=${encodeURIComponent(resumoTexto())}`, "_blank", "noopener"));
+
+(function iniciar() {
+  const s = ler(K_ESTADO);
+  if (s) { $("#cliente").value = s.cliente || ""; aplicar(s.itens || [], s.desc?.unico || 0, s.desc?.mes || 0); }
+  else { const p = PRESETS.completo; aplicar(p.itens.map(id => [id, 1]), p.dU, p.dM); }
+})();
+</script>
+</body>
+</html>
