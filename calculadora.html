@@ -105,6 +105,8 @@
       <div class="card" id="g-unico"><h2>Implementação · pagamento único</h2></div>
       <div class="card" id="g-ano"><h2>Anual</h2></div>
       <div class="card" id="g-mes"><h2>Mensalidade</h2></div>
+      <div class="card" id="g-camp"><h2>Campanhas de datas especiais · avulso</h2></div>
+      <p class="note">Os carrosséis do mês já entram no clima das datas sem custo extra. A campanha é o reforço com oferta, artes extras, Reels, WhatsApp e anúncios.</p>
       <p class="note">Verba de anúncios fica fora da mensalidade e é paga direto ao Meta/Google pelo cliente. Sugestão em cidade de ~60 mil hab.: R$ 450 a R$ 900/mês. <button type="button" id="resetPrecos" style="background:none;border:0;color:#38bdf8;font:inherit;cursor:pointer;padding:0;text-decoration:underline">Voltar aos preços padrão</button></p>
     </div>
 
@@ -152,6 +154,8 @@ const SERVICOS = [
   { id: "gmnextra",tipo: "mes",   nome: "Google — perfil/loja adicional", desc: "Cada loja a mais", valor: 90, qtd: true },
   { id: "manut",   tipo: "mes",   nome: "Manutenção de site", desc: "Hospedagem, segurança, backup, atualizações", valor: 150 },
   { id: "capta",   tipo: "mes",   nome: "Captação de fotos/vídeos + 4 Reels", desc: "1 dia na loja por mês", valor: 420 },
+  { id: "camp1",   tipo: "camp",  nome: "Campanha de data especial", desc: "Black Friday, Natal, Dia das Mães… oferta, 4 artes extras, roteiro de Reels, mensagens de WhatsApp e anúncios da data", valor: 390 },
+  { id: "campx",   tipo: "camp",  nome: "Campanha adicional", desc: "Cada data a mais contratada junto", valor: 300, qtd: true },
 ];
 const IMPL_BASE = ["gmn", "dados", "face", "ident", "ads"];
 const PRESETS = {
@@ -170,7 +174,7 @@ const ler = k => { try { return JSON.parse(localStorage.getItem(k) || "null"); }
 const gravar = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
 
 const precosSalvos = ler(K_PRECOS) || {};
-const sufixo = { unico: "", ano: "/ano", mes: "/mês" };
+const sufixo = { unico: "", ano: "/ano", mes: "/mês", camp: "" };
 SERVICOS.forEach(s => {
   const el = document.createElement("div");
   el.className = "item";
@@ -201,16 +205,17 @@ function estado() {
 function render() {
   const sel = estado();
   const soma = t => sel.filter(s => s.tipo === t).reduce((a, s) => a + s.sub, 0);
-  const u = soma("unico"), a = soma("ano"), m = soma("mes");
+  const u = soma("unico"), a = soma("ano"), m = soma("mes"), c = soma("camp");
   const uF = u * (1 - desc.unico / 100), mF = m * (1 - desc.mes / 100);
   $("#resumo").innerHTML = `
     <div class="row"><span>Implementação</span><span>${desc.unico && u ? `<s>${brl(u)}</s>` : ""}<strong>${brl(uF)}</strong></span></div>
     ${a ? `<div class="row"><span>Anual</span><strong>${brl(a)}/ano</strong></div>` : ""}
+    ${c ? `<div class="row"><span>Campanhas (cobradas na data)</span><strong>${brl(c)}</strong></div>` : ""}
     <div class="row" style="border:0"><span>Mensalidade</span>${desc.mes && m ? `<s>${brl(m)}</s>` : ""}</div>
     <div class="total">${brl(mF)}<small>/mês</small></div>
     <p class="note" style="margin:6px 0 0">Primeiro pagamento: <strong style="color:#fff">${brl(uF + a + mF)}</strong>${sel.some(s => s.id === "trafego") ? " · + verba de anúncios" : ""}</p>`;
   gravar(K_ESTADO, { itens: sel.map(s => [s.id, s.qtd]), desc, cliente: $("#cliente").value });
-  return { sel, u, a, m, uF, mF };
+  return { sel, u, a, m, c, uF, mF };
 }
 
 function resumoTexto() {
@@ -221,6 +226,7 @@ function resumoTexto() {
   if (lista("unico").length) L.push("*Implementação (pagamento único)*", ...lista("unico"), desc.unico ? `Total: ~${brl(r.u)}~ *${brl(r.uF)}* (${desc.unico}% de desconto no pacote)` : `Total: *${brl(r.uF)}*`, "");
   if (lista("ano").length) L.push("*Anual*", ...lista("ano"), "");
   if (lista("mes").length) L.push("*Mensalidade*", ...lista("mes"), desc.mes ? `Total: ~${brl(r.m)}~ *${brl(r.mF)}/mês* (${desc.mes}% de desconto no pacote)` : `Total: *${brl(r.mF)}/mês*`, "");
+  if (lista("camp").length) L.push("*Campanhas de datas especiais*", ...lista("camp"), `Total: *${brl(r.c)}* (cobrado na época de cada campanha)`, "");
   if (r.sel.some(s => s.id === "trafego")) L.push("Verba dos anúncios à parte, paga direto ao Meta.");
   return L.join("\n").trim();
 }
