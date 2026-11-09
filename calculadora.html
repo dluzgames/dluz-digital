@@ -97,6 +97,7 @@
     <div>
       <div class="tools">
         <button type="button" data-preset="site">Site + manutenção</button>
+        <button type="button" data-preset="loja">Loja virtual</button>
         <button type="button" data-preset="essencial">Essencial</button>
         <button type="button" data-preset="completo">Completo</button>
         <button type="button" data-preset="premium">Premium</button>
@@ -146,20 +147,28 @@ const SERVICOS = [
   { id: "face",    tipo: "unico", nome: "Facebook + Meta Business + Pixel", desc: "Página ligada ao Instagram, Pixel no site", valor: 270 },
   { id: "ident",   tipo: "unico", nome: "Identidade das redes", desc: "Modelos de carrossel e capas de destaque", valor: 300 },
   { id: "ads",     tipo: "unico", nome: "Setup de tráfego pago", desc: "Conta, públicos locais e campanhas iniciais", valor: 240 },
+  { id: "blog",    tipo: "unico", nome: "Blog no site", desc: "Estrutura do blog, categorias e SEO básico", valor: 300 },
+  { id: "ecom",    tipo: "unico", nome: "Loja virtual no site (e-commerce)", desc: "Carrinho, pagamento por Pix e cartão, frete", valor: 900 },
+  { id: "prod",    tipo: "unico", nome: "Cadastro de produtos (pacote de 20)", desc: "Foto, descrição, preço e variações", valor: 120, qtd: true },
+  { id: "catalogo",tipo: "unico", nome: "Anúncios dos produtos (catálogo)", desc: "Catálogo no Instagram/Facebook e Google Shopping ligado à loja", valor: 300 },
   { id: "dominio", tipo: "ano",   nome: "Domínio próprio", desc: "Registro e renovação do endereço", valor: 65 },
   { id: "social",  tipo: "mes",   nome: "Gestão de Instagram + Facebook", desc: "8 carrosséis/mês (2 por semana), legendas, stories", valor: 540 },
   { id: "perfil",  tipo: "mes",   nome: "Perfil extra de Instagram", desc: "Para segunda loja ou marca", valor: 110, qtd: true },
   { id: "trafego", tipo: "mes",   nome: "Gestão de tráfego pago", desc: "Campanhas, criativos, otimização, relatório", valor: 360 },
   { id: "gmnmes",  tipo: "mes",   nome: "Gestão do Google Meu Negócio", desc: "4 posts/mês, fotos, respostas de avaliação", valor: 150 },
   { id: "gmnextra",tipo: "mes",   nome: "Google — perfil/loja adicional", desc: "Cada loja a mais", valor: 90, qtd: true },
-  { id: "manut",   tipo: "mes",   nome: "Manutenção de site", desc: "Hospedagem, segurança, backup, atualizações", valor: 150 },
+  { id: "manut",   tipo: "mes",   nome: "Manutenção do site", desc: "Atualizações, banners, correções e segurança", valor: 150 },
+  { id: "servidor",tipo: "mes",   nome: "Servidor e hospedagem", desc: "Servidor, SSL, backup e monitoramento", valor: 60 },
+  { id: "blogmes", tipo: "mes",   nome: "Posts no blog (SEO)", desc: "4 artigos por mês para aparecer no Google", valor: 240 },
+  { id: "ecommes", tipo: "mes",   nome: "Gestão da loja virtual", desc: "Até 20 produtos novos por mês, estoque e pedidos", valor: 180 },
   { id: "capta",   tipo: "mes",   nome: "Captação de fotos/vídeos + 4 Reels", desc: "1 dia na loja por mês", valor: 420 },
   { id: "camp1",   tipo: "camp",  nome: "Campanha de data especial", desc: "Black Friday, Natal, Dia das Mães… oferta, 4 artes extras, roteiro de Reels, mensagens de WhatsApp e anúncios da data", valor: 390 },
   { id: "campx",   tipo: "camp",  nome: "Campanha adicional", desc: "Cada data a mais contratada junto", valor: 300, qtd: true },
 ];
 const IMPL_BASE = ["gmn", "dados", "face", "ident", "ads"];
 const PRESETS = {
-  site:      { itens: ["site", "dominio", "manut"], dU: 0, dM: 0 },
+  site:      { itens: ["site", "dominio", "manut", "servidor"], dU: 0, dM: 0 },
+  loja:      { itens: ["site", "ecom", "prod", "catalogo", "dominio", "manut", "servidor", "ecommes"], dU: 0, dM: 0 },
   essencial: { itens: [...IMPL_BASE, "social", "gmnmes", "manut"], dU: 25, dM: 17.5 },
   completo:  { itens: [...IMPL_BASE, "social", "trafego", "gmnmes", "manut"], dU: 25, dM: 17.5 },
   premium:   { itens: [...IMPL_BASE, "social", "trafego", "gmnmes", "manut", "capta"], dU: 25, dM: 17.5 },
