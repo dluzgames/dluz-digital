@@ -175,7 +175,7 @@
   <section class="hero">
     <div class="badge">Uso interno · tabela base</div>
     <h1>Calculadora de <span>Serviços</span></h1>
-    <p>Calcule a verba de anúncios pelo tamanho da cidade, marque o que o cliente quer e gere a proposta com o pagamento único, a mensalidade e a verba bem separados.</p>
+    <p>Calcule a verba de anúncios pelo tamanho da cidade, marque o que o cliente quer e gere a proposta com o pagamento único, a mensalidade e a verba dos anúncios bem separados.</p>
   </section>
 
   <div class="layout">
@@ -210,7 +210,7 @@
           <div class="fstep"><b id="f-imp">24.120</b><small>exibições por mês</small></div>
         </div>
         <div class="tresult">
-          <div class="tbox verba"><span>Verba ao Facebook</span><b id="r-verba">R$ 290/mês</b><small id="r-dia">≈ R$ 10 por dia, paga pelo cliente</small></div>
+          <div class="tbox verba"><span>Verba dos anúncios</span><b id="r-verba">R$ 290/mês</b><small id="r-dia">≈ R$ 10 por dia, paga à DLuz</small></div>
           <div class="tbox gestao"><span>Gestão DLuz</span><b id="r-gestao">R$ 360/mês</b><small id="r-faixa">faixa até 60 mil hab.</small></div>
           <button type="button" class="usar" id="t-usar">Usar no orçamento</button>
         </div>
@@ -250,8 +250,8 @@
       <div id="resumo"></div>
 
       <div class="sec v">
-        <h4><span>Verba de anúncios</span><span>paga ao Facebook</span></h4>
-        <div class="vinput"><input class="field" id="verba" type="number" min="0" step="10" value="0" aria-label="Verba mensal de anúncios em reais" /><span class="note">por mês, no cartão do cliente</span></div>
+        <h4><span>Verba de anúncios</span><span>paga à DLuz</span></h4>
+        <div class="vinput"><input class="field" id="verba" type="number" min="0" step="10" value="0" aria-label="Verba mensal de anúncios em reais" /><span class="note">por mês, junto com a mensalidade; vai inteira para os anúncios</span></div>
       </div>
 
       <div class="grand" id="grand"></div>
@@ -374,7 +374,7 @@ function renderTrafego() {
   $("#f-alc").textContent = num(t.alc);
   $("#f-imp").textContent = num(t.imp);
   $("#r-verba").textContent = brl(t.verba) + "/mês";
-  $("#r-dia").textContent = "≈ " + brl(t.verba / 30) + " por dia, paga pelo cliente";
+  $("#r-dia").textContent = "≈ " + brl(t.verba / 30) + " por dia, paga à DLuz";
   $("#r-gestao").textContent = brl(t.gestao) + "/mês";
   $("#r-faixa").textContent = "faixa " + t.faixa.nome + (t.r.extra ? " + ritmo forte" : "");
   $("#t-pubc").hidden = $("#t-pub").value !== "custom";
@@ -404,7 +404,7 @@ function calcular() {
   const u = soma("unico"), a = soma("ano"), m = soma("mes"), c = soma("camp");
   const uF = u * (1 - desc.unico / 100), mF = m * (1 - desc.mes / 100);
   const verba = Math.max(0, Number($("#verba").value) || 0);
-  return { sel, grupo, u, a, m, c, uF, mF, verba, primeiro: uF + mF + a };
+  return { sel, grupo, u, a, m, c, uF, mF, verba, primeiro: uF + mF + a + verba, mensalTotal: mF + verba };
 }
 function secHTML(cls, titulo, dir, itens, total, totalF, pct, suf) {
   const linhas = itens.length ? itens.map(s => `<div class="line"><span>${esc(s.nome)}${s.qtd > 1 ? ` (${s.qtd}x)` : ""}</span><span>${brl(s.sub)}</span></div>`).join("") : `<div class="empty">Nada marcado</div>`;
@@ -421,8 +421,8 @@ function render() {
     (r.c ? secHTML("c", "Campanhas", "na data", r.grupo("camp"), r.c, r.c, 0, "") : "");
   $("#grand").innerHTML = `
     <div class="big"><span>Primeiro pagamento à DLuz</span><b>${brl(r.primeiro)}</b></div>
-    <div><span>Depois, todo mês à DLuz</span><b>${brl(r.mF)}</b></div>
-    ${r.verba ? `<div><span>Verba ao Facebook, todo mês</span><b style="color:var(--amber)">${brl(r.verba)}</b></div>` : ""}`;
+    <div><span>Depois, todo mês à DLuz</span><b>${brl(r.mensalTotal)}</b></div>
+    ${r.verba ? `<div><span>dos quais verba dos anúncios</span><b style="color:var(--amber);font-size:16px">${brl(r.verba)}</b></div>` : ""}`;
   salvar();
   return r;
 }
@@ -450,9 +450,8 @@ function resumoTexto() {
   if (r.grupo("mes").length) L.push("*2. Mensalidade fixa (todo mês)*", ...listaTexto(r, "mes"), desc.mes ? `Total: ~${brl(r.m)}~ *${brl(r.mF)}/mês* (pacote)` : `Total: *${brl(r.mF)}/mês*`, "");
   if (r.grupo("ano").length) L.push("*Por ano*", ...listaTexto(r, "ano"), "");
   if (r.grupo("camp").length) L.push("*Campanhas (cobradas na data)*", ...listaTexto(r, "camp"), `Total: *${brl(r.c)}*`, "");
-  if (r.verba) L.push("*3. Verba de anúncios (paga direto ao Facebook)*", `• ${brl(r.verba)}/mês no cartão da empresa`, `• Alcance estimado em ${t.cidade || "na cidade"}: ${num(t.alc)} pessoas/mês, ${t.r.freq}x cada`, "");
-  L.push(`*Primeiro pagamento à DLuz:* ${brl(r.primeiro)}`, `*Depois, todo mês à DLuz:* ${brl(r.mF)}`);
-  if (r.verba) L.push(`*Verba ao Facebook:* ${brl(r.verba)}/mês`);
+  if (r.verba) L.push("*3. Verba de anúncios (paga à DLuz, vai inteira para os anúncios)*", `• ${brl(r.verba)}/mês, junto com a mensalidade`, `• Alcance estimado em ${t.cidade || "na cidade"}: ${num(t.alc)} pessoas/mês, ${t.r.freq}x cada`, "");
+  L.push(`*Primeiro pagamento à DLuz:* ${brl(r.primeiro)}`, `*Depois, todo mês à DLuz:* ${brl(r.mensalTotal)}${r.verba ? ` (mensalidade ${brl(r.mF)} + verba ${brl(r.verba)})` : ""}`);
   return L.join("\n").trim();
 }
 function tabela(cls, titulo, nota, itens, total, totalF, pct, suf) {
@@ -471,7 +470,7 @@ function gerarProposta() {
   if (r.grupo("mes").length) partes.push(tabela("cap-m", numr() + "Mensalidade fixa", "todo mês, enquanto durar o contrato", r.grupo("mes"), r.m, r.mF, desc.mes, "/mês"));
   if (r.grupo("ano").length) partes.push(tabela("", numr() + "Por ano", "renovação anual", r.grupo("ano"), r.a, r.a, 0, "/ano"));
   if (r.grupo("camp").length) partes.push(tabela("", numr() + "Campanhas de datas especiais", "cobradas na época de cada campanha", r.grupo("camp"), r.c, r.c, 0, ""));
-  if (r.verba) partes.push(`<table><caption class="cap-v">${numr()}Verba de anúncios<small>paga direto ao Facebook, no cartão da empresa · não passa pela DLuz</small></caption>
+  if (r.verba) partes.push(`<table><caption class="cap-v">${numr()}Verba de anúncios<small>paga à DLuz junto com a mensalidade · usada inteira nos anúncios do Facebook e Instagram</small></caption>
     <tr><td>Verba mensal dos anúncios<small>Ritmo ${t.r.nome.toLowerCase()} em ${esc(t.cidade || "na cidade")}</small></td><td>${brl(r.verba)}/mês</td></tr>
     ${t.meses > 1 ? `<tr class="t"><td>Total em ${t.meses} meses</td><td>${brl(r.verba * t.meses)}</td></tr>` : ""}</table>
     <div class="reach">Estimativa: dos ${num(t.pop)} habitantes, cerca de ${num(t.net)} usam internet e ${num(t.pub)} estão no público ideal. Com essa verba, o anúncio alcança perto de ${num(t.alc)} pessoas por mês, cada uma vendo umas ${t.r.freq} vezes (${num(t.imp)} exibições). O resultado real depende do anúncio e da oferta.</div>`);
@@ -479,12 +478,12 @@ function gerarProposta() {
     <header><div><b>DLuz <span>Digital</span></b><div style="color:#475569;font-size:9.5pt">Marketing digital · digital.dluz.com.br</div></div>
       <div>Proposta comercial<br><strong style="color:#0f172a;font-size:11pt">${esc(cli)}</strong><br>${hoje}</div></header>
     <h5>Investimento</h5>
-    <p class="sub">Cada parte abaixo é paga de um jeito: o pagamento único uma vez, a mensalidade todo mês e a verba dos anúncios direto ao Facebook.</p>
+    <p class="sub">O pagamento único é feito uma vez. A mensalidade e a verba dos anúncios são pagas todo mês à DLuz, e a verba vai inteira para os anúncios.</p>
     ${partes.join("")}
     <div class="boxes">
-      <div><span>Primeiro pagamento à DLuz</span><b>${brl(r.primeiro)}</b><small>Pagamento único + 1ª mensalidade${r.a ? " + anual" : ""}</small></div>
-      <div><span>Depois, todo mês à DLuz</span><b>${brl(r.mF)}</b><small>Mensalidade fixa</small></div>
-      <div><span>Verba ao Facebook</span><b>${r.verba ? brl(r.verba) : "—"}</b><small>${r.verba ? "Por mês, paga pela empresa" : "Sem anúncios"}</small></div>
+      <div><span>Primeiro pagamento à DLuz</span><b>${brl(r.primeiro)}</b><small>Pagamento único + 1ª mensalidade${r.verba ? " + verba" : ""}${r.a ? " + anual" : ""}</small></div>
+      <div><span>Depois, todo mês à DLuz</span><b>${brl(r.mensalTotal)}</b><small>Mensalidade ${brl(r.mF)}${r.verba ? " + verba " + brl(r.verba) : ""}</small></div>
+      <div><span>Verba dos anúncios</span><b>${r.verba ? brl(r.verba) : "—"}</b><small>${r.verba ? "Por mês, já somada acima e usada inteira nos anúncios" : "Sem anúncios"}</small></div>
     </div>
     <h5 style="font-size:12pt">Condições</h5>
     <ul><li>Contrato mínimo de 6 meses.</li><li>Mensalidade até o dia 10 de cada mês.</li><li>Pagamento único em até 2x, junto com as 2 primeiras mensalidades.</li><li>Proposta válida por 15 dias.</li></ul>
